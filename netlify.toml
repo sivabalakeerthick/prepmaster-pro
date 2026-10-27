@@ -1,13 +1,16 @@
-# ==============================================================================
-# PrepMaster Pro — Netlify Build & Redirect Configuration
-# ==============================================================================
-
 [build]
   base = "frontend"
   publish = "dist/frontend/browser"
   command = "npm run build"
 
-# SPA Fallback for Angular HTML5 Client-Side Routing
+# Proxy all /api requests from Netlify to your Render backend
+[[redirects]]
+  from = "/api/*"
+  to = "https://prepmaster-pro.onrender.com"
+  status = 200
+  force = true
+
+# SPA fallback for Angular routes
 [[redirects]]
   from = "/*"
   to = "/index.html"
