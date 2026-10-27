@@ -3,7 +3,7 @@
 [![Angular](https://img.shields.io/badge/Angular-22-DD0031?style=for-the-badge&logo=angular&logoColor=white)](https://angular.dev)
 [![Node.js](https://img.shields.io/badge/Node.js-Express-339933?style=for-the-badge&logo=nodedotjs&logoColor=white)](https://nodejs.org)
 [![Vercel](https://img.shields.io/badge/Vercel-Frontend-000000?style=for-the-badge&logo=vercel&logoColor=white)](https://careermaster.vercel.app)
-[![Render](https://img.shields.io/badge/Render-Backend%20API-46E3B7?style=for-the-badge&logo=render&logoColor=white)](https://prepmaster-pro.onrender.com)
+[![Render](https://img.shields.io/badge/Render-Backend%20API-46E3B7?style=for-the-badge&logo=render&logoColor=white)](https://render.com)
 [![UptimeRobot](https://img.shields.io/badge/UptimeRobot-24%2F7%20Monitoring-3BD671?style=for-the-badge&logo=uptimerobot&logoColor=white)](https://uptimerobot.com)
 
 A high-performance, full-stack developer preparation platform built with **Angular 22** and **Express.js** to track end-to-end software engineering and interview readiness across two rich learning tracks.
@@ -15,8 +15,8 @@ A high-performance, full-stack developer preparation platform built with **Angul
 | Component | Provider | Live URL | Description |
 | :--- | :--- | :--- | :--- |
 | **Frontend Web App** | **Vercel** | [https://careermaster.vercel.app](https://careermaster.vercel.app) | Angular 22 Single-Page Application (Global Edge CDN) |
-| **Backend REST API** | **Render** | [https://prepmaster-pro.onrender.com](https://prepmaster-pro.onrender.com) | Node.js Express server with JWT auth and progress APIs |
-| **Health Check & Keep-Alive** | **UptimeRobot** | [https://prepmaster-pro.onrender.com/api/health](https://prepmaster-pro.onrender.com/api/health) | Pinged every 5 min to keep Render warm 24/7 (zero cold starts) |
+| **Backend REST API** | **Render** | `https://<your-backend-app>.onrender.com` | Node.js Express server with JWT auth and progress APIs |
+| **Health Check & Keep-Alive** | **UptimeRobot** | `https://<your-backend-app>.onrender.com/api/health` | Pinged every 5 min to keep Render warm 24/7 (zero cold starts) |
 
 ---
 
@@ -53,7 +53,6 @@ A high-performance, full-stack developer preparation platform built with **Angul
 ```
 prepmaster-pro/
 ├── .gitignore                      # Exhaustive git exclusion rules
-├── .npmrc                          # npm dependency resolution config
 ├── package.json                    # Workspace root scripts
 ├── README.md                       # Platform documentation
 ├── vercel.json                     # Vercel deployment & Render /api proxy config
@@ -119,7 +118,7 @@ All sensitive secrets, database records, and user passwords remain **strictly lo
 PORT=3000
 JWT_SECRET=your-secure-jwt-secret-key-replace-this
 JWT_EXPIRES_IN=7d
-FRONTEND_URL=https://careermaster.vercel.app
+FRONTEND_URL=https://xxxxxxxxxxxx.vercel.app
 
 # Multi-User JSON Array
 ALLOWED_USERS=[{"name":"Your Name","email":"your.email@example.com","password":"your_password"}]
@@ -127,12 +126,12 @@ ALLOWED_USERS=[{"name":"Your Name","email":"your.email@example.com","password":"
 # Google OAuth 2.0 (Optional - https://console.cloud.google.com)
 GOOGLE_CLIENT_ID=
 GOOGLE_CLIENT_SECRET=
-GOOGLE_CALLBACK_URL=https://prepmaster-pro.onrender.com/api/auth/google/callback
+GOOGLE_CALLBACK_URL=https://xxxxxxxxxxxx/api/auth/google/callback
 
 # GitHub OAuth 2.0 (Optional - https://github.com/settings/developers)
 GITHUB_CLIENT_ID=
 GITHUB_CLIENT_SECRET=
-GITHUB_CALLBACK_URL=https://prepmaster-pro.onrender.com/api/auth/github/callback
+GITHUB_CALLBACK_URL=https://xxxxxxxxxxxxx/api/auth/github/callback
 ```
 
 ### Adding Users to Your Local or Cloud App:
@@ -140,8 +139,8 @@ To add users, edit `ALLOWED_USERS` in your `backend/src/.env` (locally) or in yo
 
 ```json
 ALLOWED_USERS=[
-  {"name": "Siva Bala", "email": "sivabalakeerthick@gmail.com", "password": "yourpassword123"},
-  {"name": "Alex Rivera", "email": "alex@example.com", "password": "mypassword456"}
+  {"name": "Developer 1", "email": "dev1@example.com", "password": "secure_password_1"},
+  {"name": "Developer 2", "email": "dev2@example.com", "password": "secure_password_2"}
 ]
 ```
 
@@ -157,7 +156,7 @@ ALLOWED_USERS=[
 Clone the repository and install dependencies:
 
 ```bash
-git clone https://github.com/sivabalakeerthick/prepmaster-pro.git
+git clone https://github.com/your-username/prepmaster-pro.git
 cd prepmaster-pro
 
 # Install backend dependencies
@@ -206,16 +205,16 @@ Open **`http://localhost:4200`** in your browser.
 3. Build Command: `npm install`
 4. Start Command: `node src/server.js`
 5. Add your Environment Variables: `ALLOWED_USERS`, `JWT_SECRET`, `JWT_EXPIRES_IN`.
-6. Live Backend URL: `https://prepmaster-pro.onrender.com`
+6. Live Backend URL: `https://<your-backend-app>.onrender.com`
 
 ### 2. Frontend on Vercel
 1. Import the repository on [Vercel](https://vercel.com).
 2. Vercel automatically reads [`vercel.json`](vercel.json), builds the Angular 22 app, and proxies all `/api/*` requests to Render.
-3. Live Frontend URL: `https://careermaster.vercel.app`
+3. Live Frontend URL: [https://careermaster.vercel.app](https://careermaster.vercel.app)
 
 ### 3. UptimeRobot Keep-Alive
 1. Create a free HTTP(s) monitor on [UptimeRobot](https://uptimerobot.com).
-2. URL: `https://prepmaster-pro.onrender.com/api/health`
+2. URL: `https://<your-backend-app>.onrender.com/api/health`
 3. Interval: **Every 5 minutes**.
 4. Result: Render's free tier stays awake 24/7 with zero cold starts!
 
