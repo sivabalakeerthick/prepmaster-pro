@@ -89,7 +89,11 @@ export class LoginComponent implements OnInit {
       },
       error: (err) => {
         this.isLoading = false;
-        this.errorMessage = err?.error?.error || 'Invalid email or password.';
+        if (err?.status === 0) {
+          this.errorMessage = 'Cannot connect to backend server. Make sure the backend is running (port 3000) or check your connection.';
+        } else {
+          this.errorMessage = err?.error?.error || 'Invalid email or password.';
+        }
       }
     });
   }

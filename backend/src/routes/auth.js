@@ -19,8 +19,8 @@ function generateToken(user) {
 }
 
 function getFrontendUrl(req) {
-  if (process.env.FRONTEND_URL && !process.env.FRONTEND_URL.includes('localhost:3000')) {
-    return process.env.FRONTEND_URL;
+  if (process.env.FRONTEND_URL) {
+    return process.env.FRONTEND_URL.replace(/\/$/, '');
   }
   return `${req.protocol}://${req.get('host')}`;
 }
@@ -152,14 +152,18 @@ router.post('/login', (req, res) => {
       const db = getDb();
       let user = db.prepare('SELECT * FROM users WHERE email = ?').get(inputEmail);
 
+      const passwordHash = bcrypt.hashSync(matchedEnvUser.password, 10);
+
       // If user doesn't exist in DB yet, create user record automatically
       if (!user) {
         const id = uuidv4();
-        const passwordHash = bcrypt.hashSync(matchedEnvUser.password, 10);
         db.prepare(
           'INSERT INTO users (id, name, email, password_hash) VALUES (?, ?, ?, ?)'
         ).run(id, matchedEnvUser.name, inputEmail, passwordHash);
         user = { id, name: matchedEnvUser.name, email: inputEmail };
+      } else {
+        // Sync password hash in DB if user updated their password in .env
+        db.prepare('UPDATE users SET password_hash = ? WHERE id = ?').run(passwordHash, user.id);
       }
 
       const token = generateToken(user);

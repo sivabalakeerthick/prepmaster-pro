@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 
 @Component({
@@ -8,6 +8,13 @@ import { RouterOutlet } from '@angular/router';
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss'
 })
-export class AppComponent {
-  title = 'Interview Preparation Tracker';
+export class AppComponent implements OnInit {
+  title = 'PrepMaster Pro';
+
+  ngOnInit(): void {
+    console.log(
+      '%c🚀 Architected & Developed by Siva Bala Keerthick',
+      'color: #2563eb; font-size: 14px; font-weight: 800; padding: 4px 0;'
+    );
+  }
 }

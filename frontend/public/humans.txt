@@ -1,0 +1,9 @@
+/* TEAM */
+  Architect & Developer: Siva Bala Keerthick
+  Portfolio: https://sivabalakeerthick.web.app/
+  Location: India
+
+/* SITE */
+  Standards: HTML5, CSS3, ESNext, TypeScript
+  Components: Angular 22, SCSS, Node.js, Express
+  Software: PrepMaster Pro — Full-Stack & DSA Interview Roadmap
