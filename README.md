@@ -2,7 +2,7 @@
 
 [![Angular](https://img.shields.io/badge/Angular-22-DD0031?style=for-the-badge&logo=angular&logoColor=white)](https://angular.dev)
 [![Node.js](https://img.shields.io/badge/Node.js-Express-339933?style=for-the-badge&logo=nodedotjs&logoColor=white)](https://nodejs.org)
-[![Vercel](https://img.shields.io/badge/Vercel-Frontend-000000?style=for-the-badge&logo=vercel&logoColor=white)](https://prepmaster-pro.vercel.app)
+[![Vercel](https://img.shields.io/badge/Vercel-Frontend-000000?style=for-the-badge&logo=vercel&logoColor=white)](https://careermaster.vercel.app)
 [![Render](https://img.shields.io/badge/Render-Backend%20API-46E3B7?style=for-the-badge&logo=render&logoColor=white)](https://prepmaster-pro.onrender.com)
 [![UptimeRobot](https://img.shields.io/badge/UptimeRobot-24%2F7%20Monitoring-3BD671?style=for-the-badge&logo=uptimerobot&logoColor=white)](https://uptimerobot.com)
 
@@ -14,7 +14,7 @@ A high-performance, full-stack developer preparation platform built with **Angul
 
 | Component | Provider | Live URL | Description |
 | :--- | :--- | :--- | :--- |
-| **Frontend Web App** | **Vercel** | [https://prepmaster-pro.vercel.app](https://prepmaster-pro.vercel.app) | Angular 22 Single-Page Application (Global Edge CDN) |
+| **Frontend Web App** | **Vercel** | [https://careermaster.vercel.app](https://careermaster.vercel.app) | Angular 22 Single-Page Application (Global Edge CDN) |
 | **Backend REST API** | **Render** | [https://prepmaster-pro.onrender.com](https://prepmaster-pro.onrender.com) | Node.js Express server with JWT auth and progress APIs |
 | **Health Check & Keep-Alive** | **UptimeRobot** | [https://prepmaster-pro.onrender.com/api/health](https://prepmaster-pro.onrender.com/api/health) | Pinged every 5 min to keep Render warm 24/7 (zero cold starts) |
 
@@ -119,7 +119,7 @@ All sensitive secrets, database records, and user passwords remain **strictly lo
 PORT=3000
 JWT_SECRET=your-secure-jwt-secret-key-replace-this
 JWT_EXPIRES_IN=7d
-FRONTEND_URL=https://prepmaster-pro.vercel.app
+FRONTEND_URL=https://careermaster.vercel.app
 
 # Multi-User JSON Array
 ALLOWED_USERS=[{"name":"Your Name","email":"your.email@example.com","password":"your_password"}]
@@ -211,7 +211,7 @@ Open **`http://localhost:4200`** in your browser.
 ### 2. Frontend on Vercel
 1. Import the repository on [Vercel](https://vercel.com).
 2. Vercel automatically reads [`vercel.json`](vercel.json), builds the Angular 22 app, and proxies all `/api/*` requests to Render.
-3. Live Frontend URL: `https://prepmaster-pro.vercel.app`
+3. Live Frontend URL: `https://careermaster.vercel.app`
 
 ### 3. UptimeRobot Keep-Alive
 1. Create a free HTTP(s) monitor on [UptimeRobot](https://uptimerobot.com).
