@@ -140,6 +140,17 @@ export class DashboardComponent implements OnInit, OnDestroy {
     }
 
     this.currentUser = this.authService.getCurrentUser();
+    if (this.authService.isLoggedIn()) {
+      this.authService.getProfile().subscribe({
+        next: (res) => {
+          if (res?.user) {
+            this.currentUser = res.user;
+            this.cdr.markForCheck();
+          }
+        },
+        error: () => {}
+      });
+    }
     this.loadInitialData();
 
     this.routeSub = this.route.paramMap.subscribe(params => {
@@ -258,6 +269,51 @@ export class DashboardComponent implements OnInit, OnDestroy {
   getUserInitial(): string {
     if (!this.currentUser || !this.currentUser.name) return 'U';
     return this.currentUser.name.charAt(0).toUpperCase();
+  }
+
+  get isOAuthUser(): boolean {
+    const provider = (this.currentUser?.provider || '').toLowerCase();
+    return provider === 'google' || provider === 'github';
+  }
+
+  showDeleteAccountModal = false;
+  isDeletingAccount = false;
+  deleteAccountError = '';
+
+  openDeleteAccountModal(): void {
+    this.deleteAccountError = '';
+    this.showDeleteAccountModal = true;
+    this.cdr.markForCheck();
+  }
+
+  closeDeleteAccountModal(): void {
+    if (!this.isDeletingAccount) {
+      this.showDeleteAccountModal = false;
+      this.deleteAccountError = '';
+      this.cdr.markForCheck();
+    }
+  }
+
+  confirmDeleteAccount(): void {
+    if (this.isDeletingAccount) return;
+    this.isDeletingAccount = true;
+    this.deleteAccountError = '';
+    this.cdr.markForCheck();
+
+    this.authService.deleteAccount().subscribe({
+      next: () => {
+        this.isDeletingAccount = false;
+        this.showDeleteAccountModal = false;
+        this.router.navigate(['/login'], {
+          queryParams: { account_deleted: 'true' }
+        });
+      },
+      error: (err) => {
+        this.isDeletingAccount = false;
+        this.deleteAccountError = err?.error?.error || 'Failed to delete account. Please try again.';
+        this.cdr.markForCheck();
+      }
+    });
   }
 
   onLogout(): void {

@@ -267,6 +267,41 @@
         cursor: not-allowed;
         opacity: 0.7;
       }
+
+      &.password-input {
+        padding-right: 42px;
+      }
+    }
+
+    .btn-toggle-password {
+      position: absolute;
+      right: 8px;
+      top: 50%;
+      transform: translateY(-50%);
+      background: transparent;
+      border: none;
+      padding: 6px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #64748b;
+      cursor: pointer;
+      border-radius: 6px;
+      transition: all 0.15s ease;
+
+      &:hover {
+        color: #1e293b;
+        background: #f1f5f9;
+      }
+
+      &:focus-visible {
+        outline: 2px solid #2563eb;
+        outline-offset: 1px;
+      }
+
+      .eye-icon {
+        display: block;
+      }
     }
   }
 }

@@ -58,6 +58,29 @@ export class AuthService {
     this.router.navigate(['/login']);
   }
 
+  public getProfile(): Observable<{ user: User }> {
+    return this.http.get<{ user: User }>(`${environment.apiUrl}/auth/me`).pipe(
+      tap(res => {
+        if (res && res.user) {
+          const current = this.getCurrentUser();
+          const merged = { ...current, ...res.user };
+          localStorage.setItem(this.userKey, JSON.stringify(merged));
+          this.currentUserSubject.next(merged);
+        }
+      })
+    );
+  }
+
+  public deleteAccount(): Observable<{ message: string }> {
+    return this.http.delete<{ message: string }>(`${environment.apiUrl}/auth/account`).pipe(
+      tap(() => {
+        localStorage.removeItem(this.tokenKey);
+        localStorage.removeItem(this.userKey);
+        this.currentUserSubject.next(null);
+      })
+    );
+  }
+
   public resetPassword(email: string, newPassword: string): Observable<{ message: string }> {
     return this.http.post<{ message: string }>(`${environment.apiUrl}/auth/reset-password`, { email, newPassword });
   }

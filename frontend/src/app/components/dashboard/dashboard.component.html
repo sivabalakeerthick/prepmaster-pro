@@ -55,8 +55,22 @@
         <span class="user-avatar">{{ getUserInitial() }}</span>
         <div class="user-meta">
           <span class="user-name">{{ currentUser.name }}</span>
+          <span *ngIf="isOAuthUser" class="user-provider-tag" [class.google]="currentUser.provider === 'google'" [class.github]="currentUser.provider === 'github'">
+            {{ currentUser.provider === 'google' ? 'Google' : 'GitHub' }}
+          </span>
         </div>
       </div>
+
+      <!-- Delete Account (Available for Google & GitHub OAuth accounts) -->
+      <button 
+        *ngIf="isOAuthUser" 
+        class="btn-delete-account" 
+        (click)="openDeleteAccountModal()" 
+        title="Permanently delete this {{ currentUser.provider === 'google' ? 'Google' : 'GitHub' }} account"
+      >
+        <span class="btn-icon">🗑️</span>
+        <span class="btn-text">Delete Account</span>
+      </button>
 
       <button class="btn-switch-user" (click)="onLogout()" title="Switch account or sign in as another user">
         <span class="btn-icon">👤</span>
@@ -373,6 +387,20 @@
                   (blur)="saveTarget()" 
                   placeholder="Note down concepts you struggled with, topics to revise, or mock interview takeaways..."
                 ></textarea>
+              </div>
+            </div>
+
+            <!-- Danger Zone: OAuth Account Deletion (Google & GitHub only) -->
+            <div *ngIf="isOAuthUser" class="account-danger-zone">
+              <div class="danger-zone-content">
+                <div class="danger-zone-info">
+                  <span class="danger-zone-title">Cloud {{ currentUser?.provider === 'google' ? 'Google' : 'GitHub' }} Profile</span>
+                  <span class="danger-zone-desc">{{ currentUser?.email }} • Need to remove your profile and clear all saved progress?</span>
+                </div>
+                <button type="button" class="btn-danger-outline" (click)="openDeleteAccountModal()">
+                  <span class="btn-icon">🗑️</span>
+                  <span>Delete Account</span>
+                </button>
               </div>
             </div>
           </div>
@@ -1531,4 +1559,66 @@
   >
     ▲
   </button>
+</div>
+
+<!-- Delete Account Confirmation Modal (Strictly for Google & GitHub OAuth Accounts) -->
+<div *ngIf="showDeleteAccountModal" class="delete-modal-backdrop" (click)="closeDeleteAccountModal()">
+  <div class="delete-modal" (click)="$event.stopPropagation()" role="dialog" aria-modal="true" aria-labelledby="deleteModalTitle">
+    <div class="delete-modal-header">
+      <div class="delete-modal-title-group">
+        <div class="delete-warning-badge">⚠️</div>
+        <div>
+          <h3 id="deleteModalTitle" class="delete-modal-title">Delete Account</h3>
+          <p class="delete-modal-subtitle">Permanently delete your {{ currentUser?.provider === 'google' ? 'Google' : 'GitHub' }} profile</p>
+        </div>
+      </div>
+      <button type="button" class="btn-modal-close" (click)="closeDeleteAccountModal()" aria-label="Close modal">✕</button>
+    </div>
+
+    <div class="delete-modal-body">
+      <div class="delete-warning-box">
+        <div class="warning-title">Warning: This action cannot be undone!</div>
+        <p class="warning-desc">
+          Deleting your account will immediately remove your profile and permanently erase all saved progress across 250+ full-stack topics, 180+ DSA exercises, and target settings.
+        </p>
+      </div>
+
+      <div class="account-identity-box">
+        <span class="identity-label">Account to delete:</span>
+        <div class="identity-val">
+          <span class="provider-pill" [class.google]="currentUser?.provider === 'google'" [class.github]="currentUser?.provider === 'github'">
+            {{ currentUser?.provider === 'google' ? 'Google' : 'GitHub' }}
+          </span>
+          <span class="identity-email">{{ currentUser?.email }}</span>
+        </div>
+      </div>
+
+      <div *ngIf="deleteAccountError" class="delete-error-banner" role="alert">
+        <span class="error-icon">⚠️</span>
+        <span>{{ deleteAccountError }}</span>
+      </div>
+    </div>
+
+    <div class="delete-modal-footer">
+      <button 
+        type="button" 
+        class="btn-modal-cancel" 
+        (click)="closeDeleteAccountModal()"
+        [disabled]="isDeletingAccount"
+      >
+        Cancel
+      </button>
+      <button 
+        type="button" 
+        class="btn-modal-confirm-delete" 
+        (click)="confirmDeleteAccount()"
+        [disabled]="isDeletingAccount"
+      >
+        <span *ngIf="!isDeletingAccount">Yes, Permanently Delete</span>
+        <span *ngIf="isDeletingAccount" class="deleting-spinner">
+          <span class="spinner-circle"></span> Deleting Account...
+        </span>
+      </button>
+    </div>
+  </div>
 </div>

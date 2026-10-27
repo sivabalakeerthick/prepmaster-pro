@@ -221,10 +221,59 @@
     box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
   }
 
-  .user-name {
-    font-size: 13px;
-    font-weight: 600;
-    color: #f1f5f9;
+  .user-meta {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+
+    .user-name {
+      font-size: 13px;
+      font-weight: 600;
+      color: #f1f5f9;
+    }
+
+    .user-provider-tag {
+      font-size: 9.5px;
+      font-weight: 800;
+      text-transform: uppercase;
+      padding: 1px 5px;
+      border-radius: 4px;
+      letter-spacing: 0.4px;
+
+      &.google {
+        background: rgba(66, 133, 244, 0.25);
+        color: #93c5fd;
+        border: 1px solid rgba(66, 133, 244, 0.4);
+      }
+
+      &.github {
+        background: rgba(168, 85, 247, 0.25);
+        color: #d8b4fe;
+        border: 1px solid rgba(168, 85, 247, 0.4);
+      }
+    }
+  }
+}
+
+.btn-delete-account {
+  background: rgba(239, 68, 68, 0.12);
+  border: 1px solid rgba(239, 68, 68, 0.28);
+  color: #fca5a5;
+  padding: 6px 12px;
+  border-radius: 8px;
+  font-size: 12px;
+  font-weight: 600;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  transition: all 0.2s ease;
+
+  &:hover {
+    background: #dc2626;
+    color: #ffffff;
+    border-color: #dc2626;
+    box-shadow: 0 2px 8px rgba(220, 38, 38, 0.3);
   }
 }
 
@@ -905,6 +954,69 @@
     &:focus {
       border-color: #2563eb;
       box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.12);
+    }
+  }
+
+  .account-danger-zone {
+    margin-top: 18px;
+    padding-top: 16px;
+    border-top: 1px dashed #e2e8f0;
+
+    .danger-zone-content {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+      padding: 12px 16px;
+      background: #fef2f2;
+      border: 1px solid #fee2e2;
+      border-radius: 10px;
+
+      @media (max-width: 640px) {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+    }
+
+    .danger-zone-info {
+      display: flex;
+      flex-direction: column;
+      gap: 2px;
+
+      .danger-zone-title {
+        font-size: 13px;
+        font-weight: 700;
+        color: #991b1b;
+      }
+
+      .danger-zone-desc {
+        font-size: 12px;
+        color: #7f1d1d;
+        opacity: 0.85;
+      }
+    }
+
+    .btn-danger-outline {
+      background: #ffffff;
+      border: 1.5px solid #f87171;
+      color: #b91c1c;
+      padding: 7px 14px;
+      border-radius: 8px;
+      font-size: 12.5px;
+      font-weight: 600;
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      white-space: nowrap;
+      transition: all 0.2s ease;
+
+      &:hover {
+        background: #dc2626;
+        color: #ffffff;
+        border-color: #dc2626;
+        box-shadow: 0 2px 8px rgba(220, 38, 38, 0.25);
+      }
     }
   }
 }
@@ -2283,6 +2395,15 @@
         }
       }
 
+      .btn-delete-account {
+        padding: 6px 8px;
+        font-size: 11px;
+
+        .btn-text {
+          display: none;
+        }
+      }
+
       .btn-logout {
         padding: 6px 8px;
         font-size: 11px;
@@ -2564,5 +2685,258 @@
 
   .app-main-content {
     padding: 10px 6px 80px;
+  }
+}
+
+/* ==========================================================================
+   Delete Account Confirmation Modal (Strictly for Google & GitHub users)
+   ========================================================================== */
+.delete-modal-backdrop {
+  position: fixed;
+  inset: 0;
+  background: rgba(15, 23, 42, 0.72);
+  backdrop-filter: blur(6px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 16px;
+  z-index: 99999;
+  animation: fadeIn 0.2s ease;
+}
+
+.delete-modal {
+  background: #ffffff;
+  border-radius: 18px;
+  width: 100%;
+  max-width: 480px;
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.35);
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  border: 1px solid rgba(239, 68, 68, 0.2);
+  animation: modalSlideUp 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+
+  .delete-modal-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 22px 24px 16px;
+    border-bottom: 1px solid #f1f5f9;
+
+    .delete-modal-title-group {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+
+      .delete-warning-badge {
+        width: 40px;
+        height: 40px;
+        border-radius: 10px;
+        background: #fee2e2;
+        border: 1px solid #fecaca;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 20px;
+        flex-shrink: 0;
+      }
+
+      .delete-modal-title {
+        font-family: var(--font-heading);
+        font-size: 18px;
+        font-weight: 800;
+        color: #1e293b;
+        margin: 0;
+      }
+
+      .delete-modal-subtitle {
+        font-size: 12.5px;
+        color: #64748b;
+        margin: 2px 0 0;
+      }
+    }
+
+    .btn-modal-close {
+      background: none;
+      border: none;
+      font-size: 18px;
+      color: #94a3b8;
+      cursor: pointer;
+      padding: 4px 8px;
+      border-radius: 6px;
+      transition: all 0.15s ease;
+
+      &:hover {
+        background: #f1f5f9;
+        color: #0f172a;
+      }
+    }
+  }
+
+  .delete-modal-body {
+    padding: 20px 24px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+
+    .delete-warning-box {
+      background: #fef2f2;
+      border: 1px solid #fecaca;
+      border-radius: 10px;
+      padding: 14px 16px;
+
+      .warning-title {
+        font-size: 13.5px;
+        font-weight: 700;
+        color: #991b1b;
+        margin-bottom: 4px;
+      }
+
+      .warning-desc {
+        font-size: 12.5px;
+        color: #7f1d1d;
+        line-height: 1.5;
+        margin: 0;
+      }
+    }
+
+    .account-identity-box {
+      background: #f8fafc;
+      border: 1px solid #e2e8f0;
+      border-radius: 10px;
+      padding: 12px 14px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 10px;
+
+      .identity-label {
+        font-size: 12px;
+        font-weight: 600;
+        color: #64748b;
+      }
+
+      .identity-val {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+
+        .identity-email {
+          font-size: 13px;
+          font-weight: 700;
+          color: #0f172a;
+        }
+      }
+
+      .provider-pill {
+        font-size: 10px;
+        font-weight: 800;
+        text-transform: uppercase;
+        padding: 2px 6px;
+        border-radius: 4px;
+        letter-spacing: 0.5px;
+
+        &.google {
+          background: #dbeafe;
+          color: #1d4ed8;
+          border: 1px solid #bfdbfe;
+        }
+
+        &.github {
+          background: #f3e8ff;
+          color: #7e22ce;
+          border: 1px solid #e9d5ff;
+        }
+      }
+    }
+
+    .delete-error-banner {
+      background: #fef2f2;
+      border: 1px solid #ef4444;
+      color: #991b1b;
+      padding: 10px 14px;
+      border-radius: 8px;
+      font-size: 12.5px;
+      font-weight: 600;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+  }
+
+  .delete-modal-footer {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 12px;
+    padding: 16px 24px 20px;
+    background: #f8fafc;
+    border-top: 1px solid #f1f5f9;
+
+    .btn-modal-cancel {
+      padding: 9px 18px;
+      background: #ffffff;
+      border: 1.5px solid #cbd5e1;
+      border-radius: 8px;
+      font-size: 13px;
+      font-weight: 600;
+      color: #475569;
+      cursor: pointer;
+      transition: all 0.15s ease;
+
+      &:hover:not(:disabled) {
+        background: #f1f5f9;
+        color: #0f172a;
+        border-color: #94a3b8;
+      }
+
+      &:disabled {
+        opacity: 0.6;
+        cursor: not-allowed;
+      }
+    }
+
+    .btn-modal-confirm-delete {
+      padding: 9px 18px;
+      background: linear-gradient(135deg, #dc2626 0%, #b91c1c 100%);
+      border: 1.5px solid #b91c1c;
+      border-radius: 8px;
+      font-size: 13px;
+      font-weight: 700;
+      color: #ffffff;
+      cursor: pointer;
+      box-shadow: 0 4px 12px rgba(220, 38, 38, 0.25);
+      transition: all 0.2s ease;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+
+      &:hover:not(:disabled) {
+        background: #991b1b;
+        transform: translateY(-1px);
+        box-shadow: 0 6px 16px rgba(220, 38, 38, 0.35);
+      }
+
+      &:disabled {
+        opacity: 0.6;
+        cursor: not-allowed;
+        transform: none;
+      }
+
+      .deleting-spinner {
+        display: inline-flex;
+        align-items: center;
+        gap: 6px;
+
+        .spinner-circle {
+          width: 12px;
+          height: 12px;
+          border: 2px solid rgba(255, 255, 255, 0.3);
+          border-top-color: #ffffff;
+          border-radius: 50%;
+          animation: spin 0.7s linear infinite;
+        }
+      }
+    }
   }
 }

@@ -223,6 +223,24 @@ class JsonDatabase {
           return { changes: 1 };
         }
 
+        // DELETE FROM progress WHERE user_id = ?
+        if (trimmed.startsWith('DELETE FROM progress') && trimmed.includes('WHERE user_id = ?')) {
+          const userId = params[0];
+          const initialLen = self.data.progress.length;
+          self.data.progress = self.data.progress.filter(p => p.user_id !== userId);
+          self.save();
+          return { changes: initialLen - self.data.progress.length };
+        }
+
+        // DELETE FROM users WHERE id = ?
+        if (trimmed.startsWith('DELETE FROM users') && trimmed.includes('WHERE id = ?')) {
+          const userId = params[0];
+          const initialLen = self.data.users.length;
+          self.data.users = self.data.users.filter(u => u.id !== userId);
+          self.save();
+          return { changes: initialLen - self.data.users.length };
+        }
+
         return { changes: 0 };
       }
     };

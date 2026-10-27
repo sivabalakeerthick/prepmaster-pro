@@ -18,8 +18,10 @@ export class LoginComponent implements OnInit {
 
   email = '';
   password = '';
+  showPassword = false;
   isLoading = false;
   errorMessage = '';
+  successMessage = '';
 
   // OAuth State
   oauthConfig = {
@@ -55,6 +57,12 @@ export class LoginComponent implements OnInit {
       this.errorMessage = `Authentication was cancelled or failed (${errorParam}). Please try again.`;
     }
 
+    // 3. Handle Account Deleted Notification
+    const deletedParam = this.route.snapshot.queryParamMap.get('account_deleted');
+    if (deletedParam === 'true') {
+      this.successMessage = 'Your account and all associated progress data have been permanently deleted.';
+    }
+
     // 3. Fetch OAuth Configuration
     this.authService.getOAuthConfig().subscribe({
       next: (config) => {
@@ -62,6 +70,10 @@ export class LoginComponent implements OnInit {
       },
       error: () => {}
     });
+  }
+
+  togglePasswordVisibility(): void {
+    this.showPassword = !this.showPassword;
   }
 
   onSubmit(): void {

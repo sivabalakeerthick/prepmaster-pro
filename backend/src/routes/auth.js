@@ -12,7 +12,7 @@ const JWT_EXPIRES_IN = process.env.JWT_EXPIRES_IN || '7d';
 
 function generateToken(user) {
   return jwt.sign(
-    { id: user.id, email: user.email, name: user.name },
+    { id: user.id, email: user.email, name: user.name, provider: user.provider || 'local' },
     JWT_SECRET,
     { expiresIn: JWT_EXPIRES_IN }
   );
@@ -69,7 +69,7 @@ router.post('/register', (req, res) => {
       'INSERT INTO users (id, name, email, password_hash) VALUES (?, ?, ?, ?)'
     ).run(id, name.trim(), normalizedEmail, passwordHash);
 
-    const user = { id, name: name.trim(), email: normalizedEmail };
+    const user = { id, name: name.trim(), email: normalizedEmail, provider: 'local' };
     const token = generateToken(user);
 
     res.status(201).json({
@@ -169,7 +169,8 @@ router.post('/login', (req, res) => {
         user: {
           id: user.id,
           name: user.name,
-          email: user.email
+          email: user.email,
+          provider: user.provider || 'local'
         }
       });
     }
@@ -195,7 +196,8 @@ router.post('/login', (req, res) => {
       user: {
         id: user.id,
         name: user.name,
-        email: user.email
+        email: user.email,
+        provider: user.provider || 'local'
       }
     });
   } catch (error) {
@@ -214,9 +216,51 @@ router.get('/me', authMiddleware, (req, res) => {
       return res.status(404).json({ error: 'User not found.' });
     }
 
-    res.json({ user });
+    res.json({
+      user: {
+        id: user.id,
+        name: user.name,
+        email: user.email,
+        provider: user.provider || 'local',
+        avatar_url: user.avatar_url || null,
+        target_role: user.target_role || '',
+        salary_target: user.salary_target || '',
+        target_date: user.target_date || '',
+        current_focus: user.current_focus || '',
+        created_at: user.created_at
+      }
+    });
   } catch (error) {
     console.error('Get me error:', error);
+    res.status(500).json({ error: 'Internal server error.' });
+  }
+});
+
+// DELETE /api/auth/account - protected (Strictly for Google & GitHub OAuth users)
+router.delete('/account', authMiddleware, (req, res) => {
+  try {
+    const db = getDb();
+    const user = db.prepare('SELECT id, email, provider FROM users WHERE id = ?').get(req.user.id);
+
+    if (!user) {
+      return res.status(404).json({ error: 'User not found.' });
+    }
+
+    const provider = String(user.provider || '').toLowerCase();
+    if (provider !== 'google' && provider !== 'github') {
+      return res.status(403).json({
+        error: 'Account deletion is only available for accounts signed in with Google or GitHub. Email accounts cannot be self-deleted.'
+      });
+    }
+
+    // Delete user's progress records
+    db.prepare('DELETE FROM progress WHERE user_id = ?').run(user.id);
+    // Delete user record
+    db.prepare('DELETE FROM users WHERE id = ?').run(user.id);
+
+    res.json({ message: 'Account and all associated progress data have been permanently deleted.' });
+  } catch (error) {
+    console.error('Delete account error:', error);
     res.status(500).json({ error: 'Internal server error.' });
   }
 });
@@ -366,7 +410,8 @@ router.get('/google/callback', async (req, res) => {
       id: user.id,
       name: user.name,
       email: user.email,
-      avatar_url: user.avatar_url
+      avatar_url: user.avatar_url,
+      provider: user.provider || 'google'
     }));
 
     res.redirect(`${frontendUrl}/dashboard/interview/1?token=${token}&user=${userJson}`);
@@ -467,7 +512,8 @@ router.get('/github/callback', async (req, res) => {
       id: user.id,
       name: user.name,
       email: user.email,
-      avatar_url: user.avatar_url
+      avatar_url: user.avatar_url,
+      provider: user.provider || 'github'
     }));
 
     res.redirect(`${frontendUrl}/dashboard/interview/1?token=${token}&user=${userJson}`);
@@ -508,7 +554,8 @@ router.get('/oauth/mock/:provider', (req, res) => {
     id: user.id,
     name: user.name,
     email: user.email,
-    avatar_url: user.avatar_url
+    avatar_url: user.avatar_url,
+    provider: user.provider
   }));
 
   res.redirect(`${frontendUrl}/dashboard/interview/1?token=${token}&user=${userJson}`);
