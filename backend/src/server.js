@@ -17,7 +17,40 @@ const PORT = process.env.PORT || 3000;
 
 // Middleware
 app.use(express.json());
-app.use(cors());
+
+// CORS Whitelist Configuration
+const allowedOrigins = [
+  'https://careermaster.vercel.app',
+  'http://localhost:4200',
+  'http://localhost:3000'
+];
+
+if (process.env.FRONTEND_URL && !process.env.FRONTEND_URL.includes('your-app-name')) {
+  const envFrontend = process.env.FRONTEND_URL.replace(/\/$/, '');
+  if (!allowedOrigins.includes(envFrontend)) {
+    allowedOrigins.push(envFrontend);
+  }
+}
+
+const corsOptions = {
+  origin: function (origin, callback) {
+    // Allow non-browser requests (e.g. UptimeRobot keep-alive, server proxies, curl)
+    if (!origin) return callback(null, true);
+
+    // Allow approved domains and all Vercel deployment aliases (*.vercel.app)
+    if (allowedOrigins.includes(origin) || origin.endsWith('.vercel.app')) {
+      return callback(null, true);
+    }
+
+    // Disallow unauthorized third-party origins
+    return callback(null, false);
+  },
+  credentials: true,
+  methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
+  allowedHeaders: ['Content-Type', 'Authorization', 'X-Requested-With']
+};
+
+app.use(cors(corsOptions));
 
 // Public endpoints
 app.get('/api/sections', (req, res) => {
