@@ -1,0 +1,3459 @@
+[
+  {
+    "id": 1,
+    "rawTitle": "1️⃣ Java Fundamentals",
+    "title": "Java Fundamentals",
+    "emoji": "1️⃣",
+    "goal": "",
+    "fields": [
+      "done",
+      "explain",
+      "code"
+    ],
+    "fieldLabels": [
+      "✅",
+      "Explain?",
+      "Code?"
+    ],
+    "topics": [
+      {
+        "name": "Variables, data types, operators, type casting",
+        "isNew": false,
+        "resources": [
+          {
+            "url": "https://docs.oracle.com/javase/tutorial/java/nutsandbolts/index.html",
+            "text": "Oracle Java Tutorial"
+          }
+        ]
+      },
+      {
+        "name": "Conditions, loops, and control flow",
+        "isNew": false,
+        "resources": [
+          {
+            "url": "https://docs.oracle.com/javase/tutorial/java/nutsandbolts/flow.html",
+            "text": "Oracle Flow Control"
+          }
+        ]
+      },
+      {
+        "name": "Methods, parameters, return values, recursion",
+        "isNew": false,
+        "resources": [
+          {
+            "url": "https://docs.oracle.com/javase/tutorial/java/javaOO/methods.html",
+            "text": "Oracle Methods"
+          }
+        ]
+      },
+      {
+        "name": "Classes, objects, and constructors",
+        "isNew": false,
+        "resources": [
+          {
+            "url": "https://docs.oracle.com/javase/tutorial/java/javaOO/classes.html",
+            "text": "Oracle Classes"
+          }
+        ]
+      },
+      {
+        "name": "`this`, `super`, `static`, and `final`",
+        "isNew": false,
+        "resources": [
+          {
+            "url": "https://docs.oracle.com/javase/tutorial/java/javaOO/thiskey.html",
+            "text": "Oracle Keywords"
+          }
+        ]
+      },
+      {
+        "name": "Inheritance and composition",
+        "isNew": false,
+        "resources": [
+          {
+            "url": "https://docs.oracle.com/javase/tutorial/java/IandI/index.html",
+            "text": "Oracle Inheritance"
+          }
+        ]
+      },
+      {
+        "name": "Method overloading and overriding",
+        "isNew": false,
+        "resources": [
+          {
+            "url": "https://docs.oracle.com/javase/tutorial/java/IandI/override.html",
+            "text": "Oracle Overriding"
+          }
+        ]
+      },
+      {
+        "name": "Compile-time and runtime polymorphism",
+        "isNew": false,
+        "resources": [
+          {
+            "url": "https://docs.oracle.com/javase/tutorial/java/IandI/polymorphism.html",
+            "text": "Oracle Polymorphism"
+          }
+        ]
+      },
+      {
+        "name": "Abstraction, interfaces, and encapsulation",
+        "isNew": false,
+        "resources": [
+          {
+            "url": "https://docs.oracle.com/javase/tutorial/java/concepts/index.html",
+            "text": "Oracle OOP Concepts"
+          }
+        ]
+      },
+      {
+        "name": "Access modifiers and packages",
+        "isNew": false,
+        "resources": [
+          {
+            "url": "https://docs.oracle.com/javase/tutorial/java/package/index.html",
+            "text": "Oracle Packages"
+          }
+        ]
+      },
+      {
+        "name": "`Object` class methods: `equals`, `hashCode`, `toString`",
+        "isNew": false,
+        "resources": [
+          {
+            "url": "https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html",
+            "text": "Java API Object"
+          }
+        ]
+      },
+      {
+        "name": "Strings, String pool, and immutability",
+        "isNew": false,
+        "resources": [
+          {
+            "url": "https://docs.oracle.com/javase/tutorial/java/data/strings.html",
+            "text": "Oracle Strings"
+          }
+        ]
+      },
+      {
+        "name": "Arrays and multidimensional arrays",
+        "isNew": false,
+        "resources": [
+          {
+            "url": "https://docs.oracle.com/javase/tutorial/java/nutsandbolts/arrays.html",
+            "text": "Oracle Arrays"
+          }
+        ]
+      },
+      {
+        "name": "Wrapper classes, autoboxing, unboxing",
+        "isNew": false,
+        "resources": [
+          {
+            "url": "https://docs.oracle.com/javase/tutorial/java/data/autoboxing.html",
+            "text": "Oracle Autoboxing"
+          }
+        ]
+      },
+      {
+        "name": "Pass-by-value and memory basics",
+        "isNew": false,
+        "resources": [
+          {
+            "url": "https://dev.java/learn/classes-objects/methods/",
+            "text": "Dev.java Methods"
+          }
+        ]
+      },
+      {
+        "name": "JVM, JRE, JDK, compilation and execution",
+        "isNew": false,
+        "resources": [
+          {
+            "url": "https://docs.oracle.com/javase/tutorial/getStarted/intro/index.html",
+            "text": "Oracle JVM/JRE/JDK"
+          }
+        ]
+      },
+      {
+        "name": "String vs StringBuilder vs StringBuffer",
+        "isNew": true,
+        "resources": [
+          {
+            "url": "https://docs.oracle.com/javase/tutorial/java/data/buffers.html",
+            "text": "Oracle StringBuilder"
+          }
+        ]
+      },
+      {
+        "name": "Java memory model (stack vs heap, metaspace)",
+        "isNew": true,
+        "resources": [
+          {
+            "url": "https://docs.oracle.com/javase/specs/jvms/se17/html/index.html",
+            "text": "JVM Spec"
+          }
+        ]
+      },
+      {
+        "name": "`enum` types and `EnumMap`/`EnumSet`",
+        "isNew": true,
+        "resources": [
+          {
+            "url": "https://docs.oracle.com/javase/tutorial/java/javaOO/enum.html",
+            "text": "Oracle Enums"
+          }
+        ]
+      },
+      {
+        "name": "Inner classes, anonymous classes, static blocks",
+        "isNew": true,
+        "resources": [
+          {
+            "url": "https://docs.oracle.com/javase/tutorial/java/javaOO/nested.html",
+            "text": "Oracle Nested Classes"
+          }
+        ]
+      },
+      {
+        "name": "Varargs and covariant return types",
+        "isNew": true,
+        "resources": [
+          {
+            "url": "https://docs.oracle.com/javase/tutorial/java/javaOO/arguments.html",
+            "text": "Oracle Varargs"
+          }
+        ]
+      },
+      {
+        "name": "`instanceof` pattern matching (Java 16+)",
+        "isNew": true,
+        "resources": [
+          {
+            "url": "https://docs.oracle.com/en/java/javase/17/language/pattern-matching-instanceof.html",
+            "text": "Oracle Pattern Matching"
+          }
+        ]
+      },
+      {
+        "name": "Switch expressions (Java 14+)",
+        "isNew": true,
+        "resources": [
+          {
+            "url": "https://docs.oracle.com/en/java/javase/17/language/switch-expressions.html",
+            "text": "Oracle Switch Expr"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 2,
+    "rawTitle": "2️⃣ Core Java & Advanced Java",
+    "title": "Core Java & Advanced Java",
+    "emoji": "2️⃣",
+    "goal": "",
+    "fields": [
+      "done",
+      "explain",
+      "code"
+    ],
+    "fieldLabels": [
+      "✅",
+      "Explain?",
+      "Code?"
+    ],
+    "topics": [
+      {
+        "name": "Exception handling and custom exceptions",
+        "isNew": false,
+        "resources": [
+          {
+            "url": "https://docs.oracle.com/javase/tutorial/essential/exceptions/index.html",
+            "text": "Oracle Exceptions"
+          }
+        ]
+      },
+      {
+        "name": "Collections Framework: List, Set, Queue, Map",
+        "isNew": false,
+        "resources": [
+          {
+            "url": "https://docs.oracle.com/javase/tutorial/collections/index.html",
+            "text": "Oracle Collections"
+          }
+        ]
+      },
+      {
+        "name": "ArrayList vs LinkedList",
+        "isNew": false,
+        "resources": [
+          {
+            "url": "https://www.baeldung.com/java-arraylist-linkedlist",
+            "text": "Baeldung Comparison"
+          }
+        ]
+      },
+      {
+        "name": "HashMap internals, collisions, and hashing",
+        "isNew": false,
+        "resources": [
+          {
+            "url": "https://github.com/Snailclimb/JavaGuide/blob/main/docs/java/collection/concurrent-hash-map-source-code.md",
+            "text": "JavaGuide HashMap"
+          }
+        ]
+      },
+      {
+        "name": "HashSet, TreeSet, LinkedHashSet",
+        "isNew": false,
+        "resources": [
+          {
+            "url": "https://docs.oracle.com/javase/tutorial/collections/implementations/set.html",
+            "text": "Oracle Set Impl"
+          }
+        ]
+      },
+      {
+        "name": "Comparable vs Comparator",
+        "isNew": false,
+        "resources": [
+          {
+            "url": "https://www.baeldung.com/java-comparator-comparable",
+            "text": "Baeldung Comparable"
+          }
+        ]
+      },
+      {
+        "name": "Generics and bounded types",
+        "isNew": false,
+        "resources": [
+          {
+            "url": "https://docs.oracle.com/javase/tutorial/java/generics/index.html",
+            "text": "Oracle Generics"
+          }
+        ]
+      },
+      {
+        "name": "Iterator and fail-fast behavior",
+        "isNew": false,
+        "resources": [
+          {
+            "url": "https://docs.oracle.com/javase/tutorial/collections/interfaces/collection.html",
+            "text": "Oracle Collections Interface"
+          }
+        ]
+      },
+      {
+        "name": "Lambda expressions and functional interfaces",
+        "isNew": false,
+        "resources": [
+          {
+            "url": "https://docs.oracle.com/javase/tutorial/java/javaOO/lambdaexpressions.html",
+            "text": "Oracle Lambdas"
+          }
+        ]
+      },
+      {
+        "name": "Stream API: map, filter, flatMap, reduce",
+        "isNew": false,
+        "resources": [
+          {
+            "url": "https://docs.oracle.com/javase/8/docs/api/java/util/stream/package-summary.html",
+            "text": "Java Stream API"
+          }
+        ]
+      },
+      {
+        "name": "Optional and method references",
+        "isNew": false,
+        "resources": [
+          {
+            "url": "https://docs.oracle.com/javase/8/docs/api/java/util/Optional.html",
+            "text": "Java Optional API"
+          }
+        ]
+      },
+      {
+        "name": "Date and Time API",
+        "isNew": false,
+        "resources": [
+          {
+            "url": "https://docs.oracle.com/javase/tutorial/datetime/index.html",
+            "text": "Oracle Date-Time"
+          }
+        ]
+      },
+      {
+        "name": "File handling, I/O, and NIO",
+        "isNew": false,
+        "resources": [
+          {
+            "url": "https://docs.oracle.com/javase/tutorial/essential/io/index.html",
+            "text": "Oracle I/O"
+          }
+        ]
+      },
+      {
+        "name": "Serialization basics",
+        "isNew": false,
+        "resources": [
+          {
+            "url": "https://docs.oracle.com/javase/tutorial/jndi/objects/serial.html",
+            "text": "Oracle Serialization"
+          }
+        ]
+      },
+      {
+        "name": "Multithreading and thread lifecycle",
+        "isNew": false,
+        "resources": [
+          {
+            "url": "https://docs.oracle.com/javase/tutorial/essential/concurrency/index.html",
+            "text": "Oracle Concurrency"
+          }
+        ]
+      },
+      {
+        "name": "`synchronized`, `volatile`, and locks",
+        "isNew": false,
+        "resources": [
+          {
+            "url": "https://docs.oracle.com/javase/tutorial/essential/concurrency/sync.html",
+            "text": "Oracle Synchronization"
+          }
+        ]
+      },
+      {
+        "name": "`ExecutorService`, `Future`, `CompletableFuture`",
+        "isNew": false,
+        "resources": [
+          {
+            "url": "https://docs.oracle.com/javase/8/docs/api/java/util/concurrent/package-summary.html",
+            "text": "Java Concurrent API"
+          }
+        ]
+      },
+      {
+        "name": "Race conditions, deadlocks, and thread safety",
+        "isNew": false,
+        "resources": [
+          {
+            "url": "https://docs.oracle.com/javase/tutorial/essential/concurrency/deadlock.html",
+            "text": "Oracle Deadlock"
+          }
+        ]
+      },
+      {
+        "name": "Garbage collection and memory management",
+        "isNew": false,
+        "resources": [
+          {
+            "url": "https://docs.oracle.com/en/java/javase/17/gctuning/index.html",
+            "text": "Oracle GC Tuning"
+          }
+        ]
+      },
+      {
+        "name": "Reflection and annotations",
+        "isNew": false,
+        "resources": [
+          {
+            "url": "https://docs.oracle.com/javase/tutorial/reflect/index.html",
+            "text": "Oracle Reflection"
+          }
+        ]
+      },
+      {
+        "name": "ConcurrentHashMap vs HashMap vs Hashtable",
+        "isNew": true,
+        "resources": [
+          {
+            "url": "https://docs.oracle.com/javase/8/docs/api/java/util/concurrent/ConcurrentHashMap.html",
+            "text": "Java ConcurrentHashMap"
+          }
+        ]
+      },
+      {
+        "name": "BlockingQueue and producer-consumer pattern",
+        "isNew": true,
+        "resources": [
+          {
+            "url": "https://docs.oracle.com/javase/8/docs/api/java/util/concurrent/BlockingQueue.html",
+            "text": "Java BlockingQueue"
+          }
+        ]
+      },
+      {
+        "name": "Thread pools and ForkJoinPool",
+        "isNew": true,
+        "resources": [
+          {
+            "url": "https://docs.oracle.com/javase/tutorial/essential/concurrency/pools.html",
+            "text": "Oracle Thread Pools"
+          }
+        ]
+      },
+      {
+        "name": "Java 8 deep dive (default methods, streams)",
+        "isNew": true,
+        "resources": [
+          {
+            "url": "https://docs.oracle.com/javase/8/docs/technotes/guides/language/defaultMethods.html",
+            "text": "Oracle Default Methods"
+          }
+        ]
+      },
+      {
+        "name": "Java 9–17 features (var, records, sealed, text blocks)",
+        "isNew": true,
+        "resources": [
+          {
+            "url": "https://docs.oracle.com/en/java/javase/17/language/index.html",
+            "text": "Oracle Java 17 Features"
+          }
+        ]
+      },
+      {
+        "name": "GC algorithms (G1, ZGC, Shenandoah)",
+        "isNew": true,
+        "resources": [
+          {
+            "url": "https://docs.oracle.com/en/java/javase/17/gctuning/index.html",
+            "text": "Oracle GC Guide"
+          }
+        ]
+      },
+      {
+        "name": "Class loaders and JIT compiler basics",
+        "isNew": true,
+        "resources": [
+          {
+            "url": "https://docs.oracle.com/javase/specs/jvms/se17/html/index.html",
+            "text": "JVM Spec"
+          }
+        ]
+      },
+      {
+        "name": "Profiling tools (JFR, VisualVM, async-profiler)",
+        "isNew": true,
+        "resources": [
+          {
+            "url": "https://docs.oracle.com/javase/8/docs/technotes/guides/troubleshoot/tooldescr011.html",
+            "text": "Oracle JFR"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 3,
+    "rawTitle": "3️⃣ DSA & Problem-Solving",
+    "title": "DSA & Problem-Solving",
+    "emoji": "3️⃣",
+    "goal": "",
+    "fields": [
+      "done",
+      "explain",
+      "code"
+    ],
+    "fieldLabels": [
+      "✅",
+      "Explain?",
+      "Code?"
+    ],
+    "topics": [
+      {
+        "name": "Big O: time and space complexity",
+        "isNew": false,
+        "resources": [
+          {
+            "url": "https://www.bigocheatsheet.com/",
+            "text": "Big-O Cheat Sheet"
+          }
+        ]
+      },
+      {
+        "name": "Array traversal and manipulation",
+        "isNew": false,
+        "resources": [
+          {
+            "url": "https://leetcode.com/tag/array/",
+            "text": "LeetCode Array Tag"
+          }
+        ]
+      },
+      {
+        "name": "Strings and character frequency",
+        "isNew": false,
+        "resources": [
+          {
+            "url": "https://leetcode.com/tag/string/",
+            "text": "LeetCode String Tag"
+          }
+        ]
+      },
+      {
+        "name": "Hashing and HashMap problems",
+        "isNew": false,
+        "resources": [
+          {
+            "url": "https://leetcode.com/tag/hash-table/",
+            "text": "LeetCode Hash Table"
+          }
+        ]
+      },
+      {
+        "name": "Two pointers",
+        "isNew": false,
+        "resources": [
+          {
+            "url": "https://leetcode.com/discuss/study-guide/1688903/Solved-all-two-pointers-problems-in-100-days",
+            "text": "Two Pointers Guide"
+          }
+        ]
+      },
+      {
+        "name": "Sliding window",
+        "isNew": false,
+        "resources": [
+          {
+            "url": "https://leetcode.com/discuss/study-guide/657507/Sliding-Window-Problems-List",
+            "text": "Sliding Window Guide"
+          }
+        ]
+      },
+      {
+        "name": "Prefix sums",
+        "isNew": false,
+        "resources": [
+          {
+            "url": "https://leetcode.com/tag/prefix-sum/",
+            "text": "LeetCode Prefix Sum"
+          }
+        ]
+      },
+      {
+        "name": "Sorting algorithms (merge, quick, heap, counting)",
+        "isNew": false,
+        "resources": [
+          {
+            "url": "https://www.geeksforgeeks.org/sorting-algorithms/",
+            "text": "GFG Sorting"
+          }
+        ]
+      },
+      {
+        "name": "Binary search and variations",
+        "isNew": false,
+        "resources": [
+          {
+            "url": "https://leetcode.com/tag/binary-search/",
+            "text": "LeetCode Binary Search"
+          }
+        ]
+      },
+      {
+        "name": "Recursion and backtracking",
+        "isNew": false,
+        "resources": [
+          {
+            "url": "https://leetcode.com/tag/backtracking/",
+            "text": "LeetCode Backtracking"
+          }
+        ]
+      },
+      {
+        "name": "Linked lists",
+        "isNew": false,
+        "resources": [
+          {
+            "url": "https://leetcode.com/tag/linked-list/",
+            "text": "LeetCode Linked List"
+          }
+        ]
+      },
+      {
+        "name": "Stacks and queues",
+        "isNew": false,
+        "resources": [
+          {
+            "url": "https://leetcode.com/tag/stack/",
+            "text": "LeetCode Stack"
+          }
+        ]
+      },
+      {
+        "name": "Monotonic stack and queue",
+        "isNew": false,
+        "resources": [
+          {
+            "url": "https://leetcode.com/tag/monotonic-stack/",
+            "text": "LeetCode Monotonic Stack"
+          }
+        ]
+      },
+      {
+        "name": "Binary trees and BST",
+        "isNew": false,
+        "resources": [
+          {
+            "url": "https://leetcode.com/tag/binary-tree/",
+            "text": "LeetCode Binary Tree"
+          }
+        ]
+      },
+      {
+        "name": "Tree traversals: BFS and DFS",
+        "isNew": false,
+        "resources": [
+          {
+            "url": "https://leetcode.com/tag/depth-first-search/",
+            "text": "LeetCode DFS"
+          }
+        ]
+      },
+      {
+        "name": "Heaps and priority queues",
+        "isNew": false,
+        "resources": [
+          {
+            "url": "https://leetcode.com/tag/heap-priority-queue/",
+            "text": "LeetCode Heap"
+          }
+        ]
+      },
+      {
+        "name": "Graphs, BFS and DFS",
+        "isNew": false,
+        "resources": [
+          {
+            "url": "https://leetcode.com/tag/graph/",
+            "text": "LeetCode Graph"
+          }
+        ]
+      },
+      {
+        "name": "Topological sorting and shortest paths",
+        "isNew": false,
+        "resources": [
+          {
+            "url": "https://www.geeksforgeeks.org/topological-sorting/",
+            "text": "GFG Topological Sort"
+          }
+        ]
+      },
+      {
+        "name": "Greedy algorithms",
+        "isNew": false,
+        "resources": [
+          {
+            "url": "https://leetcode.com/tag/greedy/",
+            "text": "LeetCode Greedy"
+          }
+        ]
+      },
+      {
+        "name": "Dynamic programming fundamentals",
+        "isNew": false,
+        "resources": [
+          {
+            "url": "https://leetcode.com/tag/dynamic-programming/",
+            "text": "LeetCode DP"
+          }
+        ]
+      },
+      {
+        "name": "Intervals and matrix problems",
+        "isNew": false,
+        "resources": [
+          {
+            "url": "https://leetcode.com/tag/matrix/",
+            "text": "LeetCode Matrix"
+          }
+        ]
+      },
+      {
+        "name": "Bit manipulation",
+        "isNew": false,
+        "resources": [
+          {
+            "url": "https://leetcode.com/tag/bit-manipulation/",
+            "text": "LeetCode Bit Manipulation"
+          }
+        ]
+      },
+      {
+        "name": "Trie and union-find basics",
+        "isNew": false,
+        "resources": [
+          {
+            "url": "https://leetcode.com/tag/trie/",
+            "text": "LeetCode Trie"
+          },
+          {
+            "url": "https://leetcode.com/tag/union-find/",
+            "text": "Union Find"
+          }
+        ]
+      },
+      {
+        "name": "Divide and conquer",
+        "isNew": true,
+        "resources": [
+          {
+            "url": "https://leetcode.com/tag/divide-and-conquer/",
+            "text": "LeetCode Divide & Conquer"
+          }
+        ]
+      },
+      {
+        "name": "Segment tree / Fenwick tree",
+        "isNew": true,
+        "resources": [
+          {
+            "url": "https://www.geeksforgeeks.org/segment-tree-data-structure/",
+            "text": "GFG Segment Tree"
+          }
+        ]
+      },
+      {
+        "name": "Randomized algorithms",
+        "isNew": true,
+        "resources": [
+          {
+            "url": "https://www.geeksforgeeks.org/randomized-algorithms/",
+            "text": "GFG Randomized"
+          }
+        ]
+      },
+      {
+        "name": "Design problems (LRU, LFU, time-based KV)",
+        "isNew": true,
+        "resources": [
+          {
+            "url": "https://leetcode.com/tag/design/",
+            "text": "LeetCode Design"
+          }
+        ]
+      },
+      {
+        "name": "Pattern library (two-pointer, sliding window, fast-slow)",
+        "isNew": true,
+        "resources": [
+          {
+            "url": "https://leetcode.com/discuss/post/7347258/15-essential-dsa-patterns-for-tech-inter-nxem/",
+            "text": "15 DSA Patterns"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 4,
+    "rawTitle": "4️⃣ SQL & Databases",
+    "title": "SQL & Databases",
+    "emoji": "4️⃣",
+    "goal": "",
+    "fields": [
+      "done",
+      "explain",
+      "query"
+    ],
+    "fieldLabels": [
+      "✅",
+      "Explain?",
+      "Query?"
+    ],
+    "topics": [
+      {
+        "name": "SELECT, WHERE, ORDER BY, DISTINCT",
+        "isNew": false,
+        "resources": [
+          {
+            "url": "https://www.w3schools.com/sql/sql_select.asp",
+            "text": "W3Schools SELECT"
+          }
+        ]
+      },
+      {
+        "name": "Aggregate functions and GROUP BY",
+        "isNew": false,
+        "resources": [
+          {
+            "url": "https://www.w3schools.com/sql/sql_groupby.asp",
+            "text": "W3Schools GROUP BY"
+          }
+        ]
+      },
+      {
+        "name": "HAVING and NULL handling",
+        "isNew": false,
+        "resources": [
+          {
+            "url": "https://www.w3schools.com/sql/sql_having.asp",
+            "text": "W3Schools HAVING"
+          }
+        ]
+      },
+      {
+        "name": "INNER, LEFT, RIGHT, and self joins",
+        "isNew": false,
+        "resources": [
+          {
+            "url": "https://www.postgresql.org/docs/current/queries-table-expressions.html#QUERIES-JOIN",
+            "text": "PostgreSQL Joins"
+          }
+        ]
+      },
+      {
+        "name": "Subqueries and correlated subqueries",
+        "isNew": false,
+        "resources": [
+          {
+            "url": "https://www.w3schools.com/sql/sql_subqueries.asp",
+            "text": "W3Schools Subqueries"
+          }
+        ]
+      },
+      {
+        "name": "CTEs and recursive CTEs",
+        "isNew": false,
+        "resources": [
+          {
+            "url": "https://www.postgresql.org/docs/current/queries-with.html",
+            "text": "PostgreSQL CTE"
+          }
+        ]
+      },
+      {
+        "name": "Window functions: ROW_NUMBER, RANK, DENSE_RANK",
+        "isNew": false,
+        "resources": [
+          {
+            "url": "https://www.postgresql.org/docs/current/tutorial-window.html",
+            "text": "PostgreSQL Window"
+          }
+        ]
+      },
+      {
+        "name": "Second-highest salary and top-N queries",
+        "isNew": false,
+        "resources": [
+          {
+            "url": "https://leetcode.com/problems/second-highest-salary/",
+            "text": "LeetCode #176"
+          }
+        ]
+      },
+      {
+        "name": "Primary, foreign, unique, and check constraints",
+        "isNew": false,
+        "resources": [
+          {
+            "url": "https://www.w3schools.com/sql/sql_constraints.asp",
+            "text": "W3Schools Constraints"
+          }
+        ]
+      },
+      {
+        "name": "Normalization and denormalization",
+        "isNew": false,
+        "resources": [
+          {
+            "url": "https://www.geeksforgeeks.org/normal-forms-in-dbms/",
+            "text": "GFG Normalization"
+          }
+        ]
+      },
+      {
+        "name": "Indexes and composite indexes",
+        "isNew": false,
+        "resources": [
+          {
+            "url": "https://use-the-index-luke.com/",
+            "text": "Use The Index Luke"
+          }
+        ]
+      },
+      {
+        "name": "Transactions and ACID properties",
+        "isNew": false,
+        "resources": [
+          {
+            "url": "https://www.geeksforgeeks.org/acid-properties-in-dbms/",
+            "text": "GFG ACID"
+          }
+        ]
+      },
+      {
+        "name": "Isolation levels, locks, and deadlocks",
+        "isNew": false,
+        "resources": [
+          {
+            "url": "https://www.postgresql.org/docs/current/transaction-iso.html",
+            "text": "PostgreSQL Isolation"
+          }
+        ]
+      },
+      {
+        "name": "Query execution plans and optimization",
+        "isNew": false,
+        "resources": [
+          {
+            "url": "https://use-the-index-luke.com/sql/explain-plan",
+            "text": "Explain Plan Guide"
+          }
+        ]
+      },
+      {
+        "name": "Views, stored procedures, and triggers",
+        "isNew": false,
+        "resources": [
+          {
+            "url": "https://www.w3schools.com/sql/sql_view.asp",
+            "text": "W3Schools Views"
+          }
+        ]
+      },
+      {
+        "name": "Database schema and relationship design",
+        "isNew": false,
+        "resources": [
+          {
+            "url": "https://www.geeksforgeeks.org/database-design/",
+            "text": "GFG DB Design"
+          }
+        ]
+      },
+      {
+        "name": "Pagination and database connection pooling",
+        "isNew": false,
+        "resources": [
+          {
+            "url": "https://www.baeldung.com/spring-boot-hikari",
+            "text": "Baeldung Hikari"
+          }
+        ]
+      },
+      {
+        "name": "Optimistic and pessimistic locking",
+        "isNew": false,
+        "resources": [
+          {
+            "url": "https://www.baeldung.com/jpa-optimistic-locking",
+            "text": "Baeldung Locking"
+          }
+        ]
+      },
+      {
+        "name": "LEAD, LAG, NTILE, FIRST_VALUE",
+        "isNew": true,
+        "resources": [
+          {
+            "url": "https://www.postgresql.org/docs/current/functions-window.html",
+            "text": "PostgreSQL Window Fns"
+          }
+        ]
+      },
+      {
+        "name": "Pivot / unpivot",
+        "isNew": true,
+        "resources": [
+          {
+            "url": "https://learn.microsoft.com/en-us/sql/t-sql/queries/from-using-pivot-and-unpivot",
+            "text": "MS Pivot/Unpivot"
+          }
+        ]
+      },
+      {
+        "name": "Partitioning and sharding strategies",
+        "isNew": true,
+        "resources": [
+          {
+            "url": "https://www.geeksforgeeks.org/database-sharding-a-system-design-concept/",
+            "text": "GFG Sharding"
+          }
+        ]
+      },
+      {
+        "name": "Materialized views",
+        "isNew": true,
+        "resources": [
+          {
+            "url": "https://www.postgresql.org/docs/current/rules-materializedviews.html",
+            "text": "PostgreSQL Mat Views"
+          }
+        ]
+      },
+      {
+        "name": "Flyway / Liquibase migrations",
+        "isNew": true,
+        "resources": [
+          {
+            "url": "https://documentation.red-gate.com/flyway",
+            "text": "Flyway Docs"
+          },
+          {
+            "url": "https://www.liquibase.org/",
+            "text": "Liquibase"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 5,
+    "rawTitle": "5️⃣ Spring & Spring Boot",
+    "title": "Spring & Spring Boot",
+    "emoji": "5️⃣",
+    "goal": "",
+    "fields": [
+      "done",
+      "explain",
+      "code"
+    ],
+    "fieldLabels": [
+      "✅",
+      "Explain?",
+      "Code?"
+    ],
+    "topics": [
+      {
+        "name": "IoC, dependency injection, and application context",
+        "isNew": false,
+        "resources": [
+          {
+            "url": "https://docs.spring.io/spring-framework/reference/core/beans/introduction.html",
+            "text": "Spring IoC Docs"
+          }
+        ]
+      },
+      {
+        "name": "Bean lifecycle and bean scopes",
+        "isNew": false,
+        "resources": [
+          {
+            "url": "https://docs.spring.io/spring-framework/reference/core/beans/factory-scopes.html",
+            "text": "Spring Bean Scopes"
+          }
+        ]
+      },
+      {
+        "name": "Spring annotations and configuration",
+        "isNew": false,
+        "resources": [
+          {
+            "url": "https://docs.spring.io/spring-framework/reference/core/beans/annotation-config.html",
+            "text": "Spring Annotations"
+          }
+        ]
+      },
+      {
+        "name": "Spring Boot starters and auto-configuration",
+        "isNew": false,
+        "resources": [
+          {
+            "url": "https://docs.spring.io/spring-boot/reference/using/build-systems.html#using.build-systems.starters",
+            "text": "Spring Starters"
+          }
+        ]
+      },
+      {
+        "name": "`application.properties` and YAML profiles",
+        "isNew": false,
+        "resources": [
+          {
+            "url": "https://docs.spring.io/spring-boot/how-to/properties-and-configuration.html",
+            "text": "Spring External Config"
+          }
+        ]
+      },
+      {
+        "name": "Spring MVC and request lifecycle",
+        "isNew": false,
+        "resources": [
+          {
+            "url": "https://docs.spring.io/spring-framework/reference/web/webmvc.html",
+            "text": "Spring MVC Docs"
+          }
+        ]
+      },
+      {
+        "name": "REST API design and HTTP methods",
+        "isNew": false,
+        "resources": [
+          {
+            "url": "https://spring.io/guides/tutorials/rest",
+            "text": "Spring REST Guide"
+          }
+        ]
+      },
+      {
+        "name": "Request DTOs, response DTOs, and validation",
+        "isNew": false,
+        "resources": [
+          {
+            "url": "https://docs.spring.io/spring-framework/reference/core/validation/beanvalidation.html",
+            "text": "Spring Validation"
+          }
+        ]
+      },
+      {
+        "name": "Exception handling with `@ControllerAdvice`",
+        "isNew": false,
+        "resources": [
+          {
+            "url": "https://spring.io/blog/2013/11/01/exception-handling-in-spring-mvc",
+            "text": "Spring Exception Handling"
+          }
+        ]
+      },
+      {
+        "name": "Spring Data JPA and Hibernate",
+        "isNew": false,
+        "resources": [
+          {
+            "url": "https://spring.io/projects/spring-data-jpa",
+            "text": "Spring Data JPA"
+          }
+        ]
+      },
+      {
+        "name": "Entity relationships and cascade types",
+        "isNew": false,
+        "resources": [
+          {
+            "url": "https://docs.jboss.org/hibernate/orm/current/userguide/html_single/Hibernate_User_Guide.html#associations",
+            "text": "Hibernate Associations"
+          }
+        ]
+      },
+      {
+        "name": "Lazy vs eager loading",
+        "isNew": false,
+        "resources": [
+          {
+            "url": "https://www.baeldung.com/hibernate-lazy-eager-loading",
+            "text": "Baeldung Lazy/Eager"
+          }
+        ]
+      },
+      {
+        "name": "N+1 query problem",
+        "isNew": false,
+        "resources": [
+          {
+            "url": "https://www.baeldung.com/spring-data-jpa-n-plus-one-problem",
+            "text": "Baeldung N+1"
+          }
+        ]
+      },
+      {
+        "name": "Transactions and propagation",
+        "isNew": false,
+        "resources": [
+          {
+            "url": "https://docs.spring.io/spring-framework/reference/data-access/transaction.html",
+            "text": "Spring Transactions"
+          }
+        ]
+      },
+      {
+        "name": "Pagination and sorting",
+        "isNew": false,
+        "resources": [
+          {
+            "url": "https://docs.spring.io/spring-data/jpa/reference/repositories/query-methods-details.html#repositories.special-parameters",
+            "text": "Spring Pagination"
+          }
+        ]
+      },
+      {
+        "name": "Spring Security filter chain",
+        "isNew": false,
+        "resources": [
+          {
+            "url": "https://docs.spring.io/spring-security/reference/servlet/architecture.html",
+            "text": "Spring Security Architecture"
+          }
+        ]
+      },
+      {
+        "name": "Authentication vs authorization",
+        "isNew": false,
+        "resources": [
+          {
+            "url": "https://docs.spring.io/spring-security/reference/servlet/authentication/index.html",
+            "text": "Spring AuthN"
+          }
+        ]
+      },
+      {
+        "name": "JWT and refresh tokens",
+        "isNew": false,
+        "resources": [
+          {
+            "url": "https://github.com/saibhargav-t/spring-security-jwt",
+            "text": "Spring JWT GitHub"
+          }
+        ]
+      },
+      {
+        "name": "OAuth 2.0 and OpenID Connect basics",
+        "isNew": false,
+        "resources": [
+          {
+            "url": "https://docs.spring.io/spring-security/reference/servlet/oauth2/index.html",
+            "text": "Spring OAuth2"
+          }
+        ]
+      },
+      {
+        "name": "JUnit, Mockito, and integration testing",
+        "isNew": false,
+        "resources": [
+          {
+            "url": "https://docs.spring.io/spring-boot/reference/testing/index.html",
+            "text": "Spring Testing"
+          }
+        ]
+      },
+      {
+        "name": "Actuator, logging, and monitoring",
+        "isNew": false,
+        "resources": [
+          {
+            "url": "https://docs.spring.io/spring-boot/reference/actuator/index.html",
+            "text": "Spring Actuator"
+          }
+        ]
+      },
+      {
+        "name": "Caching with Spring",
+        "isNew": false,
+        "resources": [
+          {
+            "url": "https://docs.spring.io/spring-framework/reference/integration/cache.html",
+            "text": "Spring Cache"
+          }
+        ]
+      },
+      {
+        "name": "API documentation using OpenAPI",
+        "isNew": false,
+        "resources": [
+          {
+            "url": "https://springdoc.org/",
+            "text": "SpringDoc OpenAPI"
+          }
+        ]
+      },
+      {
+        "name": "Spring Events (ApplicationEventPublisher)",
+        "isNew": true,
+        "resources": [
+          {
+            "url": "https://docs.spring.io/spring-framework/reference/core/beans/context-introduction.html#context-functionality-events",
+            "text": "Spring Events"
+          }
+        ]
+      },
+      {
+        "name": "Spring WebFlux and reactive programming",
+        "isNew": true,
+        "resources": [
+          {
+            "url": "https://docs.spring.io/spring-framework/reference/web/webflux.html",
+            "text": "Spring WebFlux"
+          }
+        ]
+      },
+      {
+        "name": "Spring Cloud (Config, Gateway, Circuit Breaker)",
+        "isNew": true,
+        "resources": [
+          {
+            "url": "https://spring.io/projects/spring-cloud",
+            "text": "Spring Cloud"
+          }
+        ]
+      },
+      {
+        "name": "Spring Batch and Spring Integration",
+        "isNew": true,
+        "resources": [
+          {
+            "url": "https://spring.io/projects/spring-batch",
+            "text": "Spring Batch"
+          },
+          {
+            "url": "https://spring.io/projects/spring-integration",
+            "text": "Spring Integration"
+          }
+        ]
+      },
+      {
+        "name": "Spring Kafka",
+        "isNew": true,
+        "resources": [
+          {
+            "url": "https://spring.io/projects/spring-kafka",
+            "text": "Spring Kafka"
+          }
+        ]
+      },
+      {
+        "name": "Testcontainers and WireMock",
+        "isNew": true,
+        "resources": [
+          {
+            "url": "https://testcontainers.com/",
+            "text": "Testcontainers"
+          },
+          {
+            "url": "https://wiremock.org/",
+            "text": "WireMock"
+          }
+        ]
+      },
+      {
+        "name": "Custom auto-configuration",
+        "isNew": true,
+        "resources": [
+          {
+            "url": "https://docs.spring.io/spring-boot/how-to/auto-configuration.html",
+            "text": "Spring Auto-config"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 6,
+    "rawTitle": "6️⃣ Microservices & Backend Engineering",
+    "title": "Microservices & Backend Engineering",
+    "emoji": "6️⃣",
+    "goal": "",
+    "fields": [
+      "done",
+      "explain",
+      "design"
+    ],
+    "fieldLabels": [
+      "✅",
+      "Explain?",
+      "Design?"
+    ],
+    "topics": [
+      {
+        "name": "Monolith vs microservices",
+        "isNew": false,
+        "resources": [
+          {
+            "url": "https://microservices.io/patterns/microservices.html",
+            "text": "microservices.io"
+          }
+        ]
+      },
+      {
+        "name": "Service boundaries and domain modeling",
+        "isNew": false,
+        "resources": [
+          {
+            "url": "https://microservices.io/patterns/decomposition/decompose-by-business-capability.html",
+            "text": "Decompose by Business Capability"
+          }
+        ]
+      },
+      {
+        "name": "API gateway and service discovery",
+        "isNew": false,
+        "resources": [
+          {
+            "url": "https://microservices.io/patterns/apigateway.html",
+            "text": "API Gateway Pattern"
+          }
+        ]
+      },
+      {
+        "name": "REST vs messaging",
+        "isNew": false,
+        "resources": [
+          {
+            "url": "https://microservices.io/patterns/communication-style/messaging.html",
+            "text": "Messaging Pattern"
+          }
+        ]
+      },
+      {
+        "name": "Synchronous vs asynchronous communication",
+        "isNew": false,
+        "resources": [
+          {
+            "url": "https://microservices.io/patterns/communication-style/index.html",
+            "text": "Communication Styles"
+          }
+        ]
+      },
+      {
+        "name": "Kafka and event-driven architecture",
+        "isNew": false,
+        "resources": [
+          {
+            "url": "https://kafka.apache.org/documentation/",
+            "text": "Kafka Docs"
+          }
+        ]
+      },
+      {
+        "name": "Retries, timeouts, and circuit breakers",
+        "isNew": false,
+        "resources": [
+          {
+            "url": "https://resilience4j.readme.io/docs/circuitbreaker",
+            "text": "Resilience4j Circuit Breaker"
+          }
+        ]
+      },
+      {
+        "name": "Idempotency and duplicate requests",
+        "isNew": false,
+        "resources": [
+          {
+            "url": "https://microservices.io/patterns/communication-style/idempotent-consumer.html",
+            "text": "Idempotent Consumer"
+          }
+        ]
+      },
+      {
+        "name": "Distributed transactions and Saga pattern",
+        "isNew": false,
+        "resources": [
+          {
+            "url": "https://microservices.io/patterns/data/saga.html",
+            "text": "Saga Pattern"
+          }
+        ]
+      },
+      {
+        "name": "Centralized configuration and secrets",
+        "isNew": false,
+        "resources": [
+          {
+            "url": "https://spring.io/projects/spring-cloud-config",
+            "text": "Spring Cloud Config"
+          }
+        ]
+      },
+      {
+        "name": "Distributed tracing and correlation IDs",
+        "isNew": false,
+        "resources": [
+          {
+            "url": "https://opentelemetry.io/docs/",
+            "text": "OpenTelemetry"
+          }
+        ]
+      },
+      {
+        "name": "Load balancing and horizontal scaling",
+        "isNew": false,
+        "resources": [
+          {
+            "url": "https://aws.amazon.com/what-is/load-balancing/",
+            "text": "AWS Load Balancing"
+          }
+        ]
+      },
+      {
+        "name": "Redis caching",
+        "isNew": false,
+        "resources": [
+          {
+            "url": "https://redis.io/docs/",
+            "text": "Redis Docs"
+          }
+        ]
+      },
+      {
+        "name": "Rate limiting and throttling",
+        "isNew": false,
+        "resources": [
+          {
+            "url": "https://cloud.google.com/architecture/rate-limiting-strategies-techniques",
+            "text": "Rate Limiting Strategies"
+          }
+        ]
+      },
+      {
+        "name": "Docker images and containers",
+        "isNew": false,
+        "resources": [
+          {
+            "url": "https://docs.docker.com/get-started/",
+            "text": "Docker Get Started"
+          }
+        ]
+      },
+      {
+        "name": "CI/CD pipelines",
+        "isNew": false,
+        "resources": [
+          {
+            "url": "https://docs.github.com/en/actions",
+            "text": "GitHub Actions"
+          }
+        ]
+      },
+      {
+        "name": "Cloud deployment fundamentals",
+        "isNew": false,
+        "resources": [
+          {
+            "url": "https://aws.amazon.com/getting-started/",
+            "text": "AWS Getting Started"
+          }
+        ]
+      },
+      {
+        "name": "Secure API design and OWASP basics",
+        "isNew": false,
+        "resources": [
+          {
+            "url": "https://owasp.org/www-project-api-security/",
+            "text": "OWASP API Security"
+          }
+        ]
+      },
+      {
+        "name": "Service mesh (Istio, Linkerd)",
+        "isNew": true,
+        "resources": [
+          {
+            "url": "https://istio.io/latest/docs/",
+            "text": "Istio Docs"
+          }
+        ]
+      },
+      {
+        "name": "API versioning strategies",
+        "isNew": true,
+        "resources": [
+          {
+            "url": "https://learn.microsoft.com/en-us/azure/architecture/best-practices/api-design#versioning",
+            "text": "Azure API Versioning"
+          }
+        ]
+      },
+      {
+        "name": "Backend for Frontend (BFF) pattern",
+        "isNew": true,
+        "resources": [
+          {
+            "url": "https://learn.microsoft.com/en-us/azure/architecture/patterns/backends-for-frontends",
+            "text": "BFF Pattern"
+          }
+        ]
+      },
+      {
+        "name": "Event sourcing and CQRS",
+        "isNew": true,
+        "resources": [
+          {
+            "url": "https://microservices.io/patterns/data/event-sourcing.html",
+            "text": "Event Sourcing"
+          },
+          {
+            "url": "https://microservices.io/patterns/data/cqrs.html",
+            "text": "CQRS"
+          }
+        ]
+      },
+      {
+        "name": "Outbox pattern and dead-letter queues",
+        "isNew": true,
+        "resources": [
+          {
+            "url": "https://microservices.io/patterns/data/transactional-outbox.html",
+            "text": "Outbox Pattern"
+          }
+        ]
+      },
+      {
+        "name": "Distributed locking (Redis, Zookeeper)",
+        "isNew": true,
+        "resources": [
+          {
+            "url": "https://redis.io/docs/manual/patterns/distributed-locks/",
+            "text": "Redis Distributed Locks"
+          }
+        ]
+      },
+      {
+        "name": "gRPC and GraphQL vs REST",
+        "isNew": true,
+        "resources": [
+          {
+            "url": "https://grpc.io/docs/",
+            "text": "gRPC Docs"
+          },
+          {
+            "url": "https://graphql.org/learn/",
+            "text": "GraphQL Learn"
+          }
+        ]
+      },
+      {
+        "name": "WebSockets and Server-Sent Events",
+        "isNew": true,
+        "resources": [
+          {
+            "url": "https://developer.mozilla.org/en-US/docs/Web/API/WebSockets_API",
+            "text": "MDN WebSockets"
+          },
+          {
+            "url": "https://developer.mozilla.org/en-US/docs/Web/API/Server-sent_events",
+            "text": "SSE"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 7,
+    "rawTitle": "7️⃣ Web Development & Angular",
+    "title": "Web Development & Angular",
+    "emoji": "7️⃣",
+    "goal": "",
+    "fields": [
+      "done",
+      "explain",
+      "code"
+    ],
+    "fieldLabels": [
+      "✅",
+      "Explain?",
+      "Code?"
+    ],
+    "topics": [
+      {
+        "name": "HTML semantics and forms",
+        "isNew": false,
+        "resources": [
+          {
+            "url": "https://developer.mozilla.org/en-US/docs/Learn/HTML",
+            "text": "MDN HTML"
+          }
+        ]
+      },
+      {
+        "name": "CSS layout, Flexbox, Grid, and responsive design",
+        "isNew": false,
+        "resources": [
+          {
+            "url": "https://developer.mozilla.org/en-US/docs/Learn/CSS",
+            "text": "MDN CSS"
+          }
+        ]
+      },
+      {
+        "name": "JavaScript scope, closures, and hoisting",
+        "isNew": false,
+        "resources": [
+          {
+            "url": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Closures",
+            "text": "MDN Closures"
+          }
+        ]
+      },
+      {
+        "name": "Promises, `async/await`, and event loop",
+        "isNew": false,
+        "resources": [
+          {
+            "url": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Event_loop",
+            "text": "MDN Event Loop"
+          }
+        ]
+      },
+      {
+        "name": "Objects, prototypes, and array methods",
+        "isNew": false,
+        "resources": [
+          {
+            "url": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array",
+            "text": "MDN Array"
+          }
+        ]
+      },
+      {
+        "name": "TypeScript types, interfaces, generics, and enums",
+        "isNew": false,
+        "resources": [
+          {
+            "url": "https://www.typescriptlang.org/docs/handbook/intro.html",
+            "text": "TypeScript Handbook"
+          }
+        ]
+      },
+      {
+        "name": "Angular components and templates",
+        "isNew": false,
+        "resources": [
+          {
+            "url": "https://angular.dev/guide/components",
+            "text": "Angular Components"
+          }
+        ]
+      },
+      {
+        "name": "Standalone components and dependency injection",
+        "isNew": false,
+        "resources": [
+          {
+            "url": "https://angular.dev/guide/di",
+            "text": "Angular DI"
+          }
+        ]
+      },
+      {
+        "name": "Lifecycle hooks and change detection",
+        "isNew": false,
+        "resources": [
+          {
+            "url": "https://angular.dev/guide/lifecycle-hooks",
+            "text": "Angular Lifecycle"
+          }
+        ]
+      },
+      {
+        "name": "Services and RxJS Observables",
+        "isNew": false,
+        "resources": [
+          {
+            "url": "https://angular.dev/guide/observables",
+            "text": "Angular Observables"
+          }
+        ]
+      },
+      {
+        "name": "Subjects and common RxJS operators",
+        "isNew": false,
+        "resources": [
+          {
+            "url": "https://www.learnrxjs.io/",
+            "text": "Learn RxJS"
+          }
+        ]
+      },
+      {
+        "name": "Routing, guards, and lazy loading",
+        "isNew": false,
+        "resources": [
+          {
+            "url": "https://angular.dev/guide/routing",
+            "text": "Angular Routing"
+          }
+        ]
+      },
+      {
+        "name": "Template-driven vs reactive forms",
+        "isNew": false,
+        "resources": [
+          {
+            "url": "https://angular.dev/guide/forms",
+            "text": "Angular Forms"
+          }
+        ]
+      },
+      {
+        "name": "HTTP client, interceptors, and error handling",
+        "isNew": false,
+        "resources": [
+          {
+            "url": "https://angular.dev/guide/http",
+            "text": "Angular HTTP"
+          }
+        ]
+      },
+      {
+        "name": "State management basics",
+        "isNew": false,
+        "resources": [
+          {
+            "url": "https://angular.dev/guide/signals",
+            "text": "Angular Signals"
+          }
+        ]
+      },
+      {
+        "name": "Unit testing Angular components",
+        "isNew": false,
+        "resources": [
+          {
+            "url": "https://angular.dev/guide/testing",
+            "text": "Angular Testing"
+          }
+        ]
+      },
+      {
+        "name": "Browser storage, cookies, and CORS",
+        "isNew": false,
+        "resources": [
+          {
+            "url": "https://developer.mozilla.org/en-US/docs/Web/HTTP/CORS",
+            "text": "MDN CORS"
+          }
+        ]
+      },
+      {
+        "name": "Frontend performance and accessibility",
+        "isNew": false,
+        "resources": [
+          {
+            "url": "https://web.dev/learn/accessibility/",
+            "text": "Web.dev A11y"
+          }
+        ]
+      },
+      {
+        "name": "Angular Signals",
+        "isNew": true,
+        "resources": [
+          {
+            "url": "https://angular.dev/guide/signals",
+            "text": "Angular Signals Guide"
+          }
+        ]
+      },
+      {
+        "name": "RxJS higher-order operators",
+        "isNew": true,
+        "resources": [
+          {
+            "url": "https://blog.angular-university.io/rxjs-higher-order-mapping/",
+            "text": "RxJS Higher-Order"
+          }
+        ]
+      },
+      {
+        "name": "Custom directives and pipes",
+        "isNew": true,
+        "resources": [
+          {
+            "url": "https://angular.dev/guide/directives",
+            "text": "Angular Directives"
+          },
+          {
+            "url": "https://angular.dev/guide/pipes",
+            "text": "Pipes"
+          }
+        ]
+      },
+      {
+        "name": "Angular animations",
+        "isNew": true,
+        "resources": [
+          {
+            "url": "https://angular.dev/guide/animations",
+            "text": "Angular Animations"
+          }
+        ]
+      },
+      {
+        "name": "NgRx / Akita / Signal Store",
+        "isNew": true,
+        "resources": [
+          {
+            "url": "https://ngrx.io/guide/store",
+            "text": "NgRx Store"
+          },
+          {
+            "url": "https://ngrx.io/guide/signals/signal-store",
+            "text": "Signal Store"
+          }
+        ]
+      },
+      {
+        "name": "Micro frontends",
+        "isNew": true,
+        "resources": [
+          {
+            "url": "https://micro-frontends.org/",
+            "text": "Micro Frontends"
+          }
+        ]
+      },
+      {
+        "name": "Angular SSR and hydration",
+        "isNew": true,
+        "resources": [
+          {
+            "url": "https://angular.dev/guide/ssr",
+            "text": "Angular SSR"
+          }
+        ]
+      },
+      {
+        "name": "E2E testing (Cypress, Playwright)",
+        "isNew": true,
+        "resources": [
+          {
+            "url": "https://docs.cypress.io/guides/getting-started/installing-cypress",
+            "text": "Cypress Docs"
+          },
+          {
+            "url": "https://playwright.dev/docs/intro",
+            "text": "Playwright Docs"
+          }
+        ]
+      },
+      {
+        "name": "Progressive Web Apps (PWA)",
+        "isNew": true,
+        "resources": [
+          {
+            "url": "https://web.dev/learn/pwa/",
+            "text": "Web.dev PWA"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 8,
+    "rawTitle": "8️⃣ Python & AI/RAG",
+    "title": "Python & AI/RAG",
+    "emoji": "8️⃣",
+    "goal": "",
+    "fields": [
+      "done",
+      "explain",
+      "built"
+    ],
+    "fieldLabels": [
+      "✅",
+      "Explain?",
+      "Built?"
+    ],
+    "topics": [
+      {
+        "name": "Python data types, collections, and functions",
+        "isNew": false,
+        "resources": [
+          {
+            "url": "https://docs.python.org/3/tutorial/index.html",
+            "text": "Python Tutorial"
+          }
+        ]
+      },
+      {
+        "name": "Classes, inheritance, and exceptions",
+        "isNew": false,
+        "resources": [
+          {
+            "url": "https://docs.python.org/3/tutorial/classes.html",
+            "text": "Python Classes"
+          }
+        ]
+      },
+      {
+        "name": "Iterators, generators, and decorators",
+        "isNew": false,
+        "resources": [
+          {
+            "url": "https://docs.python.org/3/tutorial/classes.html#generators",
+            "text": "Python Generators"
+          }
+        ]
+      },
+      {
+        "name": "Virtual environments, packages, and typing",
+        "isNew": false,
+        "resources": [
+          {
+            "url": "https://docs.python.org/3/library/venv.html",
+            "text": "Python venv"
+          }
+        ]
+      },
+      {
+        "name": "`asyncio`, `async/await`, and concurrency",
+        "isNew": false,
+        "resources": [
+          {
+            "url": "https://docs.python.org/3/library/asyncio.html",
+            "text": "Python asyncio"
+          }
+        ]
+      },
+      {
+        "name": "FastAPI routes, validation, and dependency injection",
+        "isNew": false,
+        "resources": [
+          {
+            "url": "https://fastapi.tiangolo.com/tutorial/",
+            "text": "FastAPI Tutorial"
+          }
+        ]
+      },
+      {
+        "name": "Pydantic models and API testing",
+        "isNew": false,
+        "resources": [
+          {
+            "url": "https://docs.pydantic.dev/latest/",
+            "text": "Pydantic Docs"
+          }
+        ]
+      },
+      {
+        "name": "LLMs, tokens, context windows, and temperature",
+        "isNew": false,
+        "resources": [
+          {
+            "url": "https://platform.openai.com/docs/introduction",
+            "text": "OpenAI Docs"
+          }
+        ]
+      },
+      {
+        "name": "Prompt engineering and structured outputs",
+        "isNew": false,
+        "resources": [
+          {
+            "url": "https://www.promptingguide.ai/",
+            "text": "Prompt Engineering Guide"
+          }
+        ]
+      },
+      {
+        "name": "Embeddings and similarity metrics",
+        "isNew": false,
+        "resources": [
+          {
+            "url": "https://platform.openai.com/docs/guides/embeddings",
+            "text": "OpenAI Embeddings"
+          }
+        ]
+      },
+      {
+        "name": "Document ingestion and chunking",
+        "isNew": false,
+        "resources": [
+          {
+            "url": "https://python.langchain.com/docs/concepts/text_splitters/",
+            "text": "LangChain Text Splitters"
+          }
+        ]
+      },
+      {
+        "name": "Vector databases and metadata filtering",
+        "isNew": false,
+        "resources": [
+          {
+            "url": "https://github.com/dannyblaker/vector-database-tutorial",
+            "text": "Vector DB Tutorial"
+          }
+        ]
+      },
+      {
+        "name": "Dense vs BM25 sparse retrieval",
+        "isNew": false,
+        "resources": [
+          {
+            "url": "https://www.pinecone.io/learn/series/rag/rerankers/",
+            "text": "Pinecone RAG Guide"
+          }
+        ]
+      },
+      {
+        "name": "Hybrid search and Reciprocal Rank Fusion",
+        "isNew": false,
+        "resources": [
+          {
+            "url": "https://weaviate.io/blog/hybrid-search-fusion-algorithms",
+            "text": "Weaviate Hybrid Search"
+          }
+        ]
+      },
+      {
+        "name": "Cross-encoder reranking",
+        "isNew": false,
+        "resources": [
+          {
+            "url": "https://www.sbert.net/examples/applications/retrieve_rerank/README.html",
+            "text": "SBERT Retrieve & Rerank"
+          }
+        ]
+      },
+      {
+        "name": "RAG evaluation: Recall@k, MRR, nDCG",
+        "isNew": false,
+        "resources": [
+          {
+            "url": "https://docs.ragas.io/",
+            "text": "RAGAS Docs"
+          }
+        ]
+      },
+      {
+        "name": "Faithfulness, relevance, and hallucinations",
+        "isNew": false,
+        "resources": [
+          {
+            "url": "https://docs.ragas.io/en/stable/concepts/metrics/",
+            "text": "RAGAS Metrics"
+          }
+        ]
+      },
+      {
+        "name": "LLM-as-a-Judge and evaluation datasets",
+        "isNew": false,
+        "resources": [
+          {
+            "url": "https://docs.smith.langchain.com/evaluation/concepts",
+            "text": "LangSmith Evaluation"
+          }
+        ]
+      },
+      {
+        "name": "RAG latency, caching, and scaling",
+        "isNew": false,
+        "resources": [
+          {
+            "url": "https://python.langchain.com/docs/how_to/llm_caching/",
+            "text": "LangChain Caching"
+          }
+        ]
+      },
+      {
+        "name": "Agentic RAG and tool calling",
+        "isNew": false,
+        "resources": [
+          {
+            "url": "https://python.langchain.com/docs/how_to/tool_calling/",
+            "text": "LangChain Tool Calling"
+          }
+        ]
+      },
+      {
+        "name": "JWT authentication for AI services",
+        "isNew": false,
+        "resources": [
+          {
+            "url": "https://fastapi.tiangolo.com/tutorial/security/oauth2-jwt/",
+            "text": "FastAPI Security"
+          }
+        ]
+      },
+      {
+        "name": "Observability, cost, and security of LLM apps",
+        "isNew": false,
+        "resources": [
+          {
+            "url": "https://langfuse.com/docs",
+            "text": "Langfuse Docs"
+          }
+        ]
+      },
+      {
+        "name": "Fine-tuning vs RAG vs prompting",
+        "isNew": true,
+        "resources": [
+          {
+            "url": "https://www.databricks.com/glossary/rag-vs-fine-tuning",
+            "text": "Databricks Guide"
+          }
+        ]
+      },
+      {
+        "name": "LoRA / QLoRA and quantization",
+        "isNew": true,
+        "resources": [
+          {
+            "url": "https://huggingface.co/docs/peft/index",
+            "text": "HuggingFace PEFT"
+          }
+        ]
+      },
+      {
+        "name": "Guardrails and hallucination detection",
+        "isNew": true,
+        "resources": [
+          {
+            "url": "https://www.guardrailsai.com/docs",
+            "text": "Guardrails AI"
+          }
+        ]
+      },
+      {
+        "name": "LangChain / LlamaIndex",
+        "isNew": true,
+        "resources": [
+          {
+            "url": "https://python.langchain.com/docs/tutorials/rag/",
+            "text": "LangChain RAG Tutorial"
+          },
+          {
+            "url": "https://docs.llamaindex.ai/",
+            "text": "LlamaIndex"
+          }
+        ]
+      },
+      {
+        "name": "Vector DB comparison",
+        "isNew": true,
+        "resources": [
+          {
+            "url": "https://github.com/dannyblaker/vector-database-tutorial",
+            "text": "Vector DB Tutorial"
+          }
+        ]
+      },
+      {
+        "name": "Multimodal RAG and Graph RAG",
+        "isNew": true,
+        "resources": [
+          {
+            "url": "https://docs.llamaindex.ai/en/stable/examples/multi_modal/multi_modal_rag/",
+            "text": "LlamaIndex Multimodal"
+          }
+        ]
+      },
+      {
+        "name": "Agent frameworks (LangGraph, CrewAI, AutoGen)",
+        "isNew": true,
+        "resources": [
+          {
+            "url": "https://langchain-ai.github.io/langgraph/",
+            "text": "LangGraph"
+          },
+          {
+            "url": "https://docs.crewai.com/",
+            "text": "CrewAI"
+          }
+        ]
+      },
+      {
+        "name": "Model serving (vLLM, TGI, Ollama)",
+        "isNew": true,
+        "resources": [
+          {
+            "url": "https://docs.vllm.ai/en/latest/",
+            "text": "vLLM Docs"
+          },
+          {
+            "url": "https://ollama.com/",
+            "text": "Ollama"
+          }
+        ]
+      },
+      {
+        "name": "Streaming responses and context window management",
+        "isNew": true,
+        "resources": [
+          {
+            "url": "https://fastapi.tiangolo.com/advanced/custom-response/#streamingresponse",
+            "text": "FastAPI Streaming"
+          }
+        ]
+      },
+      {
+        "name": "RAGAS and evaluation frameworks",
+        "isNew": true,
+        "resources": [
+          {
+            "url": "https://docs.ragas.io/",
+            "text": "RAGAS Docs"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 9,
+    "rawTitle": "9️⃣ System Design & Engineering",
+    "title": "System Design & Engineering",
+    "emoji": "9️⃣",
+    "goal": "",
+    "fields": [
+      "done",
+      "explain",
+      "design"
+    ],
+    "fieldLabels": [
+      "✅",
+      "Explain?",
+      "Design?"
+    ],
+    "topics": [
+      {
+        "name": "Requirements and functional vs non-functional needs",
+        "isNew": false,
+        "resources": [
+          {
+            "url": "https://github.com/donnemartin/system-design-primer",
+            "text": "System Design Primer"
+          }
+        ]
+      },
+      {
+        "name": "Latency, throughput, and availability",
+        "isNew": false,
+        "resources": [
+          {
+            "url": "https://github.com/donnemartin/system-design-primer#latency-vs-throughput",
+            "text": "Primer Latency"
+          }
+        ]
+      },
+      {
+        "name": "HTTP, DNS, TCP, and TLS basics",
+        "isNew": false,
+        "resources": [
+          {
+            "url": "https://github.com/donnemartin/system-design-primer#http",
+            "text": "Primer HTTP"
+          }
+        ]
+      },
+      {
+        "name": "Load balancers and reverse proxies",
+        "isNew": false,
+        "resources": [
+          {
+            "url": "https://aws.amazon.com/what-is/load-balancing/",
+            "text": "AWS Load Balancing"
+          }
+        ]
+      },
+      {
+        "name": "Caching strategies and cache invalidation",
+        "isNew": false,
+        "resources": [
+          {
+            "url": "https://github.com/donnemartin/system-design-primer#cache",
+            "text": "Primer Cache"
+          }
+        ]
+      },
+      {
+        "name": "SQL vs NoSQL selection",
+        "isNew": false,
+        "resources": [
+          {
+            "url": "https://github.com/donnemartin/system-design-primer#sql-vs-nosql",
+            "text": "Primer SQL vs NoSQL"
+          }
+        ]
+      },
+      {
+        "name": "Database replication and sharding",
+        "isNew": false,
+        "resources": [
+          {
+            "url": "https://github.com/donnemartin/system-design-primer#database",
+            "text": "Primer Database"
+          }
+        ]
+      },
+      {
+        "name": "Queues, pub/sub, and background jobs",
+        "isNew": false,
+        "resources": [
+          {
+            "url": "https://aws.amazon.com/message-queue/",
+            "text": "AWS SQS"
+          }
+        ]
+      },
+      {
+        "name": "Pagination, filtering, and API versioning",
+        "isNew": false,
+        "resources": [
+          {
+            "url": "https://learn.microsoft.com/en-us/azure/architecture/best-practices/api-design",
+            "text": "Azure API Design"
+          }
+        ]
+      },
+      {
+        "name": "Consistent hashing and distributed systems basics",
+        "isNew": false,
+        "resources": [
+          {
+            "url": "https://www.toptal.com/big-data/consistent-hashing",
+            "text": "Consistent Hashing"
+          }
+        ]
+      },
+      {
+        "name": "CAP theorem and consistency models",
+        "isNew": false,
+        "resources": [
+          {
+            "url": "https://github.com/donnemartin/system-design-primer#cap-theorem",
+            "text": "Primer CAP"
+          }
+        ]
+      },
+      {
+        "name": "Authentication, authorization, and threat modeling",
+        "isNew": false,
+        "resources": [
+          {
+            "url": "https://owasp.org/www-community/Threat_Modeling",
+            "text": "OWASP Threat Modeling"
+          }
+        ]
+      },
+      {
+        "name": "Logging, metrics, and distributed tracing",
+        "isNew": false,
+        "resources": [
+          {
+            "url": "https://opentelemetry.io/docs/",
+            "text": "OpenTelemetry"
+          }
+        ]
+      },
+      {
+        "name": "Unit, integration, contract, and load testing",
+        "isNew": false,
+        "resources": [
+          {
+            "url": "https://martinfowler.com/articles/practical-test-pyramid.html",
+            "text": "Test Pyramid"
+          }
+        ]
+      },
+      {
+        "name": "Git, branching, merging, and pull requests",
+        "isNew": false,
+        "resources": [
+          {
+            "url": "https://git-scm.com/doc",
+            "text": "Git Docs"
+          }
+        ]
+      },
+      {
+        "name": "SOLID principles and design patterns",
+        "isNew": false,
+        "resources": [
+          {
+            "url": "https://refactoring.guru/design-patterns",
+            "text": "Refactoring Guru"
+          }
+        ]
+      },
+      {
+        "name": "Refactoring and code review",
+        "isNew": false,
+        "resources": [
+          {
+            "url": "https://refactoring.guru/refactoring",
+            "text": "Refactoring Guru"
+          }
+        ]
+      },
+      {
+        "name": "Clean code and maintainability",
+        "isNew": false,
+        "resources": [
+          {
+            "url": "https://github.com/ryanmcdermott/clean-code-javascript",
+            "text": "Clean Code JS"
+          }
+        ]
+      },
+      {
+        "name": "Rate limiting algorithms",
+        "isNew": true,
+        "resources": [
+          {
+            "url": "https://cloud.google.com/architecture/rate-limiting-strategies-techniques",
+            "text": "Google Rate Limiting"
+          }
+        ]
+      },
+      {
+        "name": "CDN architecture",
+        "isNew": true,
+        "resources": [
+          {
+            "url": "https://aws.amazon.com/what-is/cdn/",
+            "text": "AWS CDN"
+          }
+        ]
+      },
+      {
+        "name": "Kafka vs RabbitMQ vs SQS",
+        "isNew": true,
+        "resources": [
+          {
+            "url": "https://www.confluent.io/blog/kafka-vs-rabbitmq-vs-activemq/",
+            "text": "Confluent Comparison"
+          }
+        ]
+      },
+      {
+        "name": "Idempotency keys",
+        "isNew": true,
+        "resources": [
+          {
+            "url": "https://stripe.com/docs/api/idempotent_requests",
+            "text": "Stripe Idempotency"
+          }
+        ]
+      },
+      {
+        "name": "Two-phase commit vs Saga",
+        "isNew": true,
+        "resources": [
+          {
+            "url": "https://microservices.io/patterns/data/saga.html",
+            "text": "Saga Pattern"
+          }
+        ]
+      },
+      {
+        "name": "Circuit breaker, bulkhead, sidecar patterns",
+        "isNew": true,
+        "resources": [
+          {
+            "url": "https://learn.microsoft.com/en-us/azure/architecture/patterns/circuit-breaker",
+            "text": "Circuit Breaker"
+          }
+        ]
+      },
+      {
+        "name": "CAP vs BASE",
+        "isNew": true,
+        "resources": [
+          {
+            "url": "https://www.geeksforgeeks.org/cap-theorem-in-dbms/",
+            "text": "GFG CAP"
+          }
+        ]
+      },
+      {
+        "name": "Read replicas and caching strategies",
+        "isNew": true,
+        "resources": [
+          {
+            "url": "https://aws.amazon.com/rds/features/read-replicas/",
+            "text": "AWS Read Replicas"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 10,
+    "rawTitle": "🔟 Project & Behavioral Interviews",
+    "title": "Project & Behavioral Interviews",
+    "emoji": "🔟",
+    "goal": "",
+    "fields": [
+      "done",
+      "prepared"
+    ],
+    "fieldLabels": [
+      "✅",
+      "Prepared?"
+    ],
+    "topics": [
+      {
+        "name": "Explain your Cognizant role and actual contributions",
+        "isNew": false,
+        "resources": [
+          {
+            "url": "https://www.indeed.com/career-advice/interviewing/star-method",
+            "text": "Indeed STAR Guide"
+          }
+        ]
+      },
+      {
+        "name": "Explain one Spring Boot project end to end",
+        "isNew": false,
+        "resources": [
+          {
+            "url": "https://spring.io/guides",
+            "text": "Spring Guides"
+          }
+        ]
+      },
+      {
+        "name": "Explain one Angular project end to end",
+        "isNew": false,
+        "resources": [
+          {
+            "url": "https://angular.dev/tutorials",
+            "text": "Angular Tutorials"
+          }
+        ]
+      },
+      {
+        "name": "Explain CogniDoc architecture and data flow",
+        "isNew": false,
+        "resources": [
+          {
+            "url": "https://github.com/donnemartin/system-design-primer",
+            "text": "System Design Primer"
+          }
+        ]
+      },
+      {
+        "name": "Explain design choices and alternatives",
+        "isNew": false,
+        "resources": [
+          {
+            "url": "https://github.com/donnemartin/system-design-primer",
+            "text": "System Design Primer"
+          }
+        ]
+      },
+      {
+        "name": "Discuss bugs, failures, and how you fixed them",
+        "isNew": false,
+        "resources": [
+          {
+            "url": "https://www.themuse.com/advice/star-interview-method",
+            "text": "The Muse STAR"
+          }
+        ]
+      },
+      {
+        "name": "Explain performance improvements using evidence",
+        "isNew": false,
+        "resources": [
+          {
+            "url": "https://web.dev/vitals/",
+            "text": "Web Vitals"
+          }
+        ]
+      },
+      {
+        "name": "Discuss security, testing, and deployment",
+        "isNew": false,
+        "resources": [
+          {
+            "url": "https://owasp.org/www-project-top-ten/",
+            "text": "OWASP Top 10"
+          }
+        ]
+      },
+      {
+        "name": "Explain trade-offs and lessons learned",
+        "isNew": false,
+        "resources": [
+          {
+            "url": "https://github.com/donnemartin/system-design-primer",
+            "text": "System Design Primer"
+          }
+        ]
+      },
+      {
+        "name": "Prepare introduction and career-change motivation",
+        "isNew": false,
+        "resources": [
+          {
+            "url": "https://www.indeed.com/career-advice/interviewing/tell-me-about-yourself",
+            "text": "Indeed Tell Me About Yourself"
+          }
+        ]
+      },
+      {
+        "name": "Prepare teamwork, conflict, and ownership examples",
+        "isNew": false,
+        "resources": [
+          {
+            "url": "https://www.themuse.com/advice/star-interview-method",
+            "text": "The Muse STAR"
+          }
+        ]
+      },
+      {
+        "name": "Practice explaining code without reading notes",
+        "isNew": false,
+        "resources": [
+          {
+            "url": "https://leetcode.com/",
+            "text": "LeetCode Practice"
+          }
+        ]
+      },
+      {
+        "name": "STAR method (Situation, Task, Action, Result)",
+        "isNew": true,
+        "resources": [
+          {
+            "url": "https://in.indeed.com/career-advice/interviewing/star-method",
+            "text": "Indeed STAR Method"
+          }
+        ]
+      },
+      {
+        "name": "Prepare 5–6 reusable stories",
+        "isNew": true,
+        "resources": [
+          {
+            "url": "https://www.hirevue.com/blog/star-method-interview-questions",
+            "text": "HireVue STAR Guide"
+          }
+        ]
+      },
+      {
+        "name": "Prepare questions to ask the interviewer",
+        "isNew": true,
+        "resources": [
+          {
+            "url": "https://www.themuse.com/advice/51-interview-questions-you-should-ask",
+            "text": "The Muse Questions"
+          }
+        ]
+      },
+      {
+        "name": "Salary negotiation basics",
+        "isNew": true,
+        "resources": [
+          {
+            "url": "https://www.glassdoor.com/blog/salary-negotiation/",
+            "text": "Glassdoor Negotiation"
+          }
+        ]
+      },
+      {
+        "name": "Follow-up email template",
+        "isNew": true,
+        "resources": [
+          {
+            "url": "https://www.indeed.com/career-advice/interviewing/interview-thank-you-email",
+            "text": "Indeed Thank You Email"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 11,
+    "rawTitle": "1️⃣1️⃣ DevOps & Cloud",
+    "title": "DevOps & Cloud",
+    "emoji": "1️⃣1️⃣",
+    "goal": "",
+    "fields": [
+      "done",
+      "explain",
+      "handson"
+    ],
+    "fieldLabels": [
+      "✅",
+      "Explain?",
+      "Hands-on?"
+    ],
+    "topics": [
+      {
+        "name": "Docker fundamentals",
+        "isNew": false,
+        "resources": [
+          {
+            "url": "https://www.docker.com/101-tutorial/",
+            "text": "Docker 101 Tutorial"
+          }
+        ]
+      },
+      {
+        "name": "Docker Compose",
+        "isNew": false,
+        "resources": [
+          {
+            "url": "https://docs.docker.com/compose/",
+            "text": "Docker Compose Docs"
+          }
+        ]
+      },
+      {
+        "name": "Kubernetes basics",
+        "isNew": false,
+        "resources": [
+          {
+            "url": "https://kubernetes.io/docs/tutorials/",
+            "text": "Kubernetes Tutorials"
+          }
+        ]
+      },
+      {
+        "name": "CI/CD with GitHub Actions / Jenkins",
+        "isNew": false,
+        "resources": [
+          {
+            "url": "https://docs.github.com/en/actions",
+            "text": "GitHub Actions"
+          }
+        ]
+      },
+      {
+        "name": "AWS core services (EC2, S3, RDS, Lambda, IAM)",
+        "isNew": false,
+        "resources": [
+          {
+            "url": "https://aws.amazon.com/getting-started/",
+            "text": "AWS Getting Started"
+          }
+        ]
+      },
+      {
+        "name": "Environment variables and secrets management",
+        "isNew": false,
+        "resources": [
+          {
+            "url": "https://12factor.net/config",
+            "text": "12-Factor Config"
+          }
+        ]
+      },
+      {
+        "name": "Blue-green and canary deployments",
+        "isNew": false,
+        "resources": [
+          {
+            "url": "https://martinfowler.com/bliki/CanaryRelease.html",
+            "text": "Martin Fowler Canary"
+          }
+        ]
+      },
+      {
+        "name": "Infrastructure as Code (Terraform basics)",
+        "isNew": false,
+        "resources": [
+          {
+            "url": "https://developer.hashicorp.com/terraform/tutorials",
+            "text": "Terraform Tutorials"
+          }
+        ]
+      },
+      {
+        "name": "Logging stack (ELK / Loki)",
+        "isNew": false,
+        "resources": [
+          {
+            "url": "https://www.elastic.co/guide/index.html",
+            "text": "Elastic Guide"
+          }
+        ]
+      },
+      {
+        "name": "Monitoring (Prometheus + Grafana)",
+        "isNew": false,
+        "resources": [
+          {
+            "url": "https://prometheus.io/docs/introduction/overview/",
+            "text": "Prometheus Docs"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 12,
+    "rawTitle": "1️⃣2️⃣ Security",
+    "title": "Security",
+    "emoji": "1️⃣2️⃣",
+    "goal": "",
+    "fields": [
+      "done",
+      "explain"
+    ],
+    "fieldLabels": [
+      "✅",
+      "Explain?"
+    ],
+    "topics": [
+      {
+        "name": "OWASP Top 10",
+        "isNew": false,
+        "resources": [
+          {
+            "url": "https://owasp.org/Top10/",
+            "text": "OWASP Top 10"
+          }
+        ]
+      },
+      {
+        "name": "SQL injection and prevention",
+        "isNew": false,
+        "resources": [
+          {
+            "url": "https://owasp.org/www-community/attacks/SQL_Injection",
+            "text": "OWASP SQL Injection"
+          }
+        ]
+      },
+      {
+        "name": "XSS and CSRF",
+        "isNew": false,
+        "resources": [
+          {
+            "url": "https://owasp.org/www-community/attacks/xss/",
+            "text": "OWASP XSS"
+          }
+        ]
+      },
+      {
+        "name": "JWT security best practices",
+        "isNew": false,
+        "resources": [
+          {
+            "url": "https://datatracker.ietf.org/doc/html/rfc8725",
+            "text": "RFC 8725 JWT BCP"
+          }
+        ]
+      },
+      {
+        "name": "Password hashing (bcrypt, Argon2)",
+        "isNew": false,
+        "resources": [
+          {
+            "url": "https://cheatsheetseries.owasp.org/cheatsheets/Password_Storage_Cheat_Sheet.html",
+            "text": "OWASP Password Storage"
+          }
+        ]
+      },
+      {
+        "name": "HTTPS / TLS handshake",
+        "isNew": false,
+        "resources": [
+          {
+            "url": "https://www.cloudflare.com/learning/ssl/what-is-https/",
+            "text": "Cloudflare HTTPS"
+          }
+        ]
+      },
+      {
+        "name": "CORS and CSP",
+        "isNew": false,
+        "resources": [
+          {
+            "url": "https://developer.mozilla.org/en-US/docs/Web/HTTP/CORS",
+            "text": "MDN CORS"
+          }
+        ]
+      },
+      {
+        "name": "Rate limiting and DDoS basics",
+        "isNew": false,
+        "resources": [
+          {
+            "url": "https://www.cloudflare.com/learning/ddos/what-is-a-ddos-attack/",
+            "text": "Cloudflare DDoS"
+          }
+        ]
+      },
+      {
+        "name": "Secrets management (Vault, AWS Secrets Manager)",
+        "isNew": false,
+        "resources": [
+          {
+            "url": "https://developer.hashicorp.com/vault/tutorials",
+            "text": "Vault Tutorials"
+          }
+        ]
+      },
+      {
+        "name": "Secure file uploads",
+        "isNew": false,
+        "resources": [
+          {
+            "url": "https://cheatsheetseries.owasp.org/cheatsheets/File_Upload_Cheat_Sheet.html",
+            "text": "OWASP File Upload"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 13,
+    "rawTitle": "1️⃣3️⃣ Testing Strategies",
+    "title": "Testing Strategies",
+    "emoji": "1️⃣3️⃣",
+    "goal": "",
+    "fields": [
+      "done",
+      "explain",
+      "practiced"
+    ],
+    "fieldLabels": [
+      "✅",
+      "Explain?",
+      "Practiced?"
+    ],
+    "topics": [
+      {
+        "name": "Unit testing (JUnit, Mockito)",
+        "isNew": false,
+        "resources": [
+          {
+            "url": "https://junit.org/junit5/docs/current/user-guide/",
+            "text": "JUnit 5 User Guide"
+          }
+        ]
+      },
+      {
+        "name": "Integration testing (Spring Boot Test)",
+        "isNew": false,
+        "resources": [
+          {
+            "url": "https://docs.spring.io/spring-boot/reference/testing/index.html",
+            "text": "Spring Boot Testing"
+          }
+        ]
+      },
+      {
+        "name": "Contract testing (Pact)",
+        "isNew": false,
+        "resources": [
+          {
+            "url": "https://docs.pact.io/",
+            "text": "Pact Docs"
+          }
+        ]
+      },
+      {
+        "name": "Load testing (JMeter, k6)",
+        "isNew": false,
+        "resources": [
+          {
+            "url": "https://k6.io/docs/",
+            "text": "k6 Docs"
+          }
+        ]
+      },
+      {
+        "name": "Testcontainers",
+        "isNew": false,
+        "resources": [
+          {
+            "url": "https://testcontainers.com/guides/",
+            "text": "Testcontainers Guides"
+          }
+        ]
+      },
+      {
+        "name": "Angular unit testing (Jasmine, Karma)",
+        "isNew": false,
+        "resources": [
+          {
+            "url": "https://angular.dev/guide/testing",
+            "text": "Angular Testing"
+          }
+        ]
+      },
+      {
+        "name": "E2E testing (Cypress, Playwright)",
+        "isNew": false,
+        "resources": [
+          {
+            "url": "https://docs.cypress.io/",
+            "text": "Cypress Docs"
+          },
+          {
+            "url": "https://playwright.dev/docs/intro",
+            "text": "Playwright Docs"
+          }
+        ]
+      },
+      {
+        "name": "Test coverage and mutation testing",
+        "isNew": false,
+        "resources": [
+          {
+            "url": "https://pitest.org/",
+            "text": "PIT Mutation Testing"
+          }
+        ]
+      },
+      {
+        "name": "Mocking strategies (mock vs stub vs spy)",
+        "isNew": false,
+        "resources": [
+          {
+            "url": "https://martinfowler.com/articles/mocksArentStubs.html",
+            "text": "Martin Fowler Mocks"
+          }
+        ]
+      },
+      {
+        "name": "TDD workflow",
+        "isNew": false,
+        "resources": [
+          {
+            "url": "https://martinfowler.com/bliki/TestDrivenDevelopment.html",
+            "text": "Martin Fowler TDD"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 14,
+    "rawTitle": "1️⃣4️⃣ Soft Skills & Career",
+    "title": "Soft Skills & Career",
+    "emoji": "1️⃣4️⃣",
+    "goal": "",
+    "fields": [
+      "done",
+      "prepared"
+    ],
+    "fieldLabels": [
+      "✅",
+      "Prepared?"
+    ],
+    "topics": [
+      {
+        "name": "Self-introduction (60–90 seconds)",
+        "isNew": false,
+        "resources": [
+          {
+            "url": "https://www.indeed.com/career-advice/interviewing/tell-me-about-yourself",
+            "text": "Indeed Tell Me About Yourself"
+          }
+        ]
+      },
+      {
+        "name": "Career-change motivation story",
+        "isNew": false,
+        "resources": [
+          {
+            "url": "https://www.themuse.com/advice/star-interview-method",
+            "text": "The Muse STAR"
+          }
+        ]
+      },
+      {
+        "name": "Strengths and weaknesses with examples",
+        "isNew": false,
+        "resources": [
+          {
+            "url": "https://www.indeed.com/career-advice/interviewing/strengths-and-weaknesses",
+            "text": "Indeed Strengths & Weaknesses"
+          }
+        ]
+      },
+      {
+        "name": "Conflict resolution story",
+        "isNew": false,
+        "resources": [
+          {
+            "url": "https://www.themuse.com/advice/star-interview-method",
+            "text": "The Muse STAR"
+          }
+        ]
+      },
+      {
+        "name": "Ownership and leadership story",
+        "isNew": false,
+        "resources": [
+          {
+            "url": "https://www.themuse.com/advice/star-interview-method",
+            "text": "The Muse STAR"
+          }
+        ]
+      },
+      {
+        "name": "Failure and learning story",
+        "isNew": false,
+        "resources": [
+          {
+            "url": "https://www.themuse.com/advice/star-interview-method",
+            "text": "The Muse STAR"
+          }
+        ]
+      },
+      {
+        "name": "Why this company?",
+        "isNew": false,
+        "resources": [
+          {
+            "url": "https://www.glassdoor.com/blog/why-do-you-want-to-work-here/",
+            "text": "Glassdoor Guide"
+          }
+        ]
+      },
+      {
+        "name": "Where do you see yourself in 5 years?",
+        "isNew": false,
+        "resources": [
+          {
+            "url": "https://www.indeed.com/career-advice/interviewing/where-do-you-see-yourself-in-5-years",
+            "text": "Indeed Guide"
+          }
+        ]
+      },
+      {
+        "name": "Questions to ask the interviewer",
+        "isNew": false,
+        "resources": [
+          {
+            "url": "https://www.themuse.com/advice/51-interview-questions-you-should-ask",
+            "text": "The Muse Questions"
+          }
+        ]
+      },
+      {
+        "name": "Salary negotiation",
+        "isNew": false,
+        "resources": [
+          {
+            "url": "https://www.glassdoor.com/blog/salary-negotiation/",
+            "text": "Glassdoor Negotiation"
+          }
+        ]
+      },
+      {
+        "name": "LinkedIn and resume polish",
+        "isNew": false,
+        "resources": [
+          {
+            "url": "https://www.linkedin.com/help/linkedin/answer/a507508",
+            "text": "LinkedIn Profile Tips"
+          }
+        ]
+      },
+      {
+        "name": "Follow-up email template",
+        "isNew": false,
+        "resources": [
+          {
+            "url": "https://www.indeed.com/career-advice/interviewing/interview-thank-you-email",
+            "text": "Indeed Thank You Email"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 15,
+    "rawTitle": "1️⃣5️⃣ Mock Interview Preparation",
+    "title": "Mock Interview Preparation",
+    "emoji": "1️⃣5️⃣",
+    "goal": "",
+    "fields": [
+      "done",
+      "activityDone"
+    ],
+    "fieldLabels": [
+      "✅",
+      "Done?"
+    ],
+    "topics": [
+      {
+        "name": "5 coding mock interviews (DSA)",
+        "isNew": false,
+        "resources": [
+          {
+            "url": "https://leetcode.com/",
+            "text": "LeetCode"
+          },
+          {
+            "url": "https://www.pramp.com/",
+            "text": "Pramp"
+          }
+        ]
+      },
+      {
+        "name": "3 system design mock interviews",
+        "isNew": false,
+        "resources": [
+          {
+            "url": "https://github.com/donnemartin/system-design-primer",
+            "text": "System Design Primer"
+          }
+        ]
+      },
+      {
+        "name": "3 behavioral mock interviews",
+        "isNew": false,
+        "resources": [
+          {
+            "url": "https://www.themuse.com/advice/star-interview-method",
+            "text": "The Muse STAR"
+          }
+        ]
+      },
+      {
+        "name": "2 Java deep-dive mock interviews",
+        "isNew": false,
+        "resources": [
+          {
+            "url": "https://dev.java/learn/",
+            "text": "Dev.java"
+          }
+        ]
+      },
+      {
+        "name": "2 Spring Boot mock interviews",
+        "isNew": false,
+        "resources": [
+          {
+            "url": "https://spring.io/guides",
+            "text": "Spring Guides"
+          }
+        ]
+      },
+      {
+        "name": "2 SQL mock interviews",
+        "isNew": false,
+        "resources": [
+          {
+            "url": "https://www.w3schools.com/sql/",
+            "text": "W3Schools SQL"
+          }
+        ]
+      },
+      {
+        "name": "2 Angular mock interviews",
+        "isNew": false,
+        "resources": [
+          {
+            "url": "https://angular.dev/tutorials",
+            "text": "Angular Tutorials"
+          }
+        ]
+      },
+      {
+        "name": "2 AI/RAG mock interviews",
+        "isNew": false,
+        "resources": [
+          {
+            "url": "https://docs.ragas.io/",
+            "text": "RAGAS Docs"
+          }
+        ]
+      },
+      {
+        "name": "Record yourself explaining 3 projects",
+        "isNew": false,
+        "resources": [
+          {
+            "url": "https://www.themuse.com/advice/star-interview-method",
+            "text": "The Muse STAR"
+          }
+        ]
+      },
+      {
+        "name": "Practice whiteboard coding without IDE",
+        "isNew": false,
+        "resources": [
+          {
+            "url": "https://leetcode.com/",
+            "text": "LeetCode"
+          }
+        ]
+      }
+    ]
+  }
+]

@@ -1,0 +1,3929 @@
+{
+  "cover": {
+    "emoji": "🧠",
+    "title": "Master DSA Practice Workbook",
+    "subtitle": "Java Foundations · 180+ Beginner Exercises · LeetCode Roadmap",
+    "badges": [
+      "✅ 180+ Practice Prompts",
+      "🔗 130+ LeetCode Problems",
+      "🎯 Interview-Ready Roadmap"
+    ],
+    "note": "For learners who know theory but feel weak at writing code.",
+    "step": "Use in order: Java Basics → Beginner Practice → LeetCode"
+  },
+  "howToUse": {
+    "intro": "🟢 Try every prompt yourself.\n✅ Tick it only when: your code runs · passes your own tests · you can explain the logic aloud.",
+    "ifStuck": [
+      "Try for 20–30 minutes",
+      "Use a hint (not the full solution)",
+      "Close the solution and code again from scratch",
+      "Explain the logic to an imaginary interviewer"
+    ],
+    "importantTip": "📌 Important: Part 1 contains original beginner practice prompts with platform links. Part 2 links to the exact LeetCode problem. Where no exact online judge problem exists, the link opens the closest matching practice section."
+  },
+  "platforms": [
+    {
+      "platform": "🟢 HackerRank Java",
+      "bestFor": "Input/output, loops, arrays, strings, data structures",
+      "link": "https://www.hackerrank.com/domains/java",
+      "label": "hackerrank.com/domains/java"
+    },
+    {
+      "platform": "🔵 CodingBat Java",
+      "bestFor": "Short exercises: String, Array, Logic, Recursion",
+      "link": "https://codingbat.com/java",
+      "label": "codingbat.com/java"
+    },
+    {
+      "platform": "🟡 LeetCode",
+      "bestFor": "Interview-style problems (see Part 2)",
+      "link": "https://leetcode.com/problemset/",
+      "label": "leetcode.com/problemset"
+    },
+    {
+      "platform": "🟠 HackerRank Kit",
+      "bestFor": "Guided: arrays, strings, hashmaps, graphs, DP",
+      "link": "https://www.hackerrank.com/interview/interview-preparation-kit",
+      "label": "Interview Prep Kit"
+    }
+  ],
+  "toc": [
+    {
+      "num": "0",
+      "sectionName": "☕ Java Coding Foundations",
+      "title": "Java Coding Foundations",
+      "emoji": "☕",
+      "topicsCount": "22",
+      "estTime": "1–2 weeks",
+      "isLeetCode": false
+    },
+    {
+      "num": "1",
+      "sectionName": "📊 Arrays",
+      "title": "Arrays",
+      "emoji": "📊",
+      "topicsCount": "28",
+      "estTime": "1–2 weeks",
+      "isLeetCode": false
+    },
+    {
+      "num": "2",
+      "sectionName": "🔤 Strings",
+      "title": "Strings",
+      "emoji": "🔤",
+      "topicsCount": "28",
+      "estTime": "1–2 weeks",
+      "isLeetCode": false
+    },
+    {
+      "num": "3",
+      "sectionName": "🗂️ Hashing & Sets",
+      "title": "️ Hashing & Sets",
+      "emoji": "🗂",
+      "topicsCount": "15",
+      "estTime": "1 week",
+      "isLeetCode": false
+    },
+    {
+      "num": "4",
+      "sectionName": "👉👈 Two Pointers & Sliding Window",
+      "title": "👈 Two Pointers & Sliding Window",
+      "emoji": "👉",
+      "topicsCount": "15",
+      "estTime": "1 week",
+      "isLeetCode": false
+    },
+    {
+      "num": "5",
+      "sectionName": "🔍 Searching, Sorting & Prefix Sums",
+      "title": "Searching, Sorting & Prefix Sums",
+      "emoji": "🔍",
+      "topicsCount": "18",
+      "estTime": "1–2 weeks",
+      "isLeetCode": false
+    },
+    {
+      "num": "6",
+      "sectionName": "🔗 Linked Lists",
+      "title": "Linked Lists",
+      "emoji": "🔗",
+      "topicsCount": "15",
+      "estTime": "1 week",
+      "isLeetCode": false
+    },
+    {
+      "num": "7",
+      "sectionName": "📚 Stacks & Queues",
+      "title": "Stacks & Queues",
+      "emoji": "📚",
+      "topicsCount": "14",
+      "estTime": "1 week",
+      "isLeetCode": false
+    },
+    {
+      "num": "8",
+      "sectionName": "🔄 Recursion & Backtracking",
+      "title": "Recursion & Backtracking",
+      "emoji": "🔄",
+      "topicsCount": "16",
+      "estTime": "1–2 weeks",
+      "isLeetCode": false
+    },
+    {
+      "num": "9",
+      "sectionName": "🌳 Trees, Heaps & Graphs",
+      "title": "Trees, Heaps & Graphs",
+      "emoji": "🌳",
+      "topicsCount": "24",
+      "estTime": "2 weeks",
+      "isLeetCode": false
+    },
+    {
+      "num": "10",
+      "sectionName": "🧮 Dynamic Programming",
+      "title": "Dynamic Programming",
+      "emoji": "🧮",
+      "topicsCount": "18",
+      "estTime": "2 weeks",
+      "isLeetCode": false
+    },
+    {
+      "num": "11",
+      "sectionName": "💰 Greedy Algorithms",
+      "title": "Greedy Algorithms",
+      "emoji": "💰",
+      "topicsCount": "10",
+      "estTime": "1 week",
+      "isLeetCode": false
+    },
+    {
+      "num": "12",
+      "sectionName": "🔢 Bit Manipulation",
+      "title": "Bit Manipulation",
+      "emoji": "🔢",
+      "topicsCount": "10",
+      "estTime": "3–5 days",
+      "isLeetCode": false
+    },
+    {
+      "num": "13",
+      "sectionName": "🏗️ Advanced Data Structures",
+      "title": "️ Advanced Data Structures",
+      "emoji": "🏗",
+      "topicsCount": "12",
+      "estTime": "1–2 weeks",
+      "isLeetCode": false
+    },
+    {
+      "num": "14",
+      "sectionName": "➗ Math & Number Theory",
+      "title": "Math & Number Theory",
+      "emoji": "➗",
+      "topicsCount": "10",
+      "estTime": "3–5 days",
+      "isLeetCode": false
+    },
+    {
+      "num": "15",
+      "sectionName": "🧩 Matrix Problems",
+      "title": "Matrix Problems",
+      "emoji": "🧩",
+      "topicsCount": "10",
+      "estTime": "1 week",
+      "isLeetCode": false
+    },
+    {
+      "num": "16",
+      "sectionName": "🎨 Design Problems",
+      "title": "Design Problems",
+      "emoji": "🎨",
+      "topicsCount": "10",
+      "estTime": "1 week",
+      "isLeetCode": false
+    },
+    {
+      "num": "17",
+      "sectionName": "🏛️ System Design for DSA",
+      "title": "️ System Design for DSA",
+      "emoji": "🏛",
+      "topicsCount": "8",
+      "estTime": "1 week",
+      "isLeetCode": false
+    },
+    {
+      "num": "—",
+      "sectionName": "🎯 LeetCode Interview Roadmap",
+      "title": "LeetCode Interview Roadmap",
+      "emoji": "🎯",
+      "topicsCount": "130+",
+      "estTime": "Ongoing",
+      "isLeetCode": true
+    }
+  ],
+  "sections": [
+    {
+      "id": 0,
+      "rawTitle": "☕ Section 0 — Java Coding Foundations",
+      "title": "Java Coding Foundations",
+      "emoji": "☕",
+      "goal": "🎯 Start here if writing code from scratch is difficult.💡 Goal: Get comfortable with syntax, input/output, loops, and methods.",
+      "isDesignSec": false,
+      "fields": [
+        "done",
+        "code"
+      ],
+      "fieldLabels": [
+        "✅",
+        "#",
+        "Exercise",
+        "Description",
+        "Code?",
+        "Practice Link"
+      ],
+      "exercises": [
+        {
+          "num": "0.1",
+          "name": "🖨️ Print output",
+          "description": "Print your name, age, and a calculated result",
+          "practice": {
+            "url": "https://www.hackerrank.com/domains/java",
+            "text": "Link"
+          }
+        },
+        {
+          "num": "0.2",
+          "name": "⌨️ Read input",
+          "description": "Read integer + word using Scanner; print both",
+          "practice": {
+            "url": "https://www.hackerrank.com/challenges/java-stdin-and-stdout-1",
+            "text": "Link"
+          }
+        },
+        {
+          "num": "0.3",
+          "name": "🧮 Arithmetic calculator",
+          "description": "Sum, difference, product, quotient",
+          "practice": {
+            "url": "https://www.hackerrank.com/challenges/java-if-else",
+            "text": "Link"
+          }
+        },
+        {
+          "num": "0.4",
+          "name": "➕ Positive/negative/zero",
+          "description": "Use if/else to classify",
+          "practice": {
+            "url": "https://www.hackerrank.com/challenges/java-if-else",
+            "text": "Link"
+          }
+        },
+        {
+          "num": "0.5",
+          "name": "🔢 Even or odd",
+          "description": "Divisible by two?",
+          "practice": {
+            "url": "https://codingbat.com/prob/p116624",
+            "text": "Link"
+          }
+        },
+        {
+          "num": "0.6",
+          "name": "🔼 Largest of two",
+          "description": "Print the larger",
+          "practice": {
+            "url": "https://codingbat.com/prob/p191363",
+            "text": "Link"
+          }
+        },
+        {
+          "num": "0.7",
+          "name": "🔼🔼 Largest of three",
+          "description": "Find largest using conditions",
+          "practice": {
+            "url": "https://codingbat.com/prob/p191363",
+            "text": "Link"
+          }
+        },
+        {
+          "num": "0.8",
+          "name": "🔁 Count 1 to N",
+          "description": "Use a for loop",
+          "practice": {
+            "url": "https://www.hackerrank.com/challenges/java-loops-i",
+            "text": "Link"
+          }
+        },
+        {
+          "num": "0.9",
+          "name": "🔽 Count down N to 1",
+          "description": "Use a while loop",
+          "practice": {
+            "url": "https://codingbat.com/prob/p154048",
+            "text": "Link"
+          }
+        },
+        {
+          "num": "0.10",
+          "name": "➗ Sum 1 to N",
+          "description": "Calculate 1 + 2 + … + N",
+          "practice": {
+            "url": "https://codingbat.com/prob/p154048",
+            "text": "Link"
+          }
+        },
+        {
+          "num": "0.11",
+          "name": "✖️ Multiplication table",
+          "description": "Print table for a number",
+          "practice": {
+            "url": "https://www.hackerrank.com/challenges/java-loops",
+            "text": "Link"
+          }
+        },
+        {
+          "num": "0.12",
+          "name": "📦 Method returning sum",
+          "description": "Method accepting two integers",
+          "practice": {
+            "url": "https://codingbat.com/prob/p140272",
+            "text": "Link"
+          }
+        },
+        {
+          "num": "0.13",
+          "name": "🔍 Prime number method",
+          "description": "Write isPrime(n) + test edge cases",
+          "practice": {
+            "url": "https://codingbat.com/prob/p130788",
+            "text": "Link"
+          }
+        },
+        {
+          "num": "0.14",
+          "name": "⭐ Star triangle",
+          "description": "Right triangle with nested loops",
+          "practice": {
+            "url": "https://www.hackerrank.com/challenges/java-loops",
+            "text": "Link"
+          }
+        },
+        {
+          "num": "0.15",
+          "name": "👁️ Trace a loop",
+          "description": "Record variable values each iteration",
+          "practice": {
+            "url": "https://codingbat.com/prob/p154048",
+            "text": "Link"
+          }
+        },
+        {
+          "num": "0.16",
+          "name": "🔀 Switch statement",
+          "description": "Print day-of-week 1–7",
+          "practice": {
+            "url": "https://www.hackerrank.com/challenges/java-if-else",
+            "text": "Link"
+          }
+        },
+        {
+          "num": "0.17",
+          "name": "🔄 Do-while loop",
+          "description": "Execute once, then repeat",
+          "practice": {
+            "url": "https://codingbat.com/prob/p154048",
+            "text": "Link"
+          }
+        },
+        {
+          "num": "0.18",
+          "name": "🎯 Ternary operator",
+          "description": "Rewrite if/else as ternary",
+          "practice": {
+            "url": "https://codingbat.com/prob/p116624",
+            "text": "Link"
+          }
+        },
+        {
+          "num": "0.19",
+          "name": "🛑 Break & continue",
+          "description": "Stop loop early / skip iteration",
+          "practice": {
+            "url": "https://www.hackerrank.com/challenges/java-loops",
+            "text": "Link"
+          }
+        },
+        {
+          "num": "0.20",
+          "name": "🧮 Math class methods",
+          "description": "abs, max, pow, sqrt",
+          "practice": {
+            "url": "https://www.hackerrank.com/challenges/java-loops",
+            "text": "Link"
+          }
+        },
+        {
+          "num": "0.21",
+          "name": "🧵 Type casting",
+          "description": "double ↔ int; observe precision",
+          "practice": {
+            "url": "https://www.hackerrank.com/challenges/java-datatypes",
+            "text": "Link"
+          }
+        },
+        {
+          "num": "0.22",
+          "name": "📝 String formatting",
+          "description": "printf / String.format for aligned output",
+          "practice": {
+            "url": "https://www.hackerrank.com/challenges/java-output-formatting",
+            "text": "Link"
+          }
+        }
+      ]
+    },
+    {
+      "id": 1,
+      "rawTitle": "📊 Section 1 — Arrays",
+      "title": "Arrays",
+      "emoji": "📊",
+      "goal": "🎯 Learn indexes, traversal, updates, and edge cases.💡 Rule: Always check nums.length == 0 and null before coding.",
+      "isDesignSec": false,
+      "fields": [
+        "done",
+        "code"
+      ],
+      "fieldLabels": [
+        "✅",
+        "#",
+        "Exercise",
+        "Description",
+        "Code?",
+        "Practice Link"
+      ],
+      "exercises": [
+        {
+          "num": "1.1",
+          "name": "🖨️ Print every element",
+          "description": "Read N integers, print each",
+          "practice": {
+            "url": "https://www.hackerrank.com/challenges/java-1d-array-introduction",
+            "text": "Link"
+          }
+        },
+        {
+          "num": "1.2",
+          "name": "➕ Sum elements",
+          "description": "Calculate total",
+          "practice": {
+            "url": "https://codingbat.com/prob/p184004",
+            "text": "Link"
+          }
+        },
+        {
+          "num": "1.3",
+          "name": "📊 Average",
+          "description": "Avoid integer-division mistakes",
+          "practice": {
+            "url": "https://codingbat.com/prob/p184004",
+            "text": "Link"
+          }
+        },
+        {
+          "num": "1.4",
+          "name": "📉📈 Min & max",
+          "description": "Both in one traversal",
+          "practice": {
+            "url": "https://www.hackerrank.com/challenges/java-1d-array-introduction",
+            "text": "Link"
+          }
+        },
+        {
+          "num": "1.5",
+          "name": "🟢🔴 Count even & odd",
+          "description": "Return both counts",
+          "practice": {
+            "url": "https://codingbat.com/prob/p184004",
+            "text": "Link"
+          }
+        },
+        {
+          "num": "1.6",
+          "name": "🎯 Count occurrences",
+          "description": "Matches of a given value",
+          "practice": {
+            "url": "https://codingbat.com/prob/p184004",
+            "text": "Link"
+          }
+        },
+        {
+          "num": "1.7",
+          "name": "🔍 Linear search",
+          "description": "Target index or -1",
+          "practice": {
+            "url": "https://codingbat.com/prob/p184004",
+            "text": "Link"
+          }
+        },
+        {
+          "num": "1.8",
+          "name": "📋 Copy array",
+          "description": "Separate array, same values",
+          "practice": {
+            "url": "https://www.hackerrank.com/challenges/java-1d-array-introduction",
+            "text": "Link"
+          }
+        },
+        {
+          "num": "1.9",
+          "name": "🔄 Reverse using another",
+          "description": "Copy values in reverse order",
+          "practice": {
+            "url": "https://codingbat.com/prob/p184004",
+            "text": "Link"
+          }
+        },
+        {
+          "num": "1.10",
+          "name": "🔄 Reverse in place",
+          "description": "Two pointers",
+          "practice": {
+            "url": "https://leetcode.com/problems/reverse-string/",
+            "text": "LeetCode #344"
+          }
+        },
+        {
+          "num": "1.11",
+          "name": "🥈 Second largest distinct",
+          "description": "Handle duplicates & too few values",
+          "practice": {
+            "url": "https://www.hackerrank.com/challenges/java-1d-array-introduction",
+            "text": "Link"
+          }
+        },
+        {
+          "num": "1.12",
+          "name": "✅ Check sorted",
+          "description": "Non-decreasing order",
+          "practice": {
+            "url": "https://codingbat.com/prob/p184004",
+            "text": "Link"
+          }
+        },
+        {
+          "num": "1.13",
+          "name": "0️⃣ Move zeroes",
+          "description": "Keep non-zero in order",
+          "practice": {
+            "url": "https://leetcode.com/problems/move-zeroes/",
+            "text": "LeetCode #283"
+          }
+        },
+        {
+          "num": "1.14",
+          "name": "🗑️ Remove dupes (sorted)",
+          "description": "Return new logical length",
+          "practice": {
+            "url": "https://leetcode.com/problems/remove-duplicates-from-sorted-array/",
+            "text": "LeetCode #26"
+          }
+        },
+        {
+          "num": "1.15",
+          "name": "➡️ Rotate right by one",
+          "description": "Last value → index zero",
+          "practice": {
+            "url": "https://leetcode.com/problems/rotate-array/",
+            "text": "LeetCode #189"
+          }
+        },
+        {
+          "num": "1.16",
+          "name": "🔗 Merge two arrays",
+          "description": "Combined array",
+          "practice": {
+            "url": "https://leetcode.com/problems/merge-sorted-array/",
+            "text": "LeetCode #88"
+          }
+        },
+        {
+          "num": "1.17",
+          "name": "❓ Missing number",
+          "description": "Values 0..N with one missing",
+          "practice": {
+            "url": "https://leetcode.com/problems/missing-number/",
+            "text": "LeetCode #268"
+          }
+        },
+        {
+          "num": "1.18",
+          "name": "🔁 Find duplicates",
+          "description": "Values occurring > once",
+          "practice": {
+            "url": "https://leetcode.com/problems/find-all-duplicates-in-an-array/",
+            "text": "LeetCode #442"
+          }
+        },
+        {
+          "num": "1.19",
+          "name": "🗺️ Frequency map",
+          "description": "Count how often each occurs",
+          "practice": {
+            "url": "https://www.hackerrank.com/challenges/java-1d-array-introduction",
+            "text": "Link"
+          }
+        },
+        {
+          "num": "1.20",
+          "name": "🎯 Two Sum (brute)",
+          "description": "Nested loops",
+          "practice": {
+            "url": "https://leetcode.com/problems/two-sum/",
+            "text": "LeetCode #1"
+          }
+        },
+        {
+          "num": "1.21",
+          "name": "🔄 Rotate by K",
+          "description": "Right by k steps; handle k > n",
+          "practice": {
+            "url": "https://leetcode.com/problems/rotate-array/",
+            "text": "LeetCode #189"
+          }
+        },
+        {
+          "num": "1.22",
+          "name": "📈 Max consecutive ones",
+          "description": "Longest run of 1s",
+          "practice": {
+            "url": "https://leetcode.com/problems/max-consecutive-ones/",
+            "text": "LeetCode #485"
+          }
+        },
+        {
+          "num": "1.23",
+          "name": "🏔️ Peak element",
+          "description": "nums[i] &gt; nums[i±1]",
+          "practice": {
+            "url": "https://leetcode.com/problems/find-peak-element/",
+            "text": "LeetCode #162"
+          }
+        },
+        {
+          "num": "1.24",
+          "name": "🧮 Product except self",
+          "description": "Multiply all other values",
+          "practice": {
+            "url": "https://leetcode.com/problems/product-of-array-except-self/",
+            "text": "LeetCode #238"
+          }
+        },
+        {
+          "num": "1.25",
+          "name": "🔀 Shuffle array",
+          "description": "Fisher–Yates in place",
+          "practice": {
+            "url": "https://leetcode.com/problems/shuffle-an-array/",
+            "text": "LeetCode #384"
+          }
+        },
+        {
+          "num": "1.26",
+          "name": "📉 Max subarray (brute)",
+          "description": "Try all subarrays",
+          "practice": {
+            "url": "https://leetcode.com/problems/maximum-subarray/",
+            "text": "LeetCode #53"
+          }
+        },
+        {
+          "num": "1.27",
+          "name": "🏗️ Build prefix sums",
+          "description": "prefix[i] = sum 0..i",
+          "practice": {
+            "url": "https://leetcode.com/problems/running-sum-of-1d-array/",
+            "text": "LeetCode #1480"
+          }
+        },
+        {
+          "num": "1.28",
+          "name": "📏 Range sum queries",
+          "description": "Inclusive range sums",
+          "practice": {
+            "url": "https://leetcode.com/problems/range-sum-query-immutable/",
+            "text": "LeetCode #303"
+          }
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "rawTitle": "🔤 Section 2 — Strings",
+      "title": "Strings",
+      "emoji": "🔤",
+      "goal": "🎯 Practice charAt, length, loops, comparisons, StringBuilder.💡 Rule: == compares references; .equals() compares values.",
+      "isDesignSec": false,
+      "fields": [
+        "done",
+        "code"
+      ],
+      "fieldLabels": [
+        "✅",
+        "#",
+        "Exercise",
+        "Description",
+        "Code?",
+        "Practice Link"
+      ],
+      "exercises": [
+        {
+          "num": "2.1",
+          "name": "🖨️ Print char & index",
+          "description": "Use charAt()",
+          "practice": {
+            "url": "https://codingbat.com/prob/p184004",
+            "text": "Link"
+          }
+        },
+        {
+          "num": "2.2",
+          "name": "🔢 Count length manually",
+          "description": "Loop over characters",
+          "practice": {
+            "url": "https://codingbat.com/prob/p184004",
+            "text": "Link"
+          }
+        },
+        {
+          "num": "2.3",
+          "name": "🔤 Vowels & consonants",
+          "description": "Case-insensitive",
+          "practice": {
+            "url": "https://codingbat.com/prob/p184004",
+            "text": "Link"
+          }
+        },
+        {
+          "num": "2.4",
+          "name": "🔢🔤 Letters/digits/spaces",
+          "description": "Classify each char",
+          "practice": {
+            "url": "https://codingbat.com/prob/p184004",
+            "text": "Link"
+          }
+        },
+        {
+          "num": "2.5",
+          "name": "⬆️ Uppercase",
+          "description": "Use Character methods",
+          "practice": {
+            "url": "https://codingbat.com/prob/p184004",
+            "text": "Link"
+          }
+        },
+        {
+          "num": "2.6",
+          "name": "🔄 Reverse with loop",
+          "description": "No reverse() first",
+          "practice": {
+            "url": "https://leetcode.com/problems/reverse-string/",
+            "text": "LeetCode #344"
+          }
+        },
+        {
+          "num": "2.7",
+          "name": "🔄 Reverse with StringBuilder",
+          "description": "Repeat using StringBuilder",
+          "practice": {
+            "url": "https://leetcode.com/problems/reverse-string/",
+            "text": "LeetCode #344"
+          }
+        },
+        {
+          "num": "2.8",
+          "name": "🪞 Palindrome",
+          "description": "Ignore case/punctuation",
+          "practice": {
+            "url": "https://leetcode.com/problems/valid-palindrome/",
+            "text": "LeetCode #125"
+          }
+        },
+        {
+          "num": "2.9",
+          "name": "🎯 Count a character",
+          "description": "Target char matches",
+          "practice": {
+            "url": "https://codingbat.com/prob/p184004",
+            "text": "Link"
+          }
+        },
+        {
+          "num": "2.10",
+          "name": "📍 First & last occurrence",
+          "description": "Target's first & last index",
+          "practice": {
+            "url": "https://codingbat.com/prob/p184004",
+            "text": "Link"
+          }
+        },
+        {
+          "num": "2.11",
+          "name": "📝 Count words",
+          "description": "One or more spaces",
+          "practice": {
+            "url": "https://leetcode.com/problems/length-of-last-word/",
+            "text": "LeetCode #58"
+          }
+        },
+        {
+          "num": "2.12",
+          "name": "🔄 Reverse word order",
+          "description": "Words, not letters",
+          "practice": {
+            "url": "https://leetcode.com/problems/reverse-words-in-a-string/",
+            "text": "LeetCode #151"
+          }
+        },
+        {
+          "num": "2.13",
+          "name": "🚫 Remove spaces",
+          "description": "Build without spaces",
+          "practice": {
+            "url": "https://codingbat.com/prob/p184004",
+            "text": "Link"
+          }
+        },
+        {
+          "num": "2.14",
+          "name": "🗑️ Remove duplicate chars",
+          "description": "Preserve first appearances",
+          "practice": {
+            "url": "https://codingbat.com/prob/p184004",
+            "text": "Link"
+          }
+        },
+        {
+          "num": "2.15",
+          "name": "📊 Character frequency",
+          "description": "Array or HashMap",
+          "practice": {
+            "url": "https://leetcode.com/problems/first-unique-character-in-a-string/",
+            "text": "LeetCode #387"
+          }
+        },
+        {
+          "num": "2.16",
+          "name": "🔀 Anagrams",
+          "description": "Compare counts or sorted",
+          "practice": {
+            "url": "https://leetcode.com/problems/valid-anagram/",
+            "text": "LeetCode #242"
+          }
+        },
+        {
+          "num": "2.17",
+          "name": "🥇 First non-repeating",
+          "description": "Frequency == 1",
+          "practice": {
+            "url": "https://leetcode.com/problems/first-unique-character-in-a-string/",
+            "text": "LeetCode #387"
+          }
+        },
+        {
+          "num": "2.18",
+          "name": "⚖️ Compare strings",
+          "description": "== vs .equals()",
+          "practice": {
+            "url": "https://www.hackerrank.com/challenges/java-strings-introduction",
+            "text": "Link"
+          }
+        },
+        {
+          "num": "2.19",
+          "name": "🗜️ Compress characters",
+          "description": "aaabbc → a3b2c1",
+          "practice": {
+            "url": "https://leetcode.com/problems/string-compression/",
+            "text": "LeetCode #443"
+          }
+        },
+        {
+          "num": "2.20",
+          "name": "📏 Longest word",
+          "description": "Longest in sentence",
+          "practice": {
+            "url": "https://codingbat.com/prob/p184004",
+            "text": "Link"
+          }
+        },
+        {
+          "num": "2.21",
+          "name": "🔗 Longest common prefix",
+          "description": "Compare char by char",
+          "practice": {
+            "url": "https://leetcode.com/problems/longest-common-prefix/",
+            "text": "LeetCode #14"
+          }
+        },
+        {
+          "num": "2.22",
+          "name": "🔢 String to integer",
+          "description": "atoi; signs, overflow",
+          "practice": {
+            "url": "https://leetcode.com/problems/string-to-integer-atoi/",
+            "text": "LeetCode #8"
+          }
+        },
+        {
+          "num": "2.23",
+          "name": "🔍 strStr()",
+          "description": "First occurrence",
+          "practice": {
+            "url": "https://leetcode.com/problems/find-the-index-of-the-first-occurrence-in-a-string/",
+            "text": "LeetCode #28"
+          }
+        },
+        {
+          "num": "2.24",
+          "name": "🪞 Longest palindromic substr",
+          "description": "Expand around center",
+          "practice": {
+            "url": "https://leetcode.com/problems/longest-palindromic-substring/",
+            "text": "LeetCode #5"
+          }
+        },
+        {
+          "num": "2.25",
+          "name": "🏷️ Group anagrams",
+          "description": "Sorted string → list",
+          "practice": {
+            "url": "https://leetcode.com/problems/group-anagrams/",
+            "text": "LeetCode #49"
+          }
+        },
+        {
+          "num": "2.26",
+          "name": "🔄 Reverse string II",
+          "description": "Every 2k characters",
+          "practice": {
+            "url": "https://leetcode.com/problems/reverse-string-ii/",
+            "text": "LeetCode #541"
+          }
+        },
+        {
+          "num": "2.27",
+          "name": "🅰️ Isomorphic strings",
+          "description": "Map both ways",
+          "practice": {
+            "url": "https://leetcode.com/problems/isomorphic-strings/",
+            "text": "LeetCode #205"
+          }
+        },
+        {
+          "num": "2.28",
+          "name": "🧩 Word pattern",
+          "description": "Pattern letters → words",
+          "practice": {
+            "url": "https://leetcode.com/problems/word-pattern/",
+            "text": "LeetCode #290"
+          }
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "rawTitle": "🗂️ Section 3 — Hashing & Sets",
+      "title": "Hashing & Sets",
+      "emoji": "🗂️",
+      "goal": "🎯 Learn when maps and sets make problems simpler.💡 Rule: HashMap for counts/lookups; HashSet for existence/duplicates.",
+      "isDesignSec": false,
+      "fields": [
+        "done",
+        "code"
+      ],
+      "fieldLabels": [
+        "✅",
+        "#",
+        "Exercise",
+        "Description",
+        "Code?",
+        "Practice Link"
+      ],
+      "exercises": [
+        {
+          "num": "3.1",
+          "name": "📊 Frequency of numbers",
+          "description": "HashMap&lt;Integer,Integer&gt;",
+          "practice": {
+            "url": "https://www.hackerrank.com/challenges/java-hashset",
+            "text": "Link"
+          }
+        },
+        {
+          "num": "3.2",
+          "name": "🔁 Detect duplicates",
+          "description": "HashSet",
+          "practice": {
+            "url": "https://leetcode.com/problems/contains-duplicate/",
+            "text": "LeetCode #217"
+          }
+        },
+        {
+          "num": "3.3",
+          "name": "🗑️ Remove dupes (order)",
+          "description": "Keep first appearances",
+          "practice": {
+            "url": "https://leetcode.com/problems/remove-duplicates-from-sorted-array/",
+            "text": "LeetCode #26"
+          }
+        },
+        {
+          "num": "3.4",
+          "name": "🤝 Common elements",
+          "description": "Values in both arrays",
+          "practice": {
+            "url": "https://leetcode.com/problems/intersection-of-two-arrays/",
+            "text": "LeetCode #349"
+          }
+        },
+        {
+          "num": "3.5",
+          "name": "➖ Set difference",
+          "description": "Values only in first",
+          "practice": {
+            "url": "https://www.hackerrank.com/challenges/java-hashset",
+            "text": "Link"
+          }
+        },
+        {
+          "num": "3.6",
+          "name": "🎯 Pairs with target sum",
+          "description": "Start with nested loops",
+          "practice": {
+            "url": "https://leetcode.com/problems/two-sum/",
+            "text": "LeetCode #1"
+          }
+        },
+        {
+          "num": "3.7",
+          "name": "🗺️ Two Sum with HashMap",
+          "description": "Store values seen",
+          "practice": {
+            "url": "https://leetcode.com/problems/two-sum/",
+            "text": "LeetCode #1"
+          }
+        },
+        {
+          "num": "3.8",
+          "name": "👑 Majority element",
+          "description": "Appears &gt; n/2 times",
+          "practice": {
+            "url": "https://leetcode.com/problems/majority-element/",
+            "text": "LeetCode #169"
+          }
+        },
+        {
+          "num": "3.9",
+          "name": "📂 Group by first letter",
+          "description": "Initial → list of words",
+          "practice": {
+            "url": "https://leetcode.com/problems/group-anagrams/",
+            "text": "LeetCode #49"
+          }
+        },
+        {
+          "num": "3.10",
+          "name": "🔀 Anagram via counts",
+          "description": "Compare without sorting",
+          "practice": {
+            "url": "https://leetcode.com/problems/valid-anagram/",
+            "text": "LeetCode #242"
+          }
+        },
+        {
+          "num": "3.11",
+          "name": "📈 Longest consecutive",
+          "description": "HashSet for O(n)",
+          "practice": {
+            "url": "https://leetcode.com/problems/longest-consecutive-sequence/",
+            "text": "LeetCode #128"
+          }
+        },
+        {
+          "num": "3.12",
+          "name": "🏆 Top K frequent",
+          "description": "Min-heap or bucket sort",
+          "practice": {
+            "url": "https://leetcode.com/problems/top-k-frequent-elements/",
+            "text": "LeetCode #347"
+          }
+        },
+        {
+          "num": "3.13",
+          "name": "🧮 Subarray sum = K",
+          "description": "Prefix sum + HashMap",
+          "practice": {
+            "url": "https://leetcode.com/problems/subarray-sum-equals-k/",
+            "text": "LeetCode #560"
+          }
+        },
+        {
+          "num": "3.14",
+          "name": "😊 Happy number",
+          "description": "Cycle detection",
+          "practice": {
+            "url": "https://leetcode.com/problems/happy-number/",
+            "text": "LeetCode #202"
+          }
+        },
+        {
+          "num": "3.15",
+          "name": "🐂 Bulls and cows",
+          "description": "Exact & misplaced matches",
+          "practice": {
+            "url": "https://leetcode.com/problems/bulls-and-cows/",
+            "text": "LeetCode #299"
+          }
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "rawTitle": "👉👈 Section 4 — Two Pointers & Sliding Window",
+      "title": "Two Pointers & Sliding Window",
+      "emoji": "👉👈",
+      "goal": "🎯 Use moving indexes for arrays and strings.💡 Rule: Two pointers usually need sorted input; sliding window usually needs contiguous subarrays.",
+      "isDesignSec": false,
+      "fields": [
+        "done",
+        "code"
+      ],
+      "fieldLabels": [
+        "✅",
+        "#",
+        "Exercise",
+        "Description",
+        "Code?",
+        "Practice Link"
+      ],
+      "exercises": [
+        {
+          "num": "4.1",
+          "name": "🎯 Pair sum in sorted",
+          "description": "Left + right pointers",
+          "practice": {
+            "url": "https://leetcode.com/problems/two-sum-ii-input-array-is-sorted/",
+            "text": "LeetCode #167"
+          }
+        },
+        {
+          "num": "4.2",
+          "name": "🗑️ Remove target in place",
+          "description": "Keep others at front",
+          "practice": {
+            "url": "https://leetcode.com/problems/remove-element/",
+            "text": "LeetCode #27"
+          }
+        },
+        {
+          "num": "4.3",
+          "name": "🔤 Reverse only vowels",
+          "description": "Swap vowels from ends",
+          "practice": {
+            "url": "https://leetcode.com/problems/reverse-vowels-of-a-string/",
+            "text": "LeetCode #345"
+          }
+        },
+        {
+          "num": "4.4",
+          "name": "🔗 Merge sorted",
+          "description": "Traverse both with pointers",
+          "practice": {
+            "url": "https://leetcode.com/problems/merge-sorted-array/",
+            "text": "LeetCode #88"
+          }
+        },
+        {
+          "num": "4.5",
+          "name": "🪞 Palindrome (two ptr)",
+          "description": "Move inward from ends",
+          "practice": {
+            "url": "https://leetcode.com/problems/valid-palindrome/",
+            "text": "LeetCode #125"
+          }
+        },
+        {
+          "num": "4.6",
+          "name": "📊 Max window sum K",
+          "description": "Each window from scratch",
+          "practice": {
+            "url": "https://leetcode.com/problems/maximum-average-subarray-i/",
+            "text": "LeetCode #643"
+          }
+        },
+        {
+          "num": "4.7",
+          "name": "⚡ Optimize window",
+          "description": "Reuse previous window sum",
+          "practice": {
+            "url": "https://leetcode.com/problems/maximum-average-subarray-i/",
+            "text": "LeetCode #643"
+          }
+        },
+        {
+          "num": "4.8",
+          "name": "🔢 Count windows",
+          "description": "Running count/sum",
+          "practice": {
+            "url": "https://leetcode.com/problems/minimum-size-subarray-sum/",
+            "text": "LeetCode #209"
+          }
+        },
+        {
+          "num": "4.9",
+          "name": "🧵 Longest unique (brute)",
+          "description": "Try all substrings",
+          "practice": {
+            "url": "https://leetcode.com/problems/longest-substring-without-repeating-characters/",
+            "text": "LeetCode #3"
+          }
+        },
+        {
+          "num": "4.10",
+          "name": "🔍 Anagram windows",
+          "description": "Compare freq per window",
+          "practice": {
+            "url": "https://leetcode.com/problems/find-all-anagrams-in-a-string/",
+            "text": "LeetCode #438"
+          }
+        },
+        {
+          "num": "4.11",
+          "name": "🏔️ Container most water",
+          "description": "Two pointers, move shorter",
+          "practice": {
+            "url": "https://leetcode.com/problems/container-with-most-water/",
+            "text": "LeetCode #11"
+          }
+        },
+        {
+          "num": "4.12",
+          "name": "3️⃣ 3Sum",
+          "description": "Fix one, two-pointer rest",
+          "practice": {
+            "url": "https://leetcode.com/problems/3sum/",
+            "text": "LeetCode #15"
+          }
+        },
+        {
+          "num": "4.13",
+          "name": "🗑️ Remove dupes II",
+          "description": "At most two occurrences",
+          "practice": {
+            "url": "https://leetcode.com/problems/remove-duplicates-from-sorted-array-ii/",
+            "text": "LeetCode #80"
+          }
+        },
+        {
+          "num": "4.14",
+          "name": "🌊 Trapping rain water",
+          "description": "Two pointers + running max",
+          "practice": {
+            "url": "https://leetcode.com/problems/trapping-rain-water/",
+            "text": "LeetCode #42"
+          }
+        },
+        {
+          "num": "4.15",
+          "name": "🔄 Sliding window max",
+          "description": "Deque-based",
+          "practice": {
+            "url": "https://leetcode.com/problems/sliding-window-maximum/",
+            "text": "LeetCode #239"
+          }
+        }
+      ]
+    },
+    {
+      "id": 5,
+      "rawTitle": "🔍 Section 5 — Searching, Sorting & Prefix Sums",
+      "title": "Searching, Sorting & Prefix Sums",
+      "emoji": "🔍",
+      "goal": "🎯 Implement mechanics before harder variations.💡 Rule: Binary search needs sorted input and a monotonic condition.",
+      "isDesignSec": false,
+      "fields": [
+        "done",
+        "code"
+      ],
+      "fieldLabels": [
+        "✅",
+        "#",
+        "Exercise",
+        "Description",
+        "Code?",
+        "Practice Link"
+      ],
+      "exercises": [
+        {
+          "num": "5.1",
+          "name": "🫧 Bubble sort",
+          "description": "Ascending",
+          "practice": {
+            "url": "https://www.hackerrank.com/challenges/ctci-bubble-sort",
+            "text": "Link"
+          }
+        },
+        {
+          "num": "5.2",
+          "name": "🎯 Selection sort",
+          "description": "Smallest remaining",
+          "practice": {
+            "url": "https://www.hackerrank.com/challenges/ctci-bubble-sort",
+            "text": "Link"
+          }
+        },
+        {
+          "num": "5.3",
+          "name": "🃏 Insertion sort",
+          "description": "Insert into sorted prefix",
+          "practice": {
+            "url": "https://www.hackerrank.com/challenges/insertionsort1",
+            "text": "Link"
+          }
+        },
+        {
+          "num": "5.4",
+          "name": "🔍 Iterative binary search",
+          "description": "Index or -1",
+          "practice": {
+            "url": "https://leetcode.com/problems/binary-search/",
+            "text": "LeetCode #704"
+          }
+        },
+        {
+          "num": "5.5",
+          "name": "🔁 Recursive binary search",
+          "description": "Same, recursive",
+          "practice": {
+            "url": "https://leetcode.com/problems/binary-search/",
+            "text": "LeetCode #704"
+          }
+        },
+        {
+          "num": "5.6",
+          "name": "🥇 First occurrence",
+          "description": "Handle duplicates",
+          "practice": {
+            "url": "https://leetcode.com/problems/find-first-and-last-position-of-element-in-sorted-array/",
+            "text": "LeetCode #34"
+          }
+        },
+        {
+          "num": "5.7",
+          "name": "🥈 Last occurrence",
+          "description": "Handle duplicates",
+          "practice": {
+            "url": "https://leetcode.com/problems/find-first-and-last-position-of-element-in-sorted-array/",
+            "text": "LeetCode #34"
+          }
+        },
+        {
+          "num": "5.8",
+          "name": "🔢 Count occurrences",
+          "description": "Positions or scan",
+          "practice": {
+            "url": "https://leetcode.com/problems/find-first-and-last-position-of-element-in-sorted-array/",
+            "text": "LeetCode #34"
+          }
+        },
+        {
+          "num": "5.9",
+          "name": "🔗 Merge sorted",
+          "description": "One sorted result",
+          "practice": {
+            "url": "https://leetcode.com/problems/merge-sorted-array/",
+            "text": "LeetCode #88"
+          }
+        },
+        {
+          "num": "5.10",
+          "name": "📊 Build prefix sums",
+          "description": "prefix[i] = sum 0..i",
+          "practice": {
+            "url": "https://leetcode.com/problems/running-sum-of-1d-array/",
+            "text": "LeetCode #1480"
+          }
+        },
+        {
+          "num": "5.11",
+          "name": "📏 Range sum queries",
+          "description": "Inclusive",
+          "practice": {
+            "url": "https://leetcode.com/problems/range-sum-query-immutable/",
+            "text": "LeetCode #303"
+          }
+        },
+        {
+          "num": "5.12",
+          "name": "🧮 Product except self",
+          "description": "Multiply all others",
+          "practice": {
+            "url": "https://leetcode.com/problems/product-of-array-except-self/",
+            "text": "LeetCode #238"
+          }
+        },
+        {
+          "num": "5.13",
+          "name": "🏗️ Merge sort",
+          "description": "Divide, sort, merge",
+          "practice": {
+            "url": "https://www.hackerrank.com/challenges/ctci-merge-sort",
+            "text": "Link"
+          }
+        },
+        {
+          "num": "5.14",
+          "name": "⚡ Quick sort",
+          "description": "Partition around pivot",
+          "practice": {
+            "url": "https://www.hackerrank.com/challenges/quicksort1",
+            "text": "Link"
+          }
+        },
+        {
+          "num": "5.15",
+          "name": "🧮 Quickselect",
+          "description": "k-th smallest avg O(n)",
+          "practice": {
+            "url": "https://leetcode.com/problems/kth-largest-element-in-an-array/",
+            "text": "LeetCode #215"
+          }
+        },
+        {
+          "num": "5.16",
+          "name": "🔍 Rotated sorted search",
+          "description": "Modified binary",
+          "practice": {
+            "url": "https://leetcode.com/problems/search-in-rotated-sorted-array/",
+            "text": "LeetCode #33"
+          }
+        },
+        {
+          "num": "5.17",
+          "name": "🔢 Insert position",
+          "description": "Where target fits",
+          "practice": {
+            "url": "https://leetcode.com/problems/search-insert-position/",
+            "text": "LeetCode #35"
+          }
+        },
+        {
+          "num": "5.18",
+          "name": "🕵️ First bad version",
+          "description": "Binary over isBadVersion",
+          "practice": {
+            "url": "https://leetcode.com/problems/first-bad-version/",
+            "text": "LeetCode #278"
+          }
+        }
+      ]
+    },
+    {
+      "id": 6,
+      "rawTitle": "🔗 Section 6 — Linked Lists",
+      "title": "Linked Lists",
+      "emoji": "🔗",
+      "goal": "🎯 Draw nodes and pointers before coding.💡 Rule: Always handle head == null and single-node lists.",
+      "isDesignSec": false,
+      "fields": [
+        "done",
+        "code"
+      ],
+      "fieldLabels": [
+        "✅",
+        "#",
+        "Exercise",
+        "Description",
+        "Code?",
+        "Practice Link"
+      ],
+      "exercises": [
+        {
+          "num": "6.1",
+          "name": "🖨️ Create & print",
+          "description": "Node & traverse to null",
+          "practice": {
+            "url": "https://www.hackerrank.com/challenges/print-the-elements-of-a-linked-list",
+            "text": "Link"
+          }
+        },
+        {
+          "num": "6.2",
+          "name": "🔢 Count nodes",
+          "description": "Return length",
+          "practice": {
+            "url": "https://www.hackerrank.com/challenges/get-the-value-of-the-node-at-a-specific-position-from-the-tail",
+            "text": "Link"
+          }
+        },
+        {
+          "num": "6.3",
+          "name": "🔍 Search a value",
+          "description": "Contains target",
+          "practice": {
+            "url": "https://www.hackerrank.com/challenges/print-the-elements-of-a-linked-list",
+            "text": "Link"
+          }
+        },
+        {
+          "num": "6.4",
+          "name": "⬆️ Insert at beginning",
+          "description": "Update head",
+          "practice": {
+            "url": "https://www.hackerrank.com/challenges/insert-a-node-at-the-head-of-a-linked-list",
+            "text": "Link"
+          }
+        },
+        {
+          "num": "6.5",
+          "name": "⬇️ Insert at end",
+          "description": "Attach new tail",
+          "practice": {
+            "url": "https://www.hackerrank.com/challenges/insert-a-node-at-the-tail-of-a-linked-list",
+            "text": "Link"
+          }
+        },
+        {
+          "num": "6.6",
+          "name": "🗑️ Delete first match",
+          "description": "Handle head deletion",
+          "practice": {
+            "url": "https://leetcode.com/problems/remove-linked-list-elements/",
+            "text": "LeetCode #203"
+          }
+        },
+        {
+          "num": "6.7",
+          "name": "🔄 Reverse iteratively",
+          "description": "prev, curr, next",
+          "practice": {
+            "url": "https://leetcode.com/problems/reverse-linked-list/",
+            "text": "LeetCode #206"
+          }
+        },
+        {
+          "num": "6.8",
+          "name": "🎯 Find middle",
+          "description": "Slow & fast",
+          "practice": {
+            "url": "https://leetcode.com/problems/middle-of-the-linked-list/",
+            "text": "LeetCode #876"
+          }
+        },
+        {
+          "num": "6.9",
+          "name": "🔁 Detect cycle",
+          "description": "Slow & fast",
+          "practice": {
+            "url": "https://leetcode.com/problems/linked-list-cycle/",
+            "text": "LeetCode #141"
+          }
+        },
+        {
+          "num": "6.10",
+          "name": "🔗 Merge two sorted",
+          "description": "Dummy node / manage head",
+          "practice": {
+            "url": "https://leetcode.com/problems/merge-two-sorted-lists/",
+            "text": "LeetCode #21"
+          }
+        },
+        {
+          "num": "6.11",
+          "name": "🗑️ Remove Nth from end",
+          "description": "Two pointers, gap N",
+          "practice": {
+            "url": "https://leetcode.com/problems/remove-nth-node-from-end-of-list/",
+            "text": "LeetCode #19"
+          }
+        },
+        {
+          "num": "6.12",
+          "name": "➕ Add two numbers",
+          "description": "Digits in reverse",
+          "practice": {
+            "url": "https://leetcode.com/problems/add-two-numbers/",
+            "text": "LeetCode #2"
+          }
+        },
+        {
+          "num": "6.13",
+          "name": "🪞 Palindrome list",
+          "description": "Reverse second half",
+          "practice": {
+            "url": "https://leetcode.com/problems/palindrome-linked-list/",
+            "text": "LeetCode #234"
+          }
+        },
+        {
+          "num": "6.14",
+          "name": "🔀 Intersection",
+          "description": "Length difference",
+          "practice": {
+            "url": "https://leetcode.com/problems/intersection-of-two-linked-lists/",
+            "text": "LeetCode #160"
+          }
+        },
+        {
+          "num": "6.15",
+          "name": "🔄 Reverse in groups of K",
+          "description": "Reverse k at a time",
+          "practice": {
+            "url": "https://leetcode.com/problems/reverse-nodes-in-k-group/",
+            "text": "LeetCode #25"
+          }
+        }
+      ]
+    },
+    {
+      "id": 7,
+      "rawTitle": "📚 Section 7 — Stacks & Queues",
+      "title": "Stacks & Queues",
+      "emoji": "📚",
+      "goal": "🎯 Understand LIFO and FIFO by implementing operations.💡 Rule: Stack = push/pop; Queue = enqueue/dequeue.",
+      "isDesignSec": false,
+      "fields": [
+        "done",
+        "code"
+      ],
+      "fieldLabels": [
+        "✅",
+        "#",
+        "Exercise",
+        "Description",
+        "Code?",
+        "Practice Link"
+      ],
+      "exercises": [
+        {
+          "num": "7.1",
+          "name": "📚 Stack using array",
+          "description": "push, pop, peek, isEmpty",
+          "practice": {
+            "url": "https://www.hackerrank.com/challenges/java-stack",
+            "text": "Link"
+          }
+        },
+        {
+          "num": "7.2",
+          "name": "🔄 Reverse string with stack",
+          "description": "Push then pop",
+          "practice": {
+            "url": "https://www.hackerrank.com/challenges/java-stack",
+            "text": "Link"
+          }
+        },
+        {
+          "num": "7.3",
+          "name": "🧩 Balanced parentheses",
+          "description": "(), [], {}",
+          "practice": {
+            "url": "https://leetcode.com/problems/valid-parentheses/",
+            "text": "LeetCode #20"
+          }
+        },
+        {
+          "num": "7.4",
+          "name": "🚶 Queue using array",
+          "description": "enqueue, dequeue, front",
+          "practice": {
+            "url": "https://www.hackerrank.com/challenges/java-queue",
+            "text": "Link"
+          }
+        },
+        {
+          "num": "7.5",
+          "name": "🔀 Stack using two queues",
+          "description": "Analyze operations",
+          "practice": {
+            "url": "https://leetcode.com/problems/implement-stack-using-queues/",
+            "text": "LeetCode #225"
+          }
+        },
+        {
+          "num": "7.6",
+          "name": "🔀 Queue using two stacks",
+          "description": "Transfer when needed",
+          "practice": {
+            "url": "https://leetcode.com/problems/implement-queue-using-stacks/",
+            "text": "LeetCode #232"
+          }
+        },
+        {
+          "num": "7.7",
+          "name": "➡️ Next greater (brute)",
+          "description": "Next larger to the right",
+          "practice": {
+            "url": "https://leetcode.com/problems/next-greater-element-i/",
+            "text": "LeetCode #496"
+          }
+        },
+        {
+          "num": "7.8",
+          "name": "📉 Min stack",
+          "description": "getMin efficiently",
+          "practice": {
+            "url": "https://leetcode.com/problems/min-stack/",
+            "text": "LeetCode #155"
+          }
+        },
+        {
+          "num": "7.9",
+          "name": "🌡️ Daily temperatures",
+          "description": "Monotonic stack",
+          "practice": {
+            "url": "https://leetcode.com/problems/daily-temperatures/",
+            "text": "LeetCode #739"
+          }
+        },
+        {
+          "num": "7.10",
+          "name": "🏗️ Largest rectangle",
+          "description": "Histogram monotonic stack",
+          "practice": {
+            "url": "https://leetcode.com/problems/largest-rectangle-in-histogram/",
+            "text": "LeetCode #84"
+          }
+        },
+        {
+          "num": "7.11",
+          "name": "🧮 Evaluate RPN",
+          "description": "Stack calculator",
+          "practice": {
+            "url": "https://leetcode.com/problems/evaluate-reverse-polish-notation/",
+            "text": "LeetCode #150"
+          }
+        },
+        {
+          "num": "7.12",
+          "name": "🛤️ Simplify path",
+          "description": "Stack for components",
+          "practice": {
+            "url": "https://leetcode.com/problems/simplify-path/",
+            "text": "LeetCode #71"
+          }
+        },
+        {
+          "num": "7.13",
+          "name": "🧮 Basic calculator",
+          "description": "+, -, parentheses",
+          "practice": {
+            "url": "https://leetcode.com/problems/basic-calculator/",
+            "text": "LeetCode #224"
+          }
+        },
+        {
+          "num": "7.14",
+          "name": "🔄 Sliding window max",
+          "description": "Monotonic deque",
+          "practice": {
+            "url": "https://leetcode.com/problems/sliding-window-maximum/",
+            "text": "LeetCode #239"
+          }
+        }
+      ]
+    },
+    {
+      "id": 8,
+      "rawTitle": "🔄 Section 8 — Recursion & Backtracking",
+      "title": "Recursion & Backtracking",
+      "emoji": "🔄",
+      "goal": "🎯 Every recursive solution needs a base case.💡 Rule: Define base case → recurse → combine results.",
+      "isDesignSec": false,
+      "fields": [
+        "done",
+        "code"
+      ],
+      "fieldLabels": [
+        "✅",
+        "#",
+        "Exercise",
+        "Description",
+        "Code?",
+        "Practice Link"
+      ],
+      "exercises": [
+        {
+          "num": "8.1",
+          "name": "🔢 Print 1 to N",
+          "description": "Base case + call order",
+          "practice": {
+            "url": "https://codingbat.com/prob/p154048",
+            "text": "Link"
+          }
+        },
+        {
+          "num": "8.2",
+          "name": "🔢 Print N to 1",
+          "description": "Operation order",
+          "practice": {
+            "url": "https://codingbat.com/prob/p154048",
+            "text": "Link"
+          }
+        },
+        {
+          "num": "8.3",
+          "name": "🧮 Factorial",
+          "description": "Trace calls for N=4",
+          "practice": {
+            "url": "https://codingbat.com/prob/p154048",
+            "text": "Link"
+          }
+        },
+        {
+          "num": "8.4",
+          "name": "🐇 Fibonacci",
+          "description": "Trace repeated work",
+          "practice": {
+            "url": "https://leetcode.com/problems/fibonacci-number/",
+            "text": "LeetCode #509"
+          }
+        },
+        {
+          "num": "8.5",
+          "name": "🔢 Sum digits",
+          "description": "Decimal digits sum",
+          "practice": {
+            "url": "https://codingbat.com/prob/p154048",
+            "text": "Link"
+          }
+        },
+        {
+          "num": "8.6",
+          "name": "🔄 Reverse string",
+          "description": "Indexes or smaller subproblems",
+          "practice": {
+            "url": "https://leetcode.com/problems/reverse-string/",
+            "text": "LeetCode #344"
+          }
+        },
+        {
+          "num": "8.7",
+          "name": "🔢 Binary strings",
+          "description": "0 or 1 at each position",
+          "practice": {
+            "url": "https://codingbat.com/prob/p154048",
+            "text": "Link"
+          }
+        },
+        {
+          "num": "8.8",
+          "name": "📦 Subsets",
+          "description": "Include/exclude elements",
+          "practice": {
+            "url": "https://leetcode.com/problems/subsets/",
+            "text": "LeetCode #78"
+          }
+        },
+        {
+          "num": "8.9",
+          "name": "🔀 Permutations",
+          "description": "Swap and recurse",
+          "practice": {
+            "url": "https://leetcode.com/problems/permutations/",
+            "text": "LeetCode #46"
+          }
+        },
+        {
+          "num": "8.10",
+          "name": "🧩 Combination sum",
+          "description": "Reuse numbers to target",
+          "practice": {
+            "url": "https://leetcode.com/problems/combination-sum/",
+            "text": "LeetCode #39"
+          }
+        },
+        {
+          "num": "8.11",
+          "name": "📞 Phone letter combos",
+          "description": "Backtrack over mapping",
+          "practice": {
+            "url": "https://leetcode.com/problems/letter-combinations-of-a-phone-number/",
+            "text": "LeetCode #17"
+          }
+        },
+        {
+          "num": "8.12",
+          "name": "🧩 Generate parentheses",
+          "description": "Track open/close",
+          "practice": {
+            "url": "https://leetcode.com/problems/generate-parentheses/",
+            "text": "LeetCode #22"
+          }
+        },
+        {
+          "num": "8.13",
+          "name": "🏰 N-Queens",
+          "description": "No attacks",
+          "practice": {
+            "url": "https://leetcode.com/problems/n-queens/",
+            "text": "LeetCode #51"
+          }
+        },
+        {
+          "num": "8.14",
+          "name": "🔍 Word search",
+          "description": "DFS + backtrack grid",
+          "practice": {
+            "url": "https://leetcode.com/problems/word-search/",
+            "text": "LeetCode #79"
+          }
+        },
+        {
+          "num": "8.15",
+          "name": "🧮 Palindrome partition",
+          "description": "Partition into palindromes",
+          "practice": {
+            "url": "https://leetcode.com/problems/palindrome-partitioning/",
+            "text": "LeetCode #131"
+          }
+        },
+        {
+          "num": "8.16",
+          "name": "🗼 Tower of Hanoi",
+          "description": "Move disks between pegs",
+          "practice": {
+            "url": "https://codingbat.com/prob/p154048",
+            "text": "Link"
+          }
+        }
+      ]
+    },
+    {
+      "id": 9,
+      "rawTitle": "🌳 Section 9 — Trees, Heaps & Graphs",
+      "title": "Trees, Heaps & Graphs",
+      "emoji": "🌳",
+      "goal": "🎯 Learn traversals and representation before advanced algorithms.💡 Rule: Trees = recursion; Graphs = BFS/DFS + visited set.",
+      "isDesignSec": false,
+      "fields": [
+        "done",
+        "code"
+      ],
+      "fieldLabels": [
+        "✅",
+        "#",
+        "Exercise",
+        "Description",
+        "Code?",
+        "Practice Link"
+      ],
+      "exercises": [
+        {
+          "num": "9.1",
+          "name": "🌳 Build a tree",
+          "description": "Create nodes, connect children",
+          "practice": {
+            "url": "https://www.hackerrank.com/challenges/tree-preorder-traversal",
+            "text": "Link"
+          },
+          "subsection": "9A. Binary Trees"
+        },
+        {
+          "num": "9.2",
+          "name": "🔄 Pre/in/postorder",
+          "description": "All recursive",
+          "practice": {
+            "url": "https://leetcode.com/problems/binary-tree-preorder-traversal/",
+            "text": "LeetCode #144"
+          },
+          "subsection": "9A. Binary Trees"
+        },
+        {
+          "num": "9.3",
+          "name": "🔢 Count nodes",
+          "description": "left + right + 1",
+          "practice": {
+            "url": "https://www.hackerrank.com/challenges/tree-height-of-a-binary-tree",
+            "text": "Link"
+          },
+          "subsection": "9A. Binary Trees"
+        },
+        {
+          "num": "9.4",
+          "name": "📏 Max depth",
+          "description": "Compare subtree depths",
+          "practice": {
+            "url": "https://leetcode.com/problems/maximum-depth-of-binary-tree/",
+            "text": "LeetCode #104"
+          },
+          "subsection": "9A. Binary Trees"
+        },
+        {
+          "num": "9.5",
+          "name": "📊 Level-order",
+          "description": "Use a queue",
+          "practice": {
+            "url": "https://leetcode.com/problems/binary-tree-level-order-traversal/",
+            "text": "LeetCode #102"
+          },
+          "subsection": "9A. Binary Trees"
+        },
+        {
+          "num": "9.6",
+          "name": "🪞 Invert tree",
+          "description": "Swap children",
+          "practice": {
+            "url": "https://leetcode.com/problems/invert-binary-tree/",
+            "text": "LeetCode #226"
+          },
+          "subsection": "9A. Binary Trees"
+        },
+        {
+          "num": "9.7",
+          "name": "⚖️ Balanced",
+          "description": "Compare subtree heights",
+          "practice": {
+            "url": "https://leetcode.com/problems/balanced-binary-tree/",
+            "text": "LeetCode #110"
+          },
+          "subsection": "9A. Binary Trees"
+        },
+        {
+          "num": "9.8",
+          "name": "🔗 Same tree",
+          "description": "Structure & values",
+          "practice": {
+            "url": "https://leetcode.com/problems/same-tree/",
+            "text": "LeetCode #100"
+          },
+          "subsection": "9A. Binary Trees"
+        },
+        {
+          "num": "9.9",
+          "name": "📏 Diameter",
+          "description": "Max path through node",
+          "practice": {
+            "url": "https://leetcode.com/problems/diameter-of-binary-tree/",
+            "text": "LeetCode #543"
+          },
+          "subsection": "9A. Binary Trees"
+        },
+        {
+          "num": "9.10",
+          "name": "✅ Validate BST",
+          "description": "Inorder increasing",
+          "practice": {
+            "url": "https://leetcode.com/problems/validate-binary-search-tree/",
+            "text": "LeetCode #98"
+          },
+          "subsection": "9A. Binary Trees"
+        },
+        {
+          "num": "9.11",
+          "name": "🥇 Kth smallest BST",
+          "description": "Inorder",
+          "practice": {
+            "url": "https://leetcode.com/problems/kth-smallest-element-in-a-bst/",
+            "text": "LeetCode #230"
+          },
+          "subsection": "9A. Binary Trees"
+        },
+        {
+          "num": "9.12",
+          "name": "👪 LCA in BST",
+          "description": "BST ordering",
+          "practice": {
+            "url": "https://leetcode.com/problems/lowest-common-ancestor-of-a-binary-search-tree/",
+            "text": "LeetCode #235"
+          },
+          "subsection": "9A. Binary Trees"
+        },
+        {
+          "num": "9.13",
+          "name": "📉 Min-heap",
+          "description": "Insert / remove smallest",
+          "practice": {
+            "url": "https://www.hackerrank.com/challenges/java-priority-queue",
+            "text": "Link"
+          },
+          "subsection": "9B. Heaps & Priority Queues"
+        },
+        {
+          "num": "9.14",
+          "name": "🏆 Kth largest",
+          "description": "Min-heap of size k",
+          "practice": {
+            "url": "https://leetcode.com/problems/kth-largest-element-in-an-array/",
+            "text": "LeetCode #215"
+          },
+          "subsection": "9B. Heaps & Priority Queues"
+        },
+        {
+          "num": "9.15",
+          "name": "🪨 Last stone weight",
+          "description": "Max-heap simulation",
+          "practice": {
+            "url": "https://leetcode.com/problems/last-stone-weight/",
+            "text": "LeetCode #1046"
+          },
+          "subsection": "9B. Heaps & Priority Queues"
+        },
+        {
+          "num": "9.16",
+          "name": "🏆 Kth in stream",
+          "description": "Maintain min-heap",
+          "practice": {
+            "url": "https://leetcode.com/problems/kth-largest-element-in-a-stream/",
+            "text": "LeetCode #703"
+          },
+          "subsection": "9B. Heaps & Priority Queues"
+        },
+        {
+          "num": "9.17",
+          "name": "🗺️ Adjacency list",
+          "description": "Undirected graph",
+          "practice": {
+            "url": "https://www.hackerrank.com/challenges/bfsshortreach",
+            "text": "Link"
+          },
+          "subsection": "9C. Graphs"
+        },
+        {
+          "num": "9.18",
+          "name": "🔍 BFS",
+          "description": "Queue + visited",
+          "practice": {
+            "url": "https://leetcode.com/problems/number-of-islands/",
+            "text": "LeetCode #200"
+          },
+          "subsection": "9C. Graphs"
+        },
+        {
+          "num": "9.19",
+          "name": "🔍 DFS",
+          "description": "Recursive + iterative",
+          "practice": {
+            "url": "https://leetcode.com/problems/number-of-islands/",
+            "text": "LeetCode #200"
+          },
+          "subsection": "9C. Graphs"
+        },
+        {
+          "num": "9.20",
+          "name": "🧩 Connected components",
+          "description": "Traverse each unvisited",
+          "practice": {
+            "url": "https://leetcode.com/problems/number-of-connected-components-in-an-undirected-graph/",
+            "text": "LeetCode #323"
+          },
+          "subsection": "9C. Graphs"
+        },
+        {
+          "num": "9.21",
+          "name": "🏝️ Number of islands",
+          "description": "Grid DFS/BFS",
+          "practice": {
+            "url": "https://leetcode.com/problems/number-of-islands/",
+            "text": "LeetCode #200"
+          },
+          "subsection": "9C. Graphs"
+        },
+        {
+          "num": "9.22",
+          "name": "🍊 Rotting oranges",
+          "description": "Multi-source BFS",
+          "practice": {
+            "url": "https://leetcode.com/problems/rotting-oranges/",
+            "text": "LeetCode #994"
+          },
+          "subsection": "9C. Graphs"
+        },
+        {
+          "num": "9.23",
+          "name": "🎨 Flood fill",
+          "description": "DFS on grid",
+          "practice": {
+            "url": "https://leetcode.com/problems/flood-fill/",
+            "text": "LeetCode #733"
+          },
+          "subsection": "9C. Graphs"
+        },
+        {
+          "num": "9.24",
+          "name": "📚 Course schedule",
+          "description": "Topological / cycle",
+          "practice": {
+            "url": "https://leetcode.com/problems/course-schedule/",
+            "text": "LeetCode #207"
+          },
+          "subsection": "9C. Graphs"
+        }
+      ]
+    },
+    {
+      "id": 10,
+      "rawTitle": "🧮 Section 10 — Dynamic Programming",
+      "title": "Dynamic Programming",
+      "emoji": "🧮",
+      "goal": "🎯 Move from recursion → memoization → tabulation.💡 Rule: Define state → transition → base case → answer.",
+      "isDesignSec": false,
+      "fields": [
+        "done",
+        "code"
+      ],
+      "fieldLabels": [
+        "✅",
+        "#",
+        "Exercise",
+        "Description",
+        "Code?",
+        "Practice Link"
+      ],
+      "exercises": [
+        {
+          "num": "10.1",
+          "name": "🔢 Fibonacci iterative",
+          "description": "Loop",
+          "practice": {
+            "url": "https://leetcode.com/problems/fibonacci-number/",
+            "text": "LeetCode #509"
+          }
+        },
+        {
+          "num": "10.2",
+          "name": "🪜 Climbing stairs (rec)",
+          "description": "1 or 2 steps",
+          "practice": {
+            "url": "https://leetcode.com/problems/climbing-stairs/",
+            "text": "LeetCode #70"
+          }
+        },
+        {
+          "num": "10.3",
+          "name": "🪜 Memoized",
+          "description": "Cache answers",
+          "practice": {
+            "url": "https://leetcode.com/problems/climbing-stairs/",
+            "text": "LeetCode #70"
+          }
+        },
+        {
+          "num": "10.4",
+          "name": "🪜 Tabulated",
+          "description": "Bottom-up",
+          "practice": {
+            "url": "https://leetcode.com/problems/climbing-stairs/",
+            "text": "LeetCode #70"
+          }
+        },
+        {
+          "num": "10.5",
+          "name": "💰 Min cost stairs",
+          "description": "Define state + transition",
+          "practice": {
+            "url": "https://leetcode.com/problems/min-cost-climbing-stairs/",
+            "text": "LeetCode #746"
+          }
+        },
+        {
+          "num": "10.6",
+          "name": "📉 Max subarray (brute)",
+          "description": "Try all subarrays",
+          "practice": {
+            "url": "https://leetcode.com/problems/maximum-subarray/",
+            "text": "LeetCode #53"
+          }
+        },
+        {
+          "num": "10.7",
+          "name": "🏔️ Kadane's",
+          "description": "Best sum ending at i",
+          "practice": {
+            "url": "https://leetcode.com/problems/maximum-subarray/",
+            "text": "LeetCode #53"
+          }
+        },
+        {
+          "num": "10.8",
+          "name": "🏠 House Robber",
+          "description": "Take or skip",
+          "practice": {
+            "url": "https://leetcode.com/problems/house-robber/",
+            "text": "LeetCode #198"
+          }
+        },
+        {
+          "num": "10.9",
+          "name": "🎒 0/1 Knapsack",
+          "description": "Weight/value DP",
+          "practice": {
+            "url": "https://www.hackerrank.com/challenges/unbounded-knapsack",
+            "text": "Link"
+          }
+        },
+        {
+          "num": "10.10",
+          "name": "🔢 Unique paths",
+          "description": "Grid DP",
+          "practice": {
+            "url": "https://leetcode.com/problems/unique-paths/",
+            "text": "LeetCode #62"
+          }
+        },
+        {
+          "num": "10.11",
+          "name": "📈 LIS",
+          "description": "Patience or DP",
+          "practice": {
+            "url": "https://leetcode.com/problems/longest-increasing-subsequence/",
+            "text": "LeetCode #300"
+          }
+        },
+        {
+          "num": "10.12",
+          "name": "🪙 Coin change",
+          "description": "Min coins to amount",
+          "practice": {
+            "url": "https://leetcode.com/problems/coin-change/",
+            "text": "LeetCode #322"
+          }
+        },
+        {
+          "num": "10.13",
+          "name": "🔗 LCS",
+          "description": "2D DP",
+          "practice": {
+            "url": "https://leetcode.com/problems/longest-common-subsequence/",
+            "text": "LeetCode #1143"
+          }
+        },
+        {
+          "num": "10.14",
+          "name": "✏️ Edit distance",
+          "description": "Insert/delete/replace",
+          "practice": {
+            "url": "https://leetcode.com/problems/edit-distance/",
+            "text": "LeetCode #72"
+          }
+        },
+        {
+          "num": "10.15",
+          "name": "🧩 Partition subset",
+          "description": "Subset-sum DP",
+          "practice": {
+            "url": "https://leetcode.com/problems/partition-equal-subset-sum/",
+            "text": "LeetCode #416"
+          }
+        },
+        {
+          "num": "10.16",
+          "name": "📝 Word break",
+          "description": "DP over prefixes",
+          "practice": {
+            "url": "https://leetcode.com/problems/word-break/",
+            "text": "LeetCode #139"
+          }
+        },
+        {
+          "num": "10.17",
+          "name": "🔄 Regex matching",
+          "description": "2D DP",
+          "practice": {
+            "url": "https://leetcode.com/problems/regular-expression-matching/",
+            "text": "LeetCode #10"
+          }
+        },
+        {
+          "num": "10.18",
+          "name": "📈 Buy/sell + cooldown",
+          "description": "State-machine DP",
+          "practice": {
+            "url": "https://leetcode.com/problems/best-time-to-buy-and-sell-stock-with-cooldown/",
+            "text": "LeetCode #309"
+          }
+        }
+      ]
+    },
+    {
+      "id": 11,
+      "rawTitle": "💰 Section 11 — Greedy Algorithms",
+      "title": "Greedy Algorithms",
+      "emoji": "💰",
+      "goal": "🎯 Make the locally optimal choice at each step.💡 Rule: Greedy works only when local optimum leads to global optimum.",
+      "isDesignSec": false,
+      "fields": [
+        "done",
+        "code"
+      ],
+      "fieldLabels": [
+        "✅",
+        "#",
+        "Exercise",
+        "Description",
+        "Code?",
+        "Practice Link"
+      ],
+      "exercises": [
+        {
+          "num": "11.1",
+          "name": "🏃 Jump game",
+          "description": "Farthest reachable index",
+          "practice": {
+            "url": "https://leetcode.com/problems/jump-game/",
+            "text": "LeetCode #55"
+          }
+        },
+        {
+          "num": "11.2",
+          "name": "⛽ Gas station",
+          "description": "Valid starting index",
+          "practice": {
+            "url": "https://leetcode.com/problems/gas-station/",
+            "text": "LeetCode #134"
+          }
+        },
+        {
+          "num": "11.3",
+          "name": "📅 Non-overlap intervals",
+          "description": "Sort by end time",
+          "practice": {
+            "url": "https://leetcode.com/problems/non-overlapping-intervals/",
+            "text": "LeetCode #435"
+          }
+        },
+        {
+          "num": "11.4",
+          "name": "🔗 Merge intervals",
+          "description": "Sort + merge",
+          "practice": {
+            "url": "https://leetcode.com/problems/merge-intervals/",
+            "text": "LeetCode #56"
+          }
+        },
+        {
+          "num": "11.5",
+          "name": "📥 Insert interval",
+          "description": "Insert & merge",
+          "practice": {
+            "url": "https://leetcode.com/problems/insert-interval/",
+            "text": "LeetCode #57"
+          }
+        },
+        {
+          "num": "11.6",
+          "name": "🍬 Candy",
+          "description": "Two-pass greedy",
+          "practice": {
+            "url": "https://leetcode.com/problems/candy/",
+            "text": "LeetCode #135"
+          }
+        },
+        {
+          "num": "11.7",
+          "name": "📈 Buy/sell II",
+          "description": "Sum upward moves",
+          "practice": {
+            "url": "https://leetcode.com/problems/best-time-to-buy-and-sell-stock-ii/",
+            "text": "LeetCode #122"
+          }
+        },
+        {
+          "num": "11.8",
+          "name": "🧮 Task scheduler",
+          "description": "Greedy + heap",
+          "practice": {
+            "url": "https://leetcode.com/problems/task-scheduler/",
+            "text": "LeetCode #621"
+          }
+        },
+        {
+          "num": "11.9",
+          "name": "📦 Fractional knapsack",
+          "description": "Value/weight ratio",
+          "practice": {
+            "url": "https://www.hackerrank.com/challenges/unbounded-knapsack",
+            "text": "Link"
+          }
+        },
+        {
+          "num": "11.10",
+          "name": "🏹 Burst balloons",
+          "description": "Sort by end coord",
+          "practice": {
+            "url": "https://leetcode.com/problems/minimum-number-of-arrows-to-burst-balloons/",
+            "text": "LeetCode #452"
+          }
+        }
+      ]
+    },
+    {
+      "id": 12,
+      "rawTitle": "🔢 Section 12 — Bit Manipulation",
+      "title": "Bit Manipulation",
+      "emoji": "🔢",
+      "goal": "🎯 Use bitwise operations for compact, fast solutions.💡 Rule: x &amp; (x - 1) clears the lowest set bit.",
+      "isDesignSec": false,
+      "fields": [
+        "done",
+        "code"
+      ],
+      "fieldLabels": [
+        "✅",
+        "#",
+        "Exercise",
+        "Description",
+        "Code?",
+        "Practice Link"
+      ],
+      "exercises": [
+        {
+          "num": "12.1",
+          "name": "1️⃣ Power of two",
+          "description": "n &gt; 0 &amp;&amp; (n&amp;(n-1))==0",
+          "practice": {
+            "url": "https://leetcode.com/problems/power-of-two/",
+            "text": "LeetCode #231"
+          }
+        },
+        {
+          "num": "12.2",
+          "name": "🔢 Count set bits",
+          "description": "bitCount or loop",
+          "practice": {
+            "url": "https://leetcode.com/problems/number-of-1-bits/",
+            "text": "LeetCode #191"
+          }
+        },
+        {
+          "num": "12.3",
+          "name": "🎯 Single number",
+          "description": "XOR cancels pairs",
+          "practice": {
+            "url": "https://leetcode.com/problems/single-number/",
+            "text": "LeetCode #136"
+          }
+        },
+        {
+          "num": "12.4",
+          "name": "🎯 Single number II",
+          "description": "Count bits mod 3",
+          "practice": {
+            "url": "https://leetcode.com/problems/single-number-ii/",
+            "text": "LeetCode #137"
+          }
+        },
+        {
+          "num": "12.5",
+          "name": "🔄 Reverse bits",
+          "description": "Bit-by-bit",
+          "practice": {
+            "url": "https://leetcode.com/problems/reverse-bits/",
+            "text": "LeetCode #190"
+          }
+        },
+        {
+          "num": "12.6",
+          "name": "🔀 Swap with XOR",
+          "description": "XOR trick",
+          "practice": {
+            "url": "https://www.hackerrank.com/challenges/java-bitset",
+            "text": "Link"
+          }
+        },
+        {
+          "num": "12.7",
+          "name": "🔢 Missing number",
+          "description": "XOR indices and values",
+          "practice": {
+            "url": "https://leetcode.com/problems/missing-number/",
+            "text": "LeetCode #268"
+          }
+        },
+        {
+          "num": "12.8",
+          "name": "🎯 Two non-repeating",
+          "description": "XOR + partition",
+          "practice": {
+            "url": "https://leetcode.com/problems/single-number-iii/",
+            "text": "LeetCode #260"
+          }
+        },
+        {
+          "num": "12.9",
+          "name": "🔢 Range AND",
+          "description": "Common prefix",
+          "practice": {
+            "url": "https://leetcode.com/problems/bitwise-and-of-numbers-range/",
+            "text": "LeetCode #201"
+          }
+        },
+        {
+          "num": "12.10",
+          "name": "🧮 Subsets with bitmask",
+          "description": "Iterate 0..2^n-1",
+          "practice": {
+            "url": "https://leetcode.com/problems/subsets/",
+            "text": "LeetCode #78"
+          }
+        }
+      ]
+    },
+    {
+      "id": 13,
+      "rawTitle": "🏗️ Section 13 — Advanced Data Structures",
+      "title": "Advanced Data Structures",
+      "emoji": "🏗️",
+      "goal": "🎯 Build specialized structures for interview edge cases.💡 Rule: Know when to use Trie vs Union-Find vs Segment Tree.",
+      "isDesignSec": false,
+      "fields": [
+        "done",
+        "code"
+      ],
+      "fieldLabels": [
+        "✅",
+        "#",
+        "Exercise",
+        "Description",
+        "Code?",
+        "Practice Link"
+      ],
+      "exercises": [
+        {
+          "num": "13.1",
+          "name": "🌳 Trie insert & search",
+          "description": "Prefix tree basics",
+          "practice": {
+            "url": "https://leetcode.com/problems/implement-trie-prefix-tree/",
+            "text": "LeetCode #208"
+          }
+        },
+        {
+          "num": "13.2",
+          "name": "🔍 Trie startsWith",
+          "description": "Prefix check",
+          "practice": {
+            "url": "https://leetcode.com/problems/implement-trie-prefix-tree/",
+            "text": "LeetCode #208"
+          }
+        },
+        {
+          "num": "13.3",
+          "name": "🔗 Union-Find",
+          "description": "Path compression + rank",
+          "practice": {
+            "url": "https://leetcode.com/problems/number-of-provinces/",
+            "text": "LeetCode #547"
+          }
+        },
+        {
+          "num": "13.4",
+          "name": "🧩 Components with DSU",
+          "description": "Count components",
+          "practice": {
+            "url": "https://leetcode.com/problems/number-of-connected-components-in-an-undirected-graph/",
+            "text": "LeetCode #323"
+          }
+        },
+        {
+          "num": "13.5",
+          "name": "🔁 Cycle with DSU",
+          "description": "Redundant edge",
+          "practice": {
+            "url": "https://leetcode.com/problems/redundant-connection/",
+            "text": "LeetCode #684"
+          }
+        },
+        {
+          "num": "13.6",
+          "name": "📊 Segment tree",
+          "description": "Range sum + point update",
+          "practice": {
+            "url": "https://www.hackerrank.com/challenges/range-minimum-query",
+            "text": "Link"
+          }
+        },
+        {
+          "num": "13.7",
+          "name": "📊 Fenwick tree",
+          "description": "Prefix sums + updates",
+          "practice": {
+            "url": "https://www.hackerrank.com/challenges/range-minimum-query",
+            "text": "Link"
+          }
+        },
+        {
+          "num": "13.8",
+          "name": "🗺️ LRU cache",
+          "description": "HashMap + DLL",
+          "practice": {
+            "url": "https://leetcode.com/problems/lru-cache/",
+            "text": "LeetCode #146"
+          }
+        },
+        {
+          "num": "13.9",
+          "name": "🗺️ LFU cache",
+          "description": "Frequency buckets",
+          "practice": {
+            "url": "https://leetcode.com/problems/lfu-cache/",
+            "text": "LeetCode #460"
+          }
+        },
+        {
+          "num": "13.10",
+          "name": "📚 Monotonic stack",
+          "description": "Next greater",
+          "practice": {
+            "url": "https://leetcode.com/problems/next-greater-element-i/",
+            "text": "LeetCode #496"
+          }
+        },
+        {
+          "num": "13.11",
+          "name": "📚 Monotonic deque",
+          "description": "Sliding window max",
+          "practice": {
+            "url": "https://leetcode.com/problems/sliding-window-maximum/",
+            "text": "LeetCode #239"
+          }
+        },
+        {
+          "num": "13.12",
+          "name": "🧮 Ordered set",
+          "description": "TreeSet ops",
+          "practice": {
+            "url": "https://www.hackerrank.com/challenges/java-sort",
+            "text": "Link"
+          }
+        }
+      ]
+    },
+    {
+      "id": 14,
+      "rawTitle": "➗ Section 14 — Math & Number Theory",
+      "title": "Math & Number Theory",
+      "emoji": "➗",
+      "goal": "🎯 Handle edge cases in numeric problems.💡 Rule: Watch for overflow; use long when in doubt.",
+      "isDesignSec": false,
+      "fields": [
+        "done",
+        "code"
+      ],
+      "fieldLabels": [
+        "✅",
+        "#",
+        "Exercise",
+        "Description",
+        "Code?",
+        "Practice Link"
+      ],
+      "exercises": [
+        {
+          "num": "14.1",
+          "name": "🔍 Sieve of Eratosthenes",
+          "description": "All primes up to N",
+          "practice": {
+            "url": "https://leetcode.com/problems/count-primes/",
+            "text": "LeetCode #204"
+          }
+        },
+        {
+          "num": "14.2",
+          "name": "🔢 GCD & LCM",
+          "description": "Euclidean",
+          "practice": {
+            "url": "https://www.hackerrank.com/challenges/java-gcd",
+            "text": "Link"
+          }
+        },
+        {
+          "num": "14.3",
+          "name": "🔄 Reverse integer",
+          "description": "Overflow handling",
+          "practice": {
+            "url": "https://leetcode.com/problems/reverse-integer/",
+            "text": "LeetCode #7"
+          }
+        },
+        {
+          "num": "14.4",
+          "name": "🪞 Palindrome number",
+          "description": "Reverse half",
+          "practice": {
+            "url": "https://leetcode.com/problems/palindrome-number/",
+            "text": "LeetCode #9"
+          }
+        },
+        {
+          "num": "14.5",
+          "name": "🔢 Power(x, n)",
+          "description": "Fast exponentiation",
+          "practice": {
+            "url": "https://leetcode.com/problems/powx-n/",
+            "text": "LeetCode #50"
+          }
+        },
+        {
+          "num": "14.6",
+          "name": "🔢 Sqrt(x)",
+          "description": "Binary / Newton",
+          "practice": {
+            "url": "https://leetcode.com/problems/sqrtx/",
+            "text": "LeetCode #69"
+          }
+        },
+        {
+          "num": "14.7",
+          "name": "🎲 Happy number",
+          "description": "Cycle detection",
+          "practice": {
+            "url": "https://leetcode.com/problems/happy-number/",
+            "text": "LeetCode #202"
+          }
+        },
+        {
+          "num": "14.8",
+          "name": "➕ Add binary",
+          "description": "Bit-by-bit",
+          "practice": {
+            "url": "https://leetcode.com/problems/add-binary/",
+            "text": "LeetCode #67"
+          }
+        },
+        {
+          "num": "14.9",
+          "name": "✖️ Multiply strings",
+          "description": "Grade-school",
+          "practice": {
+            "url": "https://leetcode.com/problems/multiply-strings/",
+            "text": "LeetCode #43"
+          }
+        },
+        {
+          "num": "14.10",
+          "name": "🎯 Excel column",
+          "description": "Base-26",
+          "practice": {
+            "url": "https://leetcode.com/problems/excel-sheet-column-number/",
+            "text": "LeetCode #171"
+          }
+        }
+      ]
+    },
+    {
+      "id": 15,
+      "rawTitle": "🧩 Section 15 — Matrix Problems",
+      "title": "Matrix Problems",
+      "emoji": "🧩",
+      "goal": "🎯 Master 2D grid traversal and in-place updates.💡 Rule: Define directions array {{0,1},{1,0},{0,-1},{-1,0}}.",
+      "isDesignSec": false,
+      "fields": [
+        "done",
+        "code"
+      ],
+      "fieldLabels": [
+        "✅",
+        "#",
+        "Exercise",
+        "Description",
+        "Code?",
+        "Practice Link"
+      ],
+      "exercises": [
+        {
+          "num": "15.1",
+          "name": "🔄 Transpose",
+          "description": "Swap [i][j] ↔ [j][i]",
+          "practice": {
+            "url": "https://leetcode.com/problems/transpose-matrix/",
+            "text": "LeetCode #867"
+          }
+        },
+        {
+          "num": "15.2",
+          "name": "🔄 Rotate 90°",
+          "description": "Transpose + reverse rows",
+          "practice": {
+            "url": "https://leetcode.com/problems/rotate-image/",
+            "text": "LeetCode #48"
+          }
+        },
+        {
+          "num": "15.3",
+          "name": "🌀 Spiral matrix",
+          "description": "4 boundaries inward",
+          "practice": {
+            "url": "https://leetcode.com/problems/spiral-matrix/",
+            "text": "LeetCode #54"
+          }
+        },
+        {
+          "num": "15.4",
+          "name": "0️⃣ Set zeroes",
+          "description": "In-place marking",
+          "practice": {
+            "url": "https://leetcode.com/problems/set-matrix-zeroes/",
+            "text": "LeetCode #73"
+          }
+        },
+        {
+          "num": "15.5",
+          "name": "🔍 Search 2D matrix",
+          "description": "Treat as sorted 1D",
+          "practice": {
+            "url": "https://leetcode.com/problems/search-a-2d-matrix/",
+            "text": "LeetCode #74"
+          }
+        },
+        {
+          "num": "15.6",
+          "name": "🏝️ Number of islands",
+          "description": "Grid DFS/BFS",
+          "practice": {
+            "url": "https://leetcode.com/problems/number-of-islands/",
+            "text": "LeetCode #200"
+          }
+        },
+        {
+          "num": "15.7",
+          "name": "🍊 Rotting oranges",
+          "description": "Multi-source BFS",
+          "practice": {
+            "url": "https://leetcode.com/problems/rotting-oranges/",
+            "text": "LeetCode #994"
+          }
+        },
+        {
+          "num": "15.8",
+          "name": "🎨 Flood fill",
+          "description": "DFS on grid",
+          "practice": {
+            "url": "https://leetcode.com/problems/flood-fill/",
+            "text": "LeetCode #733"
+          }
+        },
+        {
+          "num": "15.9",
+          "name": "🛤️ Unique paths II",
+          "description": "DP with obstacles",
+          "practice": {
+            "url": "https://leetcode.com/problems/unique-paths-ii/",
+            "text": "LeetCode #63"
+          }
+        },
+        {
+          "num": "15.10",
+          "name": "📉 Min path sum",
+          "description": "Grid DP",
+          "practice": {
+            "url": "https://leetcode.com/problems/minimum-path-sum/",
+            "text": "LeetCode #64"
+          }
+        }
+      ]
+    },
+    {
+      "id": 16,
+      "rawTitle": "🎨 Section 16 — Design Problems",
+      "title": "Design Problems",
+      "emoji": "🎨",
+      "goal": "🎯 Combine data structures to meet operation constraints.💡 Rule: State the time complexity of each operation.",
+      "isDesignSec": false,
+      "fields": [
+        "done",
+        "code"
+      ],
+      "fieldLabels": [
+        "✅",
+        "#",
+        "Exercise",
+        "Description",
+        "Code?",
+        "Practice Link"
+      ],
+      "exercises": [
+        {
+          "num": "16.1",
+          "name": "🗺️ LRU cache",
+          "description": "HashMap + DLL",
+          "practice": {
+            "url": "https://leetcode.com/problems/lru-cache/",
+            "text": "LeetCode #146"
+          }
+        },
+        {
+          "num": "16.2",
+          "name": "🗺️ LFU cache",
+          "description": "Frequency buckets",
+          "practice": {
+            "url": "https://leetcode.com/problems/lfu-cache/",
+            "text": "LeetCode #460"
+          }
+        },
+        {
+          "num": "16.3",
+          "name": "📚 Min stack",
+          "description": "Aux stack",
+          "practice": {
+            "url": "https://leetcode.com/problems/min-stack/",
+            "text": "LeetCode #155"
+          }
+        },
+        {
+          "num": "16.4",
+          "name": "🔀 Queue with stacks",
+          "description": "Two stacks",
+          "practice": {
+            "url": "https://leetcode.com/problems/implement-queue-using-stacks/",
+            "text": "LeetCode #232"
+          }
+        },
+        {
+          "num": "16.5",
+          "name": "🔀 Stack with queues",
+          "description": "One or two queues",
+          "practice": {
+            "url": "https://leetcode.com/problems/implement-stack-using-queues/",
+            "text": "LeetCode #225"
+          }
+        },
+        {
+          "num": "16.6",
+          "name": "🌳 Trie",
+          "description": "insert/search/startsWith",
+          "practice": {
+            "url": "https://leetcode.com/problems/implement-trie-prefix-tree/",
+            "text": "LeetCode #208"
+          }
+        },
+        {
+          "num": "16.7",
+          "name": "🔗 Union-Find",
+          "description": "Compression + rank",
+          "practice": {
+            "url": "https://leetcode.com/problems/number-of-provinces/",
+            "text": "LeetCode #547"
+          }
+        },
+        {
+          "num": "16.8",
+          "name": "🎲 Insert delete getRandom",
+          "description": "ArrayList + HashMap",
+          "practice": {
+            "url": "https://leetcode.com/problems/insert-delete-getrandom-o1/",
+            "text": "LeetCode #380"
+          }
+        },
+        {
+          "num": "16.9",
+          "name": "📊 Time-based KV store",
+          "description": "Binary search on timestamps",
+          "practice": {
+            "url": "https://leetcode.com/problems/time-based-key-value-store/",
+            "text": "LeetCode #981"
+          }
+        },
+        {
+          "num": "16.10",
+          "name": "🏗️ Design Twitter",
+          "description": "Merge k sorted feeds",
+          "practice": {
+            "url": "https://leetcode.com/problems/design-twitter/",
+            "text": "LeetCode #355"
+          }
+        }
+      ]
+    },
+    {
+      "id": 17,
+      "rawTitle": "🏛️ Section 17 — System Design for DSA",
+      "title": "System Design for DSA",
+      "emoji": "🏛️",
+      "goal": "🎯 Connect DSA patterns to real backend systems.💡 Rule: Always state assumptions, constraints, and trade-offs.",
+      "isDesignSec": true,
+      "fields": [
+        "done",
+        "code"
+      ],
+      "fieldLabels": [
+        "✅",
+        "Topic",
+        "What to Cover",
+        "Reference"
+      ],
+      "exercises": [
+        {
+          "num": "17.1",
+          "name": "🗺️ Rate limiter",
+          "description": "Token bucket / sliding window",
+          "practice": {
+            "url": "https://github.com/donnemartin/system-design-primer",
+            "text": "Primer"
+          }
+        },
+        {
+          "num": "17.2",
+          "name": "🗺️ LRU cache",
+          "description": "HashMap + DLL",
+          "practice": {
+            "url": "https://leetcode.com/problems/lru-cache/",
+            "text": "LeetCode #146"
+          }
+        },
+        {
+          "num": "17.3",
+          "name": "🔗 Consistent hashing",
+          "description": "Virtual nodes",
+          "practice": {
+            "url": "https://github.com/donnemartin/system-design-primer",
+            "text": "Primer"
+          }
+        },
+        {
+          "num": "17.4",
+          "name": "📊 Top K frequent",
+          "description": "Heap + hashmap",
+          "practice": {
+            "url": "https://leetcode.com/problems/top-k-frequent-elements/",
+            "text": "LeetCode #347"
+          }
+        },
+        {
+          "num": "17.5",
+          "name": "🔍 Autocomplete",
+          "description": "Trie + top-K",
+          "practice": {
+            "url": "https://leetcode.com/problems/design-search-autocomplete-system/",
+            "text": "LeetCode #642"
+          }
+        },
+        {
+          "num": "17.6",
+          "name": "📰 News feed",
+          "description": "Merge k sorted lists",
+          "practice": {
+            "url": "https://leetcode.com/problems/design-twitter/",
+            "text": "LeetCode #355"
+          }
+        },
+        {
+          "num": "17.7",
+          "name": "🚦 Task scheduler",
+          "description": "Greedy + heap",
+          "practice": {
+            "url": "https://leetcode.com/problems/task-scheduler/",
+            "text": "LeetCode #621"
+          }
+        },
+        {
+          "num": "17.8",
+          "name": "🗺️ Distributed cache",
+          "description": "Consistent hashing + eviction",
+          "practice": {
+            "url": "https://github.com/donnemartin/system-design-primer",
+            "text": "Primer"
+          }
+        }
+      ]
+    }
+  ],
+  "leetcodeCategories": [
+    {
+      "title": "📊 Arrays",
+      "problems": [
+        {
+          "id": "1",
+          "title": "Two Sum",
+          "difficulty": "Easy",
+          "diffClass": "easy",
+          "link": "https://leetcode.com/problems/two-sum/"
+        },
+        {
+          "id": "26",
+          "title": "Remove Duplicates from Sorted Array",
+          "difficulty": "Easy",
+          "diffClass": "easy",
+          "link": "https://leetcode.com/problems/remove-duplicates-from-sorted-array/"
+        },
+        {
+          "id": "121",
+          "title": "Best Time to Buy and Sell Stock",
+          "difficulty": "Easy",
+          "diffClass": "easy",
+          "link": "https://leetcode.com/problems/best-time-to-buy-and-sell-stock/"
+        },
+        {
+          "id": "136",
+          "title": "Single Number",
+          "difficulty": "Easy",
+          "diffClass": "easy",
+          "link": "https://leetcode.com/problems/single-number/"
+        },
+        {
+          "id": "169",
+          "title": "Majority Element",
+          "difficulty": "Easy",
+          "diffClass": "easy",
+          "link": "https://leetcode.com/problems/majority-element/"
+        },
+        {
+          "id": "189",
+          "title": "Rotate Array",
+          "difficulty": "Medium",
+          "diffClass": "med",
+          "link": "https://leetcode.com/problems/rotate-array/"
+        },
+        {
+          "id": "217",
+          "title": "Contains Duplicate",
+          "difficulty": "Easy",
+          "diffClass": "easy",
+          "link": "https://leetcode.com/problems/contains-duplicate/"
+        },
+        {
+          "id": "268",
+          "title": "Missing Number",
+          "difficulty": "Easy",
+          "diffClass": "easy",
+          "link": "https://leetcode.com/problems/missing-number/"
+        },
+        {
+          "id": "283",
+          "title": "Move Zeroes",
+          "difficulty": "Easy",
+          "diffClass": "easy",
+          "link": "https://leetcode.com/problems/move-zeroes/"
+        },
+        {
+          "id": "349",
+          "title": "Intersection of Two Arrays",
+          "difficulty": "Easy",
+          "diffClass": "easy",
+          "link": "https://leetcode.com/problems/intersection-of-two-arrays/"
+        },
+        {
+          "id": "485",
+          "title": "Max Consecutive Ones",
+          "difficulty": "Easy",
+          "diffClass": "easy",
+          "link": "https://leetcode.com/problems/max-consecutive-ones/"
+        },
+        {
+          "id": "128",
+          "title": "Longest Consecutive Sequence",
+          "difficulty": "Medium",
+          "diffClass": "med",
+          "link": "https://leetcode.com/problems/longest-consecutive-sequence/"
+        },
+        {
+          "id": "347",
+          "title": "Top K Frequent Elements",
+          "difficulty": "Medium",
+          "diffClass": "med",
+          "link": "https://leetcode.com/problems/top-k-frequent-elements/"
+        },
+        {
+          "id": "560",
+          "title": "Subarray Sum Equals K",
+          "difficulty": "Medium",
+          "diffClass": "med",
+          "link": "https://leetcode.com/problems/subarray-sum-equals-k/"
+        }
+      ]
+    },
+    {
+      "title": "🔤 Strings",
+      "problems": [
+        {
+          "id": "3",
+          "title": "Longest Substring Without Repeating Characters",
+          "difficulty": "Medium",
+          "diffClass": "med",
+          "link": "https://leetcode.com/problems/longest-substring-without-repeating-characters/"
+        },
+        {
+          "id": "5",
+          "title": "Longest Palindromic Substring",
+          "difficulty": "Medium",
+          "diffClass": "med",
+          "link": "https://leetcode.com/problems/longest-palindromic-substring/"
+        },
+        {
+          "id": "8",
+          "title": "String to Integer (atoi)",
+          "difficulty": "Medium",
+          "diffClass": "med",
+          "link": "https://leetcode.com/problems/string-to-integer-atoi/"
+        },
+        {
+          "id": "13",
+          "title": "Roman to Integer",
+          "difficulty": "Easy",
+          "diffClass": "easy",
+          "link": "https://leetcode.com/problems/roman-to-integer/"
+        },
+        {
+          "id": "14",
+          "title": "Longest Common Prefix",
+          "difficulty": "Easy",
+          "diffClass": "easy",
+          "link": "https://leetcode.com/problems/longest-common-prefix/"
+        },
+        {
+          "id": "28",
+          "title": "Find Index of First Occurrence",
+          "difficulty": "Easy",
+          "diffClass": "easy",
+          "link": "https://leetcode.com/problems/find-the-index-of-the-first-occurrence-in-a-string/"
+        },
+        {
+          "id": "49",
+          "title": "Group Anagrams",
+          "difficulty": "Medium",
+          "diffClass": "med",
+          "link": "https://leetcode.com/problems/group-anagrams/"
+        },
+        {
+          "id": "58",
+          "title": "Length of Last Word",
+          "difficulty": "Easy",
+          "diffClass": "easy",
+          "link": "https://leetcode.com/problems/length-of-last-word/"
+        },
+        {
+          "id": "125",
+          "title": "Valid Palindrome",
+          "difficulty": "Easy",
+          "diffClass": "easy",
+          "link": "https://leetcode.com/problems/valid-palindrome/"
+        },
+        {
+          "id": "151",
+          "title": "Reverse Words in a String",
+          "difficulty": "Medium",
+          "diffClass": "med",
+          "link": "https://leetcode.com/problems/reverse-words-in-a-string/"
+        },
+        {
+          "id": "205",
+          "title": "Isomorphic Strings",
+          "difficulty": "Easy",
+          "diffClass": "easy",
+          "link": "https://leetcode.com/problems/isomorphic-strings/"
+        },
+        {
+          "id": "242",
+          "title": "Valid Anagram",
+          "difficulty": "Easy",
+          "diffClass": "easy",
+          "link": "https://leetcode.com/problems/valid-anagram/"
+        },
+        {
+          "id": "290",
+          "title": "Word Pattern",
+          "difficulty": "Easy",
+          "diffClass": "easy",
+          "link": "https://leetcode.com/problems/word-pattern/"
+        },
+        {
+          "id": "344",
+          "title": "Reverse String",
+          "difficulty": "Easy",
+          "diffClass": "easy",
+          "link": "https://leetcode.com/problems/reverse-string/"
+        },
+        {
+          "id": "345",
+          "title": "Reverse Vowels of a String",
+          "difficulty": "Easy",
+          "diffClass": "easy",
+          "link": "https://leetcode.com/problems/reverse-vowels-of-a-string/"
+        },
+        {
+          "id": "383",
+          "title": "Ransom Note",
+          "difficulty": "Easy",
+          "diffClass": "easy",
+          "link": "https://leetcode.com/problems/ransom-note/"
+        },
+        {
+          "id": "387",
+          "title": "First Unique Character",
+          "difficulty": "Easy",
+          "diffClass": "easy",
+          "link": "https://leetcode.com/problems/first-unique-character-in-a-string/"
+        },
+        {
+          "id": "389",
+          "title": "Find the Difference",
+          "difficulty": "Easy",
+          "diffClass": "easy",
+          "link": "https://leetcode.com/problems/find-the-difference/"
+        },
+        {
+          "id": "424",
+          "title": "Longest Repeating Character Replacement",
+          "difficulty": "Medium",
+          "diffClass": "med",
+          "link": "https://leetcode.com/problems/longest-repeating-character-replacement/"
+        },
+        {
+          "id": "438",
+          "title": "Find All Anagrams in a String",
+          "difficulty": "Medium",
+          "diffClass": "med",
+          "link": "https://leetcode.com/problems/find-all-anagrams-in-a-string/"
+        },
+        {
+          "id": "443",
+          "title": "String Compression",
+          "difficulty": "Medium",
+          "diffClass": "med",
+          "link": "https://leetcode.com/problems/string-compression/"
+        },
+        {
+          "id": "541",
+          "title": "Reverse String II",
+          "difficulty": "Easy",
+          "diffClass": "easy",
+          "link": "https://leetcode.com/problems/reverse-string-ii/"
+        },
+        {
+          "id": "567",
+          "title": "Permutation in String",
+          "difficulty": "Medium",
+          "diffClass": "med",
+          "link": "https://leetcode.com/problems/permutation-in-string/"
+        },
+        {
+          "id": "1678",
+          "title": "Goal Parser Interpretation",
+          "difficulty": "Easy",
+          "diffClass": "easy",
+          "link": "https://leetcode.com/problems/goal-parser-interpretation/"
+        },
+        {
+          "id": "1768",
+          "title": "Merge Strings Alternately",
+          "difficulty": "Easy",
+          "diffClass": "easy",
+          "link": "https://leetcode.com/problems/merge-strings-alternately/"
+        }
+      ]
+    },
+    {
+      "title": "👈👉 Two Pointers & Sliding Window",
+      "problems": [
+        {
+          "id": "11",
+          "title": "Container With Most Water",
+          "difficulty": "Medium",
+          "diffClass": "med",
+          "link": "https://leetcode.com/problems/container-with-most-water/"
+        },
+        {
+          "id": "15",
+          "title": "3Sum",
+          "difficulty": "Medium",
+          "diffClass": "med",
+          "link": "https://leetcode.com/problems/3sum/"
+        },
+        {
+          "id": "80",
+          "title": "Remove Duplicates II",
+          "difficulty": "Medium",
+          "diffClass": "med",
+          "link": "https://leetcode.com/problems/remove-duplicates-from-sorted-array-ii/"
+        },
+        {
+          "id": "167",
+          "title": "Two Sum II",
+          "difficulty": "Medium",
+          "diffClass": "med",
+          "link": "https://leetcode.com/problems/two-sum-ii-input-array-is-sorted/"
+        },
+        {
+          "id": "209",
+          "title": "Minimum Size Subarray Sum",
+          "difficulty": "Medium",
+          "diffClass": "med",
+          "link": "https://leetcode.com/problems/minimum-size-subarray-sum/"
+        },
+        {
+          "id": "643",
+          "title": "Maximum Average Subarray I",
+          "difficulty": "Easy",
+          "diffClass": "easy",
+          "link": "https://leetcode.com/problems/maximum-average-subarray-i/"
+        }
+      ]
+    },
+    {
+      "title": "🔍 Searching & Sorting",
+      "problems": [
+        {
+          "id": "33",
+          "title": "Search in Rotated Sorted Array",
+          "difficulty": "Medium",
+          "diffClass": "med",
+          "link": "https://leetcode.com/problems/search-in-rotated-sorted-array/"
+        },
+        {
+          "id": "34",
+          "title": "Find First & Last Position",
+          "difficulty": "Medium",
+          "diffClass": "med",
+          "link": "https://leetcode.com/problems/find-first-and-last-position-of-element-in-sorted-array/"
+        },
+        {
+          "id": "35",
+          "title": "Search Insert Position",
+          "difficulty": "Easy",
+          "diffClass": "easy",
+          "link": "https://leetcode.com/problems/search-insert-position/"
+        },
+        {
+          "id": "75",
+          "title": "Sort Colors",
+          "difficulty": "Medium",
+          "diffClass": "med",
+          "link": "https://leetcode.com/problems/sort-colors/"
+        },
+        {
+          "id": "88",
+          "title": "Merge Sorted Array",
+          "difficulty": "Easy",
+          "diffClass": "easy",
+          "link": "https://leetcode.com/problems/merge-sorted-array/"
+        },
+        {
+          "id": "153",
+          "title": "Find Minimum in Rotated",
+          "difficulty": "Medium",
+          "diffClass": "med",
+          "link": "https://leetcode.com/problems/find-minimum-in-rotated-sorted-array/"
+        },
+        {
+          "id": "215",
+          "title": "Kth Largest Element",
+          "difficulty": "Medium",
+          "diffClass": "med",
+          "link": "https://leetcode.com/problems/kth-largest-element-in-an-array/"
+        },
+        {
+          "id": "278",
+          "title": "First Bad Version",
+          "difficulty": "Easy",
+          "diffClass": "easy",
+          "link": "https://leetcode.com/problems/first-bad-version/"
+        },
+        {
+          "id": "704",
+          "title": "Binary Search",
+          "difficulty": "Easy",
+          "diffClass": "easy",
+          "link": "https://leetcode.com/problems/binary-search/"
+        }
+      ]
+    },
+    {
+      "title": "📏 Prefix Sums & Intervals",
+      "problems": [
+        {
+          "id": "56",
+          "title": "Merge Intervals",
+          "difficulty": "Medium",
+          "diffClass": "med",
+          "link": "https://leetcode.com/problems/merge-intervals/"
+        },
+        {
+          "id": "57",
+          "title": "Insert Interval",
+          "difficulty": "Medium",
+          "diffClass": "med",
+          "link": "https://leetcode.com/problems/insert-interval/"
+        },
+        {
+          "id": "238",
+          "title": "Product of Array Except Self",
+          "difficulty": "Medium",
+          "diffClass": "med",
+          "link": "https://leetcode.com/problems/product-of-array-except-self/"
+        },
+        {
+          "id": "303",
+          "title": "Range Sum Query — Immutable",
+          "difficulty": "Easy",
+          "diffClass": "easy",
+          "link": "https://leetcode.com/problems/range-sum-query-immutable/"
+        },
+        {
+          "id": "435",
+          "title": "Non-overlapping Intervals",
+          "difficulty": "Medium",
+          "diffClass": "med",
+          "link": "https://leetcode.com/problems/non-overlapping-intervals/"
+        },
+        {
+          "id": "724",
+          "title": "Find Pivot Index",
+          "difficulty": "Easy",
+          "diffClass": "easy",
+          "link": "https://leetcode.com/problems/find-pivot-index/"
+        },
+        {
+          "id": "1480",
+          "title": "Running Sum of 1D Array",
+          "difficulty": "Easy",
+          "diffClass": "easy",
+          "link": "https://leetcode.com/problems/running-sum-of-1d-array/"
+        }
+      ]
+    },
+    {
+      "title": "🔄 Recursion & Backtracking",
+      "problems": [
+        {
+          "id": "17",
+          "title": "Letter Combinations of a Phone Number",
+          "difficulty": "Medium",
+          "diffClass": "med",
+          "link": "https://leetcode.com/problems/letter-combinations-of-a-phone-number/"
+        },
+        {
+          "id": "22",
+          "title": "Generate Parentheses",
+          "difficulty": "Medium",
+          "diffClass": "med",
+          "link": "https://leetcode.com/problems/generate-parentheses/"
+        },
+        {
+          "id": "39",
+          "title": "Combination Sum",
+          "difficulty": "Medium",
+          "diffClass": "med",
+          "link": "https://leetcode.com/problems/combination-sum/"
+        },
+        {
+          "id": "46",
+          "title": "Permutations",
+          "difficulty": "Medium",
+          "diffClass": "med",
+          "link": "https://leetcode.com/problems/permutations/"
+        },
+        {
+          "id": "50",
+          "title": "Pow(x, n)",
+          "difficulty": "Medium",
+          "diffClass": "med",
+          "link": "https://leetcode.com/problems/powx-n/"
+        },
+        {
+          "id": "78",
+          "title": "Subsets",
+          "difficulty": "Medium",
+          "diffClass": "med",
+          "link": "https://leetcode.com/problems/subsets/"
+        },
+        {
+          "id": "509",
+          "title": "Fibonacci Number",
+          "difficulty": "Easy",
+          "diffClass": "easy",
+          "link": "https://leetcode.com/problems/fibonacci-number/"
+        }
+      ]
+    },
+    {
+      "title": "🌳 Trees & BST",
+      "problems": [
+        {
+          "id": "98",
+          "title": "Validate BST",
+          "difficulty": "Medium",
+          "diffClass": "med",
+          "link": "https://leetcode.com/problems/validate-binary-search-tree/"
+        },
+        {
+          "id": "100",
+          "title": "Same Tree",
+          "difficulty": "Easy",
+          "diffClass": "easy",
+          "link": "https://leetcode.com/problems/same-tree/"
+        },
+        {
+          "id": "102",
+          "title": "Level Order Traversal",
+          "difficulty": "Medium",
+          "diffClass": "med",
+          "link": "https://leetcode.com/problems/binary-tree-level-order-traversal/"
+        },
+        {
+          "id": "104",
+          "title": "Maximum Depth",
+          "difficulty": "Easy",
+          "diffClass": "easy",
+          "link": "https://leetcode.com/problems/maximum-depth-of-binary-tree/"
+        },
+        {
+          "id": "110",
+          "title": "Balanced Binary Tree",
+          "difficulty": "Easy",
+          "diffClass": "easy",
+          "link": "https://leetcode.com/problems/balanced-binary-tree/"
+        },
+        {
+          "id": "226",
+          "title": "Invert Binary Tree",
+          "difficulty": "Easy",
+          "diffClass": "easy",
+          "link": "https://leetcode.com/problems/invert-binary-tree/"
+        },
+        {
+          "id": "230",
+          "title": "Kth Smallest in BST",
+          "difficulty": "Medium",
+          "diffClass": "med",
+          "link": "https://leetcode.com/problems/kth-smallest-element-in-a-bst/"
+        },
+        {
+          "id": "235",
+          "title": "LCA of a BST",
+          "difficulty": "Medium",
+          "diffClass": "med",
+          "link": "https://leetcode.com/problems/lowest-common-ancestor-of-a-binary-search-tree/"
+        },
+        {
+          "id": "543",
+          "title": "Diameter of Binary Tree",
+          "difficulty": "Easy",
+          "diffClass": "easy",
+          "link": "https://leetcode.com/problems/diameter-of-binary-tree/"
+        }
+      ]
+    },
+    {
+      "title": "🗺️ Graphs & Greedy",
+      "problems": [
+        {
+          "id": "55",
+          "title": "Jump Game",
+          "difficulty": "Medium",
+          "diffClass": "med",
+          "link": "https://leetcode.com/problems/jump-game/"
+        },
+        {
+          "id": "133",
+          "title": "Clone Graph",
+          "difficulty": "Medium",
+          "diffClass": "med",
+          "link": "https://leetcode.com/problems/clone-graph/"
+        },
+        {
+          "id": "134",
+          "title": "Gas Station",
+          "difficulty": "Medium",
+          "diffClass": "med",
+          "link": "https://leetcode.com/problems/gas-station/"
+        },
+        {
+          "id": "200",
+          "title": "Number of Islands",
+          "difficulty": "Medium",
+          "diffClass": "med",
+          "link": "https://leetcode.com/problems/number-of-islands/"
+        },
+        {
+          "id": "207",
+          "title": "Course Schedule",
+          "difficulty": "Medium",
+          "diffClass": "med",
+          "link": "https://leetcode.com/problems/course-schedule/"
+        },
+        {
+          "id": "703",
+          "title": "Kth Largest in a Stream",
+          "difficulty": "Easy",
+          "diffClass": "easy",
+          "link": "https://leetcode.com/problems/kth-largest-element-in-a-stream/"
+        },
+        {
+          "id": "733",
+          "title": "Flood Fill",
+          "difficulty": "Easy",
+          "diffClass": "easy",
+          "link": "https://leetcode.com/problems/flood-fill/"
+        },
+        {
+          "id": "994",
+          "title": "Rotting Oranges",
+          "difficulty": "Medium",
+          "diffClass": "med",
+          "link": "https://leetcode.com/problems/rotting-oranges/"
+        },
+        {
+          "id": "1046",
+          "title": "Last Stone Weight",
+          "difficulty": "Easy",
+          "diffClass": "easy",
+          "link": "https://leetcode.com/problems/last-stone-weight/"
+        }
+      ]
+    },
+    {
+      "title": "🧮 Dynamic Programming",
+      "problems": [
+        {
+          "id": "53",
+          "title": "Maximum Subarray",
+          "difficulty": "Medium",
+          "diffClass": "med",
+          "link": "https://leetcode.com/problems/maximum-subarray/"
+        },
+        {
+          "id": "62",
+          "title": "Unique Paths",
+          "difficulty": "Medium",
+          "diffClass": "med",
+          "link": "https://leetcode.com/problems/unique-paths/"
+        },
+        {
+          "id": "70",
+          "title": "Climbing Stairs",
+          "difficulty": "Easy",
+          "diffClass": "easy",
+          "link": "https://leetcode.com/problems/climbing-stairs/"
+        },
+        {
+          "id": "198",
+          "title": "House Robber",
+          "difficulty": "Medium",
+          "diffClass": "med",
+          "link": "https://leetcode.com/problems/house-robber/"
+        },
+        {
+          "id": "300",
+          "title": "Longest Increasing Subsequence",
+          "difficulty": "Medium",
+          "diffClass": "med",
+          "link": "https://leetcode.com/problems/longest-increasing-subsequence/"
+        },
+        {
+          "id": "322",
+          "title": "Coin Change",
+          "difficulty": "Medium",
+          "diffClass": "med",
+          "link": "https://leetcode.com/problems/coin-change/"
+        },
+        {
+          "id": "746",
+          "title": "Min Cost Climbing Stairs",
+          "difficulty": "Easy",
+          "diffClass": "easy",
+          "link": "https://leetcode.com/problems/min-cost-climbing-stairs/"
+        }
+      ]
+    }
+  ],
+  "studyStages": [
+    {
+      "stage": "1",
+      "focus": "☕ Java Foundations — HackerRank Introduction + CodingBat Logic",
+      "duration": "1–2 weeks"
+    },
+    {
+      "stage": "2",
+      "focus": "📊 Arrays & Strings — spend extra time here if needed",
+      "duration": "2–3 weeks"
+    },
+    {
+      "stage": "3",
+      "focus": "🗂️ Hashing, Two Pointers, Searching/Sorting",
+      "duration": "1–2 weeks"
+    },
+    {
+      "stage": "4",
+      "focus": "🔗 Linked Lists, Stacks/Queues, Recursion",
+      "duration": "1–2 weeks"
+    },
+    {
+      "stage": "5",
+      "focus": "🌳 Trees, Graphs & DP Basics",
+      "duration": "2 weeks"
+    },
+    {
+      "stage": "6",
+      "focus": "🎯 LeetCode Roadmap — work in topic order",
+      "duration": "Ongoing"
+    }
+  ],
+  "solvingRoutine": [
+    "1. Define inputs/outputs",
+    "2. Write examples",
+    "3. Attempt brute force",
+    "4. Code in Java",
+    "5. Test edge cases",
+    "6. Analyze time/space complexity",
+    "7. Explain your solution aloud"
+  ]
+}

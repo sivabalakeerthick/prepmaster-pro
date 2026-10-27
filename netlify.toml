@@ -1,0 +1,14 @@
+# ==============================================================================
+# PrepMaster Pro — Netlify Build & Redirect Configuration
+# ==============================================================================
+
+[build]
+  base = "frontend"
+  publish = "dist/frontend/browser"
+  command = "npm run build"
+
+# SPA Fallback for Angular HTML5 Client-Side Routing
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200

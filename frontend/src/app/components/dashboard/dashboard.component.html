@@ -1,0 +1,1534 @@
+<!-- Top Navbar -->
+<header class="app-nav">
+  <div class="nav-content">
+    <div class="nav-brand-group">
+      <button class="btn-sidebar-toggle" (click)="toggleSidebar()" title="Toggle Sections Sidebar">
+        <span class="hamburger-icon">☰</span>
+        <span class="sidebar-toggle-text">Sections</span>
+      </button>
+
+      <div class="nav-brand">
+        <span class="nav-logo">🎯</span>
+        <div class="brand-text">
+          <div class="brand-title-row">
+            <span class="nav-title">PrepMaster</span>
+            <span class="brand-badge-pro">PRO</span>
+          </div>
+          <span class="nav-sub">Full-Stack & DSA Interview Roadmap</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Center Nav Track Switcher (W3Schools / GeeksforGeeks Pill Bar) -->
+    <div class="nav-tracks">
+      <button 
+        type="button"
+        class="nav-track-btn" 
+        [class.active]="activeTrack === 'interview'" 
+        (click)="setTrack('interview')"
+      >
+        <span class="track-icon">☕</span>
+        <span class="track-name">Full-Stack Prep</span>
+        <span class="track-badge-count text-mono">{{ completedInterviewTopics }}/{{ totalInterviewTopics }}</span>
+      </button>
+
+      <button 
+        type="button"
+        class="nav-track-btn" 
+        [class.active]="activeTrack === 'dsa'" 
+        (click)="setTrack('dsa')"
+      >
+        <span class="track-icon">🧠</span>
+        <span class="track-name">Master DSA</span>
+        <span class="track-badge-count text-mono">{{ completedDsaItems }}/{{ totalDsaItems }}</span>
+      </button>
+    </div>
+
+    <!-- Right User Info & Global Readiness -->
+    <div class="nav-right" *ngIf="currentUser">
+      <div class="global-progress-badge" title="Overall readiness across all tracks">
+        <span class="pulse-indicator"></span>
+        <span class="progress-text">{{ overallAllPercent }}% Ready</span>
+      </div>
+
+      <div class="user-pill" title="Currently logged in as {{ currentUser.name }}">
+        <span class="user-avatar">{{ getUserInitial() }}</span>
+        <div class="user-meta">
+          <span class="user-name">{{ currentUser.name }}</span>
+        </div>
+      </div>
+
+      <button class="btn-switch-user" (click)="onLogout()" title="Switch account or sign in as another user">
+        <span class="btn-icon">👤</span>
+        <span class="btn-text">Switch User</span>
+      </button>
+
+      <button class="btn-logout" (click)="onLogout()" title="Sign out of account">
+        <span class="btn-text">Sign Out</span>
+        <span class="logout-icon">⎋</span>
+      </button>
+    </div>
+
+    <!-- Fallback if not signed in -->
+    <div class="nav-right" *ngIf="!currentUser">
+      <a routerLink="/login" class="nav-auth-link login-btn">Sign In</a>
+      <a routerLink="/register" class="nav-auth-link register-btn">Create Free Account</a>
+    </div>
+  </div>
+</header>
+
+<!-- Mobile Sticky Track Bar (Visible on mobile/tablet <= 768px) -->
+<div class="mobile-track-bar" aria-label="Mobile track navigation">
+  <button 
+    type="button" 
+    class="mobile-track-tab" 
+    [class.active]="activeTrack === 'interview'" 
+    (click)="setTrack('interview')"
+  >
+    <span class="tab-icon">☕</span>
+    <span class="tab-name">Full-Stack Prep</span>
+    <span class="tab-badge text-mono">{{ completedInterviewTopics }}/{{ totalInterviewTopics }}</span>
+  </button>
+  <button 
+    type="button" 
+    class="mobile-track-tab" 
+    [class.active]="activeTrack === 'dsa'" 
+    (click)="setTrack('dsa')"
+  >
+    <span class="tab-icon">🧠</span>
+    <span class="tab-name">Master DSA</span>
+    <span class="tab-badge text-mono">{{ completedDsaItems }}/{{ totalDsaItems }}</span>
+  </button>
+</div>
+
+<!-- Main Application Shell with Sidebar Drawer -->
+<div class="app-shell" [class.sidebar-collapsed]="!isSidebarOpen">
+  <!-- Mobile Sidebar Backdrop Overlay -->
+  <div class="sidebar-backdrop" *ngIf="isSidebarOpen" (click)="isSidebarOpen = false"></div>
+
+  <!-- Left Sidebar (Collapsible, Sticky, Filterable) -->
+  <aside class="app-sidebar" [class.open]="isSidebarOpen">
+    <div class="sidebar-header">
+      <div class="sidebar-title">
+        <span class="sidebar-icon">📑</span>
+        <span>{{ activeTrack === 'interview' ? 'Full-Stack Domains' : 'DSA Foundations' }}</span>
+      </div>
+      <button class="btn-sidebar-close" (click)="isSidebarOpen = false" title="Close Sidebar">✕</button>
+    </div>
+
+    <!-- Quick filter within sidebar -->
+    <div class="sidebar-search">
+      <span class="search-mini-icon">🔍</span>
+      <input 
+        type="text" 
+        [(ngModel)]="sidebarSearch" 
+        placeholder="Quick jump to section..." 
+      />
+      <button *ngIf="sidebarSearch" (click)="sidebarSearch = ''" class="btn-mini-clear">✕</button>
+    </div>
+
+    <!-- Section navigation list -->
+    <div class="sidebar-nav-list">
+      <!-- Full-Stack Sections -->
+      <ng-container *ngIf="activeTrack === 'interview'">
+        <a 
+          *ngFor="let sec of filteredInterviewSidebarSections"
+          class="sidebar-item"
+          [routerLink]="['/dashboard', 'interview', sec.id]"
+          (click)="closeSidebarMobile()"
+          [class.active]="isInterviewSectionActive(sec.id)"
+          [class.item-completed]="getSectionCompleted(sec.id) === sec.topics.length && sec.topics.length > 0"
+        >
+          <span class="sidebar-item-emoji">{{ sec.emoji }}</span>
+          <span class="sidebar-item-title">{{ sec.id }}. {{ sec.title }}</span>
+          <span class="sidebar-item-pill text-mono" [class.complete]="getSectionCompleted(sec.id) === sec.topics.length">
+            <span *ngIf="getSectionCompleted(sec.id) === sec.topics.length">✓</span>
+            {{ getSectionCompleted(sec.id) }}/{{ sec.topics.length }}
+          </span>
+        </a>
+      </ng-container>
+
+      <!-- DSA Sections -->
+      <ng-container *ngIf="activeTrack === 'dsa'">
+        <a 
+          *ngFor="let sec of filteredDsaSidebarSections"
+          class="sidebar-item"
+          [routerLink]="['/dashboard', 'dsa', sec.id]"
+          (click)="closeSidebarMobile()"
+          [class.active]="isDsaSectionActive(sec.id)"
+          [class.item-completed]="getSectionCompleted('dsa_' + sec.id) === sec.exercises.length && sec.exercises.length > 0"
+        >
+          <span class="sidebar-item-emoji">{{ sec.emoji }}</span>
+          <span class="sidebar-item-title">{{ sec.id }}. {{ sec.title }}</span>
+          <span class="sidebar-item-pill text-mono" [class.complete]="getSectionCompleted('dsa_' + sec.id) === sec.exercises.length">
+            <span *ngIf="getSectionCompleted('dsa_' + sec.id) === sec.exercises.length">✓</span>
+            {{ getSectionCompleted('dsa_' + sec.id) }}/{{ sec.exercises.length }}
+          </span>
+        </a>
+
+        <!-- LeetCode Roadmap Sidebar Item -->
+        <a 
+          class="sidebar-item leetcode-sidebar-item"
+          [routerLink]="['/dashboard', 'dsa', 'roadmap']"
+          (click)="closeSidebarMobile()"
+          [class.active]="activeDsaSectionId === 'roadmap'"
+          [class.item-completed]="completedLeetCodeProblems === totalLeetCodeProblems && totalLeetCodeProblems > 0"
+          *ngIf="!sidebarSearch || 'leetcode roadmap'.includes(sidebarSearch.toLowerCase())"
+        >
+          <span class="sidebar-item-emoji">🎯</span>
+          <span class="sidebar-item-title">LeetCode Roadmap</span>
+          <span class="sidebar-item-pill text-mono highlight" [class.complete]="completedLeetCodeProblems === totalLeetCodeProblems && totalLeetCodeProblems > 0">
+            <span *ngIf="completedLeetCodeProblems === totalLeetCodeProblems && totalLeetCodeProblems > 0">✓</span>
+            {{ completedLeetCodeProblems }}/{{ totalLeetCodeProblems }}
+          </span>
+        </a>
+
+        <!-- Solving Routine & Official Links Sidebar Item -->
+        <a 
+          class="sidebar-item"
+          [routerLink]="['/dashboard', 'dsa', 'routine']"
+          (click)="closeSidebarMobile()"
+          [class.active]="activeDsaSectionId === 'routine'"
+          *ngIf="!sidebarSearch || 'solving routine platforms links practice'.includes(sidebarSearch.toLowerCase())"
+        >
+          <span class="sidebar-item-emoji">💡</span>
+          <span class="sidebar-item-title">Solving Routine & Links</span>
+          <span class="sidebar-item-pill text-mono">7 steps</span>
+        </a>
+      </ng-container>
+    </div>
+  </aside>
+
+  <!-- Main Content Area -->
+  <main class="app-main-content">
+    <div *ngIf="isLoading" class="loading-state">
+      <div class="spinner-large"></div>
+      <p>Loading your study checklist and progress...</p>
+    </div>
+
+    <div *ngIf="!isLoading">
+      <!-- ============================================================== -->
+      <!-- TRACK 1: FULL-STACK INTERVIEW PREPARATION (LINKED EDITION)      -->
+      <!-- ============================================================== -->
+      <div *ngIf="activeTrack === 'interview'">
+        <!-- HERO COVER BANNER -->
+        <section class="cover-card interview-cover">
+          <div class="cover-content">
+            <div class="cover-header-line">
+              <span class="cover-badge-top">🚀 PRO INTERVIEW CHECKLIST</span>
+              <span class="cover-badge-top secondary">LINKED EDITION</span>
+            </div>
+            <h1 class="cover-title">Full-Stack Interview Preparation</h1>
+            <p class="cover-subtitle">Complete 15-Domain Interactive Topic Checklist & Progress Tracker</p>
+            <p class="cover-stack">Java · Spring Boot · Microservices · Angular · System Design · AI/RAG · SQL · DevOps</p>
+
+            <div class="cover-badges-grid">
+              <div class="cover-badge-item">
+                <span class="badge-num">{{ totalInterviewTopics }}+</span>
+                <span class="badge-lbl">Curated Topics</span>
+              </div>
+              <div class="cover-badge-item">
+                <span class="badge-num">{{ completedInterviewTopics }}</span>
+                <span class="badge-lbl">Mastered ({{ overallInterviewPercent }}%)</span>
+              </div>
+              <div class="cover-badge-item">
+                <span class="badge-num">15</span>
+                <span class="badge-lbl">Tech Domains</span>
+              </div>
+              <div class="cover-badge-item">
+                <span class="badge-num">100%</span>
+                <span class="badge-lbl">Direct Resource Links</span>
+              </div>
+            </div>
+
+            <p class="cover-note">
+              💡 <b>Golden Rule:</b> Tick a topic only when you can explain it aloud <b>and</b> solve a related problem independently.
+            </p>
+          </div>
+        </section>
+
+        <!-- HOW TO USE BOX -->
+        <section class="info-section">
+          <div class="intro-box">
+            <div class="intro-box-title">📖 How to Master This Checklist</div>
+            <div class="intro-box-grid">
+              <div class="intro-step">
+                <span class="step-icon">☁️</span>
+                <div><b>Cloud Auto-Sync:</b> All checks, target dates, and notes save automatically to your personal account.</div>
+              </div>
+              <div class="intro-step">
+                <span class="step-icon">🎯</span>
+                <div><b>Deep Understanding:</b> Mark "Done" only when interview-ready with zero memory gaps.</div>
+              </div>
+              <div class="intro-step">
+                <span class="step-icon">🔗</span>
+                <div><b>Official Resources:</b> Click the resource button on any topic to open official documentation and tutorials.</div>
+              </div>
+              <div class="intro-step">
+                <span class="step-icon">📊</span>
+                <div><b>Multi-Domain Tracking:</b> Monitor domain-specific readiness with real-time visual progress bars.</div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- MY TARGET ROLE & STUDY PLANNER -->
+        <section class="target-card">
+          <div class="target-card-header">
+            <div class="target-card-title">
+              <span class="icon">🎯</span>
+              <div>
+                <h3>Target Role & Career Planner</h3>
+                <p>Define your career objectives to personalize your preparation focus.</p>
+              </div>
+            </div>
+            <span *ngIf="targetSavedMessage" class="saved-indicator">{{ targetSavedMessage }}</span>
+          </div>
+
+          <div class="target-card-body">
+            <!-- Role Selection Chips -->
+            <div class="target-field-group">
+              <label class="field-label">Target Role</label>
+              <div class="role-chips-group">
+                <button 
+                  type="button" 
+                  class="role-chip" 
+                  [class.active]="targetData.targetRole === 'Backend'" 
+                  (click)="selectRole('Backend')"
+                >
+                  <span class="chip-icon">⚡</span>
+                  <span class="chip-text">Backend Engineer</span>
+                  <span class="chip-check" *ngIf="targetData.targetRole === 'Backend'">✓</span>
+                </button>
+
+                <button 
+                  type="button" 
+                  class="role-chip" 
+                  [class.active]="targetData.targetRole === 'Full-stack'" 
+                  (click)="selectRole('Full-stack')"
+                >
+                  <span class="chip-icon">🌐</span>
+                  <span class="chip-text">Full-stack Engineer</span>
+                  <span class="chip-check" *ngIf="targetData.targetRole === 'Full-stack'">✓</span>
+                </button>
+
+                <button 
+                  type="button" 
+                  class="role-chip" 
+                  [class.active]="targetData.targetRole === 'AI Engineering'" 
+                  (click)="selectRole('AI Engineering')"
+                >
+                  <span class="chip-icon">🤖</span>
+                  <span class="chip-text">AI / RAG Engineering</span>
+                  <span class="chip-check" *ngIf="targetData.targetRole === 'AI Engineering'">✓</span>
+                </button>
+              </div>
+            </div>
+
+            <!-- Inputs Grid -->
+            <div class="target-inputs-grid">
+              <div class="target-input-box">
+                <label>💰 Salary Target (LPA)</label>
+                <div class="input-affix-wrapper">
+                  <span class="affix-prefix">₹</span>
+                  <input 
+                    type="text" 
+                    [(ngModel)]="targetData.salaryTarget" 
+                    (blur)="saveTarget()" 
+                    placeholder="e.g. 18 - 25" 
+                  />
+                  <span class="affix-suffix">LPA</span>
+                </div>
+              </div>
+
+              <div class="target-input-box">
+                <label>📅 Target Interview Date</label>
+                <input 
+                  type="date" 
+                  class="modern-input" 
+                  [(ngModel)]="targetData.targetDate" 
+                  (change)="saveTarget()" 
+                />
+              </div>
+
+              <div class="target-input-box full-width">
+                <label>🔥 Current Focus Domain</label>
+                <input 
+                  type="text" 
+                  class="modern-input" 
+                  [(ngModel)]="targetData.currentFocus" 
+                  (blur)="saveTarget()" 
+                  placeholder="e.g. Spring Boot Microservices + Kafka Idempotency + System Design" 
+                />
+              </div>
+
+              <div class="target-input-box full-width">
+                <div class="notes-header">
+                  <label>📝 Personal Study Notes & Weak Areas</label>
+                  <small>Auto-saves on blur</small>
+                </div>
+                <textarea 
+                  class="modern-textarea" 
+                  [(ngModel)]="targetData.personalNotes" 
+                  (blur)="saveTarget()" 
+                  placeholder="Note down concepts you struggled with, topics to revise, or mock interview takeaways..."
+                ></textarea>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- STATS OVERVIEW CARDS -->
+        <section class="stats-grid">
+          <div class="stat-card">
+            <div class="stat-icon-wrapper blue">📚</div>
+            <div class="stat-info">
+              <div class="stat-value">{{ totalInterviewTopics }}</div>
+              <div class="stat-label">Total Curated Topics</div>
+            </div>
+          </div>
+
+          <div class="stat-card">
+            <div class="stat-icon-wrapper green">✅</div>
+            <div class="stat-info">
+              <div class="stat-value">{{ completedInterviewTopics }}</div>
+              <div class="stat-label">Topics Mastered</div>
+            </div>
+          </div>
+
+          <div class="stat-card">
+            <div class="stat-icon-wrapper orange">⏳</div>
+            <div class="stat-info">
+              <div class="stat-value">{{ totalInterviewTopics - completedInterviewTopics }}</div>
+              <div class="stat-label">Topics Remaining</div>
+            </div>
+          </div>
+
+          <div class="stat-card highlight">
+            <div class="stat-icon-wrapper purple">📈</div>
+            <div class="stat-info">
+              <div class="stat-value">{{ overallInterviewPercent }}%</div>
+              <div class="stat-label">Full-Stack Readiness</div>
+            </div>
+          </div>
+        </section>
+
+        <!-- DOMAINS OVERVIEW TABLE (W3Schools/GfG Index Table) -->
+        <section class="progress-overview-section">
+          <div class="section-heading-plain">
+            <div class="title-with-badge">
+              <h3>📊 Progress Tracker by Domain</h3>
+              <span class="badge-count">15 Tech Domains</span>
+            </div>
+            <p>Click any domain row or the Jump button to scroll directly to its topic checklist.</p>
+          </div>
+
+          <div class="table-responsive elevated-table-wrapper">
+            <table class="progress-table">
+              <thead>
+                <tr>
+                  <th style="width: 35%;">Domain Name</th>
+                  <th style="width: 80px; text-align: center;">Topics</th>
+                  <th style="width: 100px; text-align: center;">Completed</th>
+                  <th>Mastery Progress</th>
+                  <th style="width: 80px; text-align: right;">%</th>
+                  <th style="width: 90px; text-align: center;">Quick Jump</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr *ngFor="let sec of interviewSections" (click)="scrollToSection(sec.id)" class="clickable-row">
+                  <td>
+                    <div class="domain-title-cell">
+                      <span class="section-emoji">{{ sec.emoji }}</span>
+                      <span class="section-name"><strong>{{ sec.id }}. {{ sec.title }}</strong></span>
+                    </div>
+                  </td>
+                  <td style="text-align: center; font-weight: 600; color: #64748b;">{{ sec.topics.length }}</td>
+                  <td style="text-align: center; font-weight: 700; color: #1e3a8a;">
+                    {{ getSectionCompleted(sec.id) }}
+                  </td>
+                  <td>
+                    <div class="bar-container">
+                      <div class="bar-fill" [style.width.%]="getSectionPercent(sec)"></div>
+                    </div>
+                  </td>
+                  <td style="text-align: right; font-weight: 700; color: #15803d;">
+                    {{ getSectionPercent(sec) }}%
+                  </td>
+                  <td style="text-align: center;">
+                    <button class="btn-jump" (click)="$event.stopPropagation(); scrollToSection(sec.id)">
+                      Jump ↓
+                    </button>
+                  </td>
+                </tr>
+                <tr class="total-row">
+                  <td><strong>Total (All 15 Domains)</strong></td>
+                  <td style="text-align: center;"><strong>{{ totalInterviewTopics }}</strong></td>
+                  <td style="text-align: center; color: #1e3a8a;"><strong>{{ completedInterviewTopics }}</strong></td>
+                  <td>
+                    <div class="bar-container large">
+                      <div class="bar-fill total" [style.width.%]="overallInterviewPercent"></div>
+                    </div>
+                  </td>
+                  <td style="text-align: right; color: #15803d;"><strong>{{ overallInterviewPercent }}%</strong></td>
+                  <td></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </section>
+
+        <!-- STICKY SEARCH & FILTER TOOLBAR -->
+        <section class="toolbar-section">
+          <!-- View Mode Toggle: Focus Mode vs All Sections -->
+          <div class="view-mode-tabs">
+            <button 
+              type="button" 
+              class="view-mode-pill" 
+              [class.active]="viewMode === 'focus'" 
+              (click)="viewMode = 'focus'"
+              title="Focus Mode: View 1 section at a time with smooth next/prev controls (no infinite scrolling)"
+            >
+              🎯 Focus Mode
+            </button>
+            <button 
+              type="button" 
+              class="view-mode-pill" 
+              [class.active]="viewMode === 'all'" 
+              (click)="viewMode = 'all'"
+              title="All Sections: Stack all sections"
+            >
+              📑 All Sections
+            </button>
+          </div>
+
+          <div class="search-box">
+            <span class="search-icon">🔍</span>
+            <input 
+              type="text" 
+              [(ngModel)]="searchQuery" 
+              placeholder="Instant search topic or resource (e.g. HashMap, Kafka, Signals, RAG, Docker)..." 
+            />
+            <button *ngIf="searchQuery" (click)="searchQuery = ''" class="btn-clear" title="Clear search">✕</button>
+          </div>
+
+          <div class="filter-controls">
+            <div class="filter-pills-group">
+              <button 
+                type="button"
+                class="filter-pill-btn" 
+                [class.active]="filterStatus === 'all'" 
+                (click)="filterStatus = 'all'"
+              >
+                All Topics
+              </button>
+              <button 
+                type="button"
+                class="filter-pill-btn" 
+                [class.active]="filterStatus === 'completed'" 
+                (click)="filterStatus = 'completed'"
+              >
+                ✅ Completed
+              </button>
+              <button 
+                type="button"
+                class="filter-pill-btn" 
+                [class.active]="filterStatus === 'pending'" 
+                (click)="filterStatus = 'pending'"
+              >
+                ☐ Pending
+              </button>
+              <button 
+                type="button"
+                class="filter-pill-btn hide-completed-pill" 
+                [class.active]="hideCompleted" 
+                (click)="hideCompleted = !hideCompleted"
+                title="Hide all completed topics to dramatically shrink the list"
+              >
+                {{ hideCompleted ? '👁️ Incomplete Only' : '👁️ Hide Completed' }}
+              </button>
+            </div>
+
+            <button *ngIf="viewMode === 'all'" class="btn-toggle-all" (click)="toggleAllSections()" title="Toggle accordion state">
+              {{ allExpanded ? '▲ Collapse All' : '▼ Expand All' }}
+            </button>
+          </div>
+        </section>
+
+        <!-- ACTIVE SECTION ANCHOR -->
+        <div id="active-section-anchor"></div>
+
+        <!-- 15 SECTION CARDS (Focus Mode renders only active, All Mode renders all) -->
+        <ng-container *ngFor="let sec of interviewSections">
+          <div 
+            *ngIf="viewMode === 'all' || isInterviewSectionActive(sec.id)" 
+            [id]="'section-' + sec.id" 
+            class="section-card"
+            [class.focus-card]="viewMode === 'focus'"
+          >
+            <!-- Breadcrumb for Focus Route -->
+            <nav class="page-breadcrumb" *ngIf="viewMode === 'focus'">
+              <span class="breadcrumb-tag">☕ Interview Prep</span>
+              <span class="breadcrumb-separator">/</span>
+              <span class="breadcrumb-current">Domain {{ sec.id }}: {{ sec.title }}</span>
+            </nav>
+
+            <!-- Section Heading -->
+            <div class="section-heading" (click)="viewMode === 'all' ? toggleSectionCollapse(sec.id) : null">
+              <div class="heading-left">
+                <span class="heading-emoji">{{ sec.emoji }}</span>
+                <span class="heading-title">{{ sec.id }}. {{ sec.title }}</span>
+              </div>
+
+              <!-- Focus Mode Domain Selector in Header -->
+              <div class="focus-stepper-header" *ngIf="viewMode === 'focus'" (click)="$event.stopPropagation()">
+                <button 
+                  type="button"
+                  class="stepper-arrow-btn" 
+                  [disabled]="!hasPrevInterviewSection" 
+                  (click)="prevInterviewSection()" 
+                  title="Previous Domain"
+                >
+                  ◀ Prev
+                </button>
+                <select 
+                  class="focus-domain-dropdown" 
+                  [ngModel]="activeInterviewSectionId" 
+                  (ngModelChange)="navToSection($event)"
+                >
+                  <option *ngFor="let s of interviewSections" [value]="s.id">
+                    Domain {{ s.id }}: {{ s.title }} ({{ getSectionCompleted(s.id) }}/{{ s.topics.length }})
+                  </option>
+                </select>
+                <button 
+                  type="button"
+                  class="stepper-arrow-btn" 
+                  [disabled]="!hasNextInterviewSection" 
+                  (click)="nextInterviewSection()" 
+                  title="Next Domain"
+                >
+                  Next ▶
+                </button>
+              </div>
+
+              <div class="heading-right">
+                <div class="heading-mini-progress">
+                  <div class="mini-bar-bg">
+                    <div class="mini-bar-fill" [style.width.%]="getSectionPercent(sec)"></div>
+                  </div>
+                </div>
+                <span class="badge-count">
+                  {{ getSectionCompleted(sec.id) }} / {{ sec.topics.length }} ({{ getSectionPercent(sec) }}%)
+                </span>
+                <span *ngIf="viewMode === 'all'" class="collapse-icon">{{ isCollapsed(sec.id) ? '▼' : '▲' }}</span>
+              </div>
+            </div>
+
+            <!-- Section Body -->
+            <div class="section-body" *ngIf="viewMode === 'focus' || !isCollapsed(sec.id)">
+              <div class="goal-box" *ngIf="sec.goal">
+                <span class="goal-icon">🎯</span>
+                <div class="goal-text"><b>Domain Goal:</b> {{ sec.goal }}</div>
+              </div>
+
+              <!-- Milestone Card if Domain is 100% Completed -->
+              <div class="milestone-card" *ngIf="getSectionCompleted(sec.id) === sec.topics.length && sec.topics.length > 0">
+                <div class="milestone-content">
+                  <span class="milestone-badge">🏆 Domain Completed!</span>
+                  <p>Outstanding! You've checked off every topic in <strong>{{ sec.title }}</strong>.</p>
+                </div>
+                <button 
+                  type="button"
+                  *ngIf="hasNextInterviewSection && viewMode === 'focus'" 
+                  class="btn-milestone-next" 
+                  (click)="nextInterviewSection()"
+                >
+                  Proceed to Next Domain: {{ interviewSections[currentInterviewIndex + 1]?.title }} →
+                </button>
+              </div>
+
+              <div class="table-responsive">
+                <table class="topics-table">
+                  <thead>
+                    <tr>
+                      <th style="width: 48px; text-align: center;">✅</th>
+                      <th>Curated Topic</th>
+                      <th *ngFor="let label of sec.fieldLabels.slice(1)" style="width: 90px; text-align: center;">
+                        {{ label }}
+                      </th>
+                      <th style="width: 180px;">Official Resource</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr 
+                      *ngFor="let topic of getFilteredTopics(sec)" 
+                      [id]="'topic-row-' + sec.id + '-' + getOriginalTopicIndex(sec, topic)"
+                      [class.topic-done]="isFieldCompleted(sec.id, getOriginalTopicIndex(sec, topic), 'done')"
+                      [class.highlight-pulse]="highlightedTopicKey === (sec.id + '-' + getOriginalTopicIndex(sec, topic))"
+                    >
+                      <!-- Done checkbox -->
+                      <td style="text-align: center;">
+                        <label class="custom-checkbox-container">
+                          <input 
+                            type="checkbox" 
+                            class="checkbox-primary"
+                            [checked]="isFieldCompleted(sec.id, getOriginalTopicIndex(sec, topic), 'done')"
+                            (change)="toggleField(sec.id, getOriginalTopicIndex(sec, topic), 'done', $event)"
+                          />
+                          <span class="checkmark"></span>
+                        </label>
+                      </td>
+
+                      <!-- Topic Name -->
+                      <td class="topic-title-cell" (click)="quickToggleTopic(sec.id, getOriginalTopicIndex(sec, topic))">
+                        <span class="topic-text">{{ topic.name }}</span>
+                      </td>
+
+                      <!-- Dynamic field checkboxes -->
+                      <td *ngFor="let field of sec.fields.slice(1)" style="text-align: center;">
+                        <label class="custom-checkbox-container">
+                          <input 
+                            type="checkbox" 
+                            class="checkbox-secondary"
+                            [checked]="isFieldCompleted(sec.id, getOriginalTopicIndex(sec, topic), field)"
+                            (change)="toggleField(sec.id, getOriginalTopicIndex(sec, topic), field, $event)"
+                          />
+                          <span class="checkmark secondary"></span>
+                        </label>
+                      </td>
+
+                      <!-- Resource Link -->
+                      <td>
+                        <div class="resource-links" *ngIf="topic.resources && topic.resources.length > 0">
+                          <a 
+                            *ngFor="let r of topic.resources" 
+                            [href]="r.url" 
+                            target="_blank" 
+                            rel="noopener" 
+                            class="resource-link-btn"
+                            title="Open official documentation"
+                          >
+                            📖 {{ r.text }} ↗
+                          </a>
+                        </div>
+                        <span *ngIf="!topic.resources || topic.resources.length === 0" class="text-subtle">
+                          —
+                        </span>
+                      </td>
+                    </tr>
+
+                    <tr *ngIf="getFilteredTopics(sec).length === 0">
+                      <td [attr.colspan]="sec.fields.length + 2" class="empty-search">
+                        <span *ngIf="hideCompleted">🎉 All topics in this domain are completed! Turn off "Hide Completed" to review.</span>
+                        <span *ngIf="!hideCompleted">🔍 No topics match your current search/filter.</span>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+
+              <!-- Section Navigation Footer (Focus Mode) -->
+              <div class="section-nav-footer" *ngIf="viewMode === 'focus'">
+                <button 
+                  type="button" 
+                  class="section-nav-btn prev" 
+                  [disabled]="!hasPrevInterviewSection" 
+                  (click)="prevInterviewSection()"
+                  *ngIf="hasPrevInterviewSection"
+                >
+                  <span class="nav-dir">← Previous Domain</span>
+                  <span class="nav-target">{{ interviewSections[currentInterviewIndex - 1]?.id }}. {{ interviewSections[currentInterviewIndex - 1]?.title }}</span>
+                </button>
+                <div class="section-nav-spacer" *ngIf="!hasPrevInterviewSection"></div>
+
+                <div class="section-nav-center">
+                  <span class="nav-domain-badge">Domain {{ activeInterviewSectionId }} of {{ interviewSections.length }}</span>
+                  <span class="nav-domain-stat">{{ getSectionCompleted(sec.id) }} / {{ sec.topics.length }} Topics Done ({{ getSectionPercent(sec) }}%)</span>
+                </div>
+
+                <button 
+                  type="button" 
+                  class="section-nav-btn next" 
+                  [disabled]="!hasNextInterviewSection" 
+                  (click)="nextInterviewSection()"
+                  *ngIf="hasNextInterviewSection"
+                >
+                  <span class="nav-dir">Next Domain →</span>
+                  <span class="nav-target">{{ interviewSections[currentInterviewIndex + 1]?.id }}. {{ interviewSections[currentInterviewIndex + 1]?.title }}</span>
+                </button>
+                <div class="section-nav-spacer" *ngIf="!hasNextInterviewSection"></div>
+              </div>
+            </div>
+          </div>
+        </ng-container>
+      </div>
+
+      <!-- ============================================================== -->
+      <!-- TRACK 2: MASTER DSA PRACTICE WORKBOOK                           -->
+      <!-- ============================================================== -->
+      <div *ngIf="activeTrack === 'dsa'">
+        <!-- HERO COVER BANNER -->
+        <section class="cover-card dsa-cover">
+          <div class="cover-content">
+            <div class="cover-header-line">
+              <span class="cover-badge-top emerald">🧠 ALGORITHMIC MASTERY</span>
+              <span class="cover-badge-top">JAVA FOUNDATIONS + LEETCODE</span>
+            </div>
+            <h1 class="cover-title">Master DSA Practice Workbook</h1>
+            <p class="cover-subtitle">18 Foundation Sections · 280+ Practice Prompts · 93+ Curated LeetCode Problems</p>
+            <p class="cover-stack">Arrays · Strings · Sliding Window · Trees · Graphs · DP · Backtracking · System Design for DSA</p>
+
+            <div class="cover-badges-grid">
+              <div class="cover-badge-item">
+                <span class="badge-num">{{ totalDsaExercises }}+</span>
+                <span class="badge-lbl">Beginner Prompts</span>
+              </div>
+              <div class="cover-badge-item">
+                <span class="badge-num">{{ totalLeetCodeProblems }}+</span>
+                <span class="badge-lbl">LeetCode Problems</span>
+              </div>
+              <div class="cover-badge-item">
+                <span class="badge-num">18</span>
+                <span class="badge-lbl">Core Sections</span>
+              </div>
+              <div class="cover-badge-item">
+                <span class="badge-num">{{ overallDsaPercent }}%</span>
+                <span class="badge-lbl">DSA Solved</span>
+              </div>
+            </div>
+
+            <p class="cover-note">
+              📌 <b>Learning Sequence:</b> Java Basics → Beginner Exercises → Pattern Recognition → LeetCode Roadmap.
+            </p>
+          </div>
+        </section>
+
+        <!-- HOW TO USE -->
+        <section class="info-section">
+          <div class="intro-box">
+            <div class="intro-box-title">📖 How to Master This Workbook</div>
+            <div class="intro-box-grid">
+              <div class="intro-step">
+                <span class="step-icon">🟢</span>
+                <div><b>Independent Code:</b> Try every prompt on your own before peeking at hints.</div>
+              </div>
+              <div class="intro-step">
+                <span class="step-icon">⏱️</span>
+                <div><b>25-Min Rule:</b> If stuck, try for 25 mins, check a minimal hint, close solution, and recode from scratch.</div>
+              </div>
+              <div class="intro-step">
+                <span class="step-icon">🗣️</span>
+                <div><b>Explain Aloud:</b> Practice articulating inputs, constraints, edge cases, and Big-O complexities.</div>
+              </div>
+              <div class="intro-step">
+                <span class="step-icon">💾</span>
+                <div><b>Live Auto-Save:</b> Checks persist automatically so you can resume practice from anywhere.</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Where to Code Beginner Exercises Table -->
+          <div class="platform-table-wrapper" style="margin-top: 20px;">
+            <div class="section-header-compact">
+              <h3>🛠️ Where to Code Beginner Exercises</h3>
+            </div>
+            <table class="platform-table">
+              <thead>
+                <tr>
+                  <th style="width: 28%;">Platform</th>
+                  <th>Best Learning Focus</th>
+                  <th style="width: 220px;">Direct Practice Hub</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td><strong>🟢 HackerRank Java</strong></td>
+                  <td>Input/output, loops, scanner, primitive arrays, strings</td>
+                  <td>
+                    <a href="https://www.hackerrank.com/domains/java" target="_blank" rel="noopener" class="practice-platform-btn">
+                      hackerrank.com/domains/java ↗
+                    </a>
+                  </td>
+                </tr>
+                <tr>
+                  <td><strong>🔵 CodingBat Java</strong></td>
+                  <td>Rapid-fire logic drills: Strings, Arrays, Logic, Recursion</td>
+                  <td>
+                    <a href="https://codingbat.com/java" target="_blank" rel="noopener" class="practice-platform-btn">
+                      codingbat.com/java ↗
+                    </a>
+                  </td>
+                </tr>
+                <tr>
+                  <td><strong>🟡 LeetCode</strong></td>
+                  <td>Standard tech interview problems (see Part 2 Roadmap)</td>
+                  <td>
+                    <a href="https://leetcode.com/problemset/" target="_blank" rel="noopener" class="practice-platform-btn">
+                      leetcode.com/problemset ↗
+                    </a>
+                  </td>
+                </tr>
+                <tr>
+                  <td><strong>🟠 HackerRank Kit</strong></td>
+                  <td>Structured tracks: Arrays, Dictionaries, HashMaps, Graphs</td>
+                  <td>
+                    <a href="https://www.hackerrank.com/interview/interview-preparation-kit" target="_blank" rel="noopener" class="practice-platform-btn">
+                      Interview Prep Kit ↗
+                    </a>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </section>
+
+        <!-- TABLE OF CONTENTS (INTERACTIVE JUMP TABLE) -->
+        <section class="info-section toc-section">
+          <div class="section-heading-plain">
+            <div class="title-with-badge">
+              <h3>📑 Table of Contents</h3>
+              <span class="badge-count">18 Sections + LeetCode</span>
+            </div>
+            <p>Master these foundation topics in order before tackling complex LeetCode hard problems.</p>
+          </div>
+
+          <div class="table-responsive elevated-table-wrapper">
+            <table class="platform-table toc-table">
+              <thead>
+                <tr>
+                  <th style="width: 50px; text-align: center;">#</th>
+                  <th>Section Name</th>
+                  <th style="width: 140px; text-align: center;">Practice Prompts</th>
+                  <th style="width: 130px; text-align: center;">Est. Time</th>
+                  <th style="width: 100px; text-align: center;">Jump</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr *ngFor="let item of dsaToc" class="clickable-row" (click)="jumpToDsaSection(item.num)">
+                  <td style="text-align: center; font-weight: 700; color: #64748b;">{{ item.num }}</td>
+                  <td>
+                    <span class="toc-name"><strong>{{ item.sectionName }}</strong></span>
+                  </td>
+                  <td style="text-align: center;">
+                    <span class="badge-count" *ngIf="!item.isLeetCode">
+                      {{ getSectionCompleted('dsa_' + item.num) }} / {{ item.topicsCount }}
+                    </span>
+                    <span class="badge-count highlight" *ngIf="item.isLeetCode">
+                      {{ completedLeetCodeProblems }} / {{ totalLeetCodeProblems }}
+                    </span>
+                  </td>
+                  <td style="text-align: center; color: #64748b; font-weight: 500;">{{ item.estTime }}</td>
+                  <td style="text-align: center;">
+                    <button class="btn-jump" (click)="$event.stopPropagation(); jumpToDsaSection(item.num)">
+                      Jump ↓
+                    </button>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </section>
+
+        <!-- 6-STAGE STUDY PLAN -->
+        <section class="study-plan-section">
+          <div class="section-heading-plain">
+            <div class="title-with-badge">
+              <h3>🗺️ 6-Stage DSA Study Plan</h3>
+              <span class="badge-count">Structured Roadmap</span>
+            </div>
+            <p>Tick each stage once you have completed its requirements.</p>
+          </div>
+
+          <div class="table-responsive elevated-table-wrapper">
+            <table class="stage-table">
+              <thead>
+                <tr>
+                  <th style="width: 60px; text-align: center;">Stage</th>
+                  <th>Focus Area</th>
+                  <th style="width: 130px;">Recommended Duration</th>
+                  <th style="width: 80px; text-align: center;">Completed</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr *ngFor="let stage of studyStages" [class.stage-done]="isFieldCompleted('stage', stage.stage, 'done')">
+                  <td style="text-align: center; font-weight: 700;">{{ stage.stage }}</td>
+                  <td><strong>{{ stage.focus }}</strong></td>
+                  <td style="color: #64748b; font-weight: 500;">{{ stage.duration }}</td>
+                  <td style="text-align: center;">
+                    <label class="custom-checkbox-container">
+                      <input 
+                        type="checkbox" 
+                        class="checkbox-primary"
+                        [checked]="isFieldCompleted('stage', stage.stage, 'done')"
+                        (change)="toggleField('stage', stage.stage, 'done', $event)"
+                      />
+                      <span class="checkmark"></span>
+                    </label>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </section>
+
+        <!-- DSA STATS GRID -->
+        <section class="stats-grid">
+          <div class="stat-card">
+            <div class="stat-icon-wrapper blue">💻</div>
+            <div class="stat-info">
+              <div class="stat-value">{{ completedDsaExercises }} / {{ totalDsaExercises }}</div>
+              <div class="stat-label">Beginner Exercises Solved</div>
+            </div>
+          </div>
+
+          <div class="stat-card">
+            <div class="stat-icon-wrapper orange">🟡</div>
+            <div class="stat-info">
+              <div class="stat-value">{{ completedLeetCodeProblems }} / {{ totalLeetCodeProblems }}</div>
+              <div class="stat-label">LeetCode Problems Solved</div>
+            </div>
+          </div>
+
+          <div class="stat-card">
+            <div class="stat-icon-wrapper green">🏆</div>
+            <div class="stat-info">
+              <div class="stat-value">{{ completedDsaItems }} / {{ totalDsaItems }}</div>
+              <div class="stat-label">Total Practice Problems</div>
+            </div>
+          </div>
+
+          <div class="stat-card highlight">
+            <div class="stat-icon-wrapper purple">📈</div>
+            <div class="stat-info">
+              <div class="stat-value">{{ overallDsaPercent }}%</div>
+              <div class="stat-label">Overall DSA Completion</div>
+            </div>
+          </div>
+        </section>
+
+        <!-- TOOLBAR FOR DSA -->
+        <section class="toolbar-section">
+          <!-- View Mode Toggle: Focus Mode vs All Sections -->
+          <div class="view-mode-tabs">
+            <button 
+              type="button" 
+              class="view-mode-pill" 
+              [class.active]="viewMode === 'focus'" 
+              (click)="viewMode = 'focus'"
+              title="Focus Mode: View 1 section at a time with smooth next/prev controls (no infinite scrolling)"
+            >
+              🎯 Focus Mode
+            </button>
+            <button 
+              type="button" 
+              class="view-mode-pill" 
+              [class.active]="viewMode === 'all'" 
+              (click)="viewMode = 'all'"
+              title="All Sections: Stack all sections"
+            >
+              📑 All Sections
+            </button>
+          </div>
+
+          <div class="search-box">
+            <span class="search-icon">🔍</span>
+            <input 
+              type="text" 
+              [(ngModel)]="searchQuery" 
+              placeholder="Search exercises or LeetCode problems (e.g. Two Sum, LRU, Binary Search)..." 
+            />
+            <button *ngIf="searchQuery" (click)="searchQuery = ''" class="btn-clear" title="Clear search">✕</button>
+          </div>
+
+          <div class="filter-controls">
+            <div class="filter-pills-group">
+              <button 
+                type="button"
+                class="filter-pill-btn" 
+                [class.active]="filterStatus === 'all'" 
+                (click)="filterStatus = 'all'"
+              >
+                All Exercises
+              </button>
+              <button 
+                type="button"
+                class="filter-pill-btn" 
+                [class.active]="filterStatus === 'completed'" 
+                (click)="filterStatus = 'completed'"
+              >
+                ✅ Completed
+              </button>
+              <button 
+                type="button"
+                class="filter-pill-btn" 
+                [class.active]="filterStatus === 'pending'" 
+                (click)="filterStatus = 'pending'"
+              >
+                ☐ Pending
+              </button>
+              <button 
+                type="button"
+                class="filter-pill-btn hide-completed-pill" 
+                [class.active]="hideCompleted" 
+                (click)="hideCompleted = !hideCompleted"
+                title="Hide all completed topics to dramatically shrink the list"
+              >
+                {{ hideCompleted ? '👁️ Incomplete Only' : '👁️ Hide Completed' }}
+              </button>
+            </div>
+
+            <button *ngIf="viewMode === 'all'" class="btn-toggle-all" (click)="toggleAllSections()" title="Toggle accordion state">
+              {{ allExpanded ? '▲ Collapse All' : '▼ Expand All' }}
+            </button>
+          </div>
+        </section>
+
+        <!-- ACTIVE DSA ANCHOR -->
+        <div id="active-dsa-anchor"></div>
+
+        <!-- PART 1: 18 SECTIONS (0 to 17) -->
+        <div class="section-divider" *ngIf="viewMode === 'all'">
+          <h2>🛠️ Part 1 — Beginner Foundations & Core Practice (18 Sections)</h2>
+        </div>
+
+        <ng-container *ngFor="let sec of dsaSections">
+          <div 
+            *ngIf="viewMode === 'all' || isDsaSectionActive(sec.id)" 
+            [id]="'section-dsa-' + sec.id" 
+            class="section-card"
+            [class.focus-card]="viewMode === 'focus'"
+          >
+            <!-- Breadcrumb for Focus Route -->
+            <nav class="page-breadcrumb" *ngIf="viewMode === 'focus'">
+              <span class="breadcrumb-tag">🧠 DSA Workbook</span>
+              <span class="breadcrumb-separator">/</span>
+              <span class="breadcrumb-current">Section {{ sec.id }}: {{ sec.title }}</span>
+            </nav>
+
+            <!-- Section Heading -->
+            <div class="section-heading dsa-heading" (click)="viewMode === 'all' ? toggleSectionCollapse('dsa_' + sec.id) : null">
+              <div class="heading-left">
+                <span class="heading-emoji">{{ sec.emoji }}</span>
+                <span class="heading-title">Section {{ sec.id }} — {{ sec.title }}</span>
+              </div>
+
+              <!-- Focus Mode Section Stepper in Header -->
+              <div class="focus-stepper-header" *ngIf="viewMode === 'focus'" (click)="$event.stopPropagation()">
+                <button 
+                  type="button"
+                  class="stepper-arrow-btn" 
+                  [disabled]="!hasPrevDsaSection" 
+                  (click)="prevDsaSection()" 
+                  title="Previous Section"
+                >
+                  ◀ Prev
+                </button>
+                <select 
+                  class="focus-domain-dropdown" 
+                  [ngModel]="activeDsaSectionId" 
+                  (ngModelChange)="navToDsaSection($event)"
+                >
+                  <option *ngFor="let item of dsaNavItems" [value]="item.id">
+                    {{ item.title }}
+                  </option>
+                </select>
+                <button 
+                  type="button"
+                  class="stepper-arrow-btn" 
+                  [disabled]="!hasNextDsaSection" 
+                  (click)="nextDsaSection()" 
+                  title="Next Section"
+                >
+                  Next ▶
+                </button>
+              </div>
+
+              <div class="heading-right">
+                <div class="heading-mini-progress">
+                  <div class="mini-bar-bg">
+                    <div class="mini-bar-fill" [style.width.%]="getDsaSectionPercent(sec)"></div>
+                  </div>
+                </div>
+                <span class="badge-count">
+                  {{ getSectionCompleted('dsa_' + sec.id) }} / {{ sec.exercises.length }} ({{ getDsaSectionPercent(sec) }}%)
+                </span>
+                <span *ngIf="viewMode === 'all'" class="collapse-icon">{{ isCollapsed('dsa_' + sec.id) ? '▼' : '▲' }}</span>
+              </div>
+            </div>
+
+            <!-- Section Body -->
+            <div class="section-body" *ngIf="viewMode === 'focus' || !isCollapsed('dsa_' + sec.id)">
+              <div class="tip-box" *ngIf="sec.goal">
+                <span class="tip-icon">💡</span>
+                <div class="tip-text">{{ sec.goal }}</div>
+              </div>
+
+              <!-- Milestone Card if Section is 100% Completed -->
+              <div class="milestone-card" *ngIf="getSectionCompleted('dsa_' + sec.id) === sec.exercises.length && sec.exercises.length > 0">
+                <div class="milestone-content">
+                  <span class="milestone-badge">🏆 Section Completed!</span>
+                  <p>All {{ sec.exercises.length }} exercises in <strong>Section {{ sec.id }}: {{ sec.title }}</strong> are solved!</p>
+                </div>
+                <button 
+                  type="button"
+                  *ngIf="hasNextDsaSection && viewMode === 'focus'" 
+                  class="btn-milestone-next" 
+                  (click)="nextDsaSection()"
+                >
+                  Continue to Next: {{ dsaNavItems[currentDsaNavIndex + 1]?.title }} →
+                </button>
+              </div>
+
+              <div class="table-responsive">
+                <table class="topics-table">
+                  <thead>
+                    <!-- Section 17 Headers -->
+                    <tr *ngIf="sec.isDesignSec">
+                      <th style="width: 48px; text-align: center;">✅</th>
+                      <th style="width: 60px; text-align: center;">#</th>
+                      <th style="width: 28%;">Topic</th>
+                      <th>What to Cover</th>
+                      <th style="width: 140px; text-align: center;">Reference</th>
+                    </tr>
+                    <!-- Section 0 to 16 Headers -->
+                    <tr *ngIf="!sec.isDesignSec">
+                      <th style="width: 48px; text-align: center;">✅</th>
+                      <th style="width: 60px; text-align: center;">#</th>
+                      <th style="width: 25%;">Exercise</th>
+                      <th>Description</th>
+                      <th style="width: 75px; text-align: center;">Code?</th>
+                      <th style="width: 140px; text-align: center;">Practice Link</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <ng-container *ngFor="let ex of getFilteredExercises(sec); let i = index">
+                      <!-- Subsection divider if applicable (e.g. 9A, 9B, 9C) -->
+                      <tr *ngIf="isNewSubsection(ex, i, getFilteredExercises(sec))" class="subsection-row">
+                        <td [attr.colspan]="sec.isDesignSec ? 5 : 6" class="subsection-cell">
+                          <strong>🌳 {{ ex.subsection }}</strong>
+                        </td>
+                      </tr>
+
+                      <!-- Section 17 Row -->
+                      <tr 
+                        *ngIf="sec.isDesignSec" 
+                        [id]="'dsa-row-' + sec.id + '-' + getOriginalExerciseIndex(sec, ex)"
+                        [class.topic-done]="isFieldCompleted('dsa_' + sec.id, getOriginalExerciseIndex(sec, ex), 'done')"
+                        [class.highlight-pulse]="highlightedTopicKey === ('dsa_' + sec.id + '-' + getOriginalExerciseIndex(sec, ex))"
+                      >
+                        <td style="text-align: center;">
+                          <label class="custom-checkbox-container">
+                            <input 
+                              type="checkbox" 
+                              class="checkbox-primary"
+                              [checked]="isFieldCompleted('dsa_' + sec.id, getOriginalExerciseIndex(sec, ex), 'done')"
+                              (change)="toggleField('dsa_' + sec.id, getOriginalExerciseIndex(sec, ex), 'done', $event)"
+                            />
+                            <span class="checkmark"></span>
+                          </label>
+                        </td>
+                        <td style="text-align: center; font-weight: 700; color: #64748b;">{{ ex.num }}</td>
+                        <td class="topic-title-cell" (click)="quickToggleTopic('dsa_' + sec.id, getOriginalExerciseIndex(sec, ex))">
+                          <span class="topic-text"><strong>{{ ex.name }}</strong></span>
+                        </td>
+                        <td style="color: #475569;">{{ ex.description }}</td>
+                        <td style="text-align: center;">
+                          <a 
+                            *ngIf="ex.practice" 
+                            [href]="ex.practice.url" 
+                            target="_blank" 
+                            rel="noopener" 
+                            class="practice-btn primer-btn"
+                          >
+                            📖 {{ ex.practice.text }} ↗
+                          </a>
+                        </td>
+                      </tr>
+
+                      <!-- Normal Exercise Row (Sec 0 to 16) -->
+                      <tr 
+                        *ngIf="!sec.isDesignSec" 
+                        [id]="'dsa-row-' + sec.id + '-' + getOriginalExerciseIndex(sec, ex)"
+                        [class.topic-done]="isFieldCompleted('dsa_' + sec.id, getOriginalExerciseIndex(sec, ex), 'done')"
+                        [class.highlight-pulse]="highlightedTopicKey === ('dsa_' + sec.id + '-' + getOriginalExerciseIndex(sec, ex))"
+                      >
+                        <td style="text-align: center;">
+                          <label class="custom-checkbox-container">
+                            <input 
+                              type="checkbox" 
+                              class="checkbox-primary"
+                              [checked]="isFieldCompleted('dsa_' + sec.id, getOriginalExerciseIndex(sec, ex), 'done')"
+                              (change)="toggleField('dsa_' + sec.id, getOriginalExerciseIndex(sec, ex), 'done', $event)"
+                            />
+                            <span class="checkmark"></span>
+                          </label>
+                        </td>
+                        <td style="text-align: center; font-weight: 700; color: #64748b;">{{ ex.num }}</td>
+                        <td class="topic-title-cell" (click)="quickToggleTopic('dsa_' + sec.id, getOriginalExerciseIndex(sec, ex))">
+                          <span class="topic-text"><strong>{{ ex.name }}</strong></span>
+                        </td>
+                        <td style="color: #475569;">{{ ex.description }}</td>
+                        <td style="text-align: center;">
+                          <label class="custom-checkbox-container">
+                            <input 
+                              type="checkbox" 
+                              class="checkbox-secondary"
+                              [checked]="isFieldCompleted('dsa_' + sec.id, getOriginalExerciseIndex(sec, ex), 'code')"
+                              (change)="toggleField('dsa_' + sec.id, getOriginalExerciseIndex(sec, ex), 'code', $event)"
+                            />
+                            <span class="checkmark secondary"></span>
+                          </label>
+                        </td>
+                        <td style="text-align: center;">
+                          <a 
+                            *ngIf="ex.practice" 
+                            [href]="ex.practice.url" 
+                            target="_blank" 
+                            rel="noopener" 
+                            class="practice-btn"
+                          >
+                            🚀 {{ ex.practice.text }} ↗
+                          </a>
+                        </td>
+                      </tr>
+                    </ng-container>
+
+                    <tr *ngIf="getFilteredExercises(sec).length === 0">
+                      <td [attr.colspan]="sec.isDesignSec ? 5 : 6" class="empty-search">
+                        <span *ngIf="hideCompleted">🎉 All exercises in this section are completed! Turn off "Hide Completed" to review.</span>
+                        <span *ngIf="!hideCompleted">🔍 No exercises match your current search/filter.</span>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+
+              <!-- Section Navigation Footer (Focus Mode) -->
+              <div class="section-nav-footer" *ngIf="viewMode === 'focus'">
+                <button 
+                  type="button" 
+                  class="section-nav-btn prev" 
+                  [disabled]="!hasPrevDsaSection" 
+                  (click)="prevDsaSection()"
+                  *ngIf="hasPrevDsaSection"
+                >
+                  <span class="nav-dir">← Previous</span>
+                  <span class="nav-target">{{ dsaNavItems[currentDsaNavIndex - 1]?.title }}</span>
+                </button>
+                <div class="section-nav-spacer" *ngIf="!hasPrevDsaSection"></div>
+
+                <div class="section-nav-center">
+                  <span class="nav-domain-badge">Part 1: Section {{ sec.id }} of 17</span>
+                  <span class="nav-domain-stat">{{ getSectionCompleted('dsa_' + sec.id) }} / {{ sec.exercises.length }} Solved ({{ getDsaSectionPercent(sec) }}%)</span>
+                </div>
+
+                <button 
+                  type="button" 
+                  class="section-nav-btn next" 
+                  [disabled]="!hasNextDsaSection" 
+                  (click)="nextDsaSection()"
+                  *ngIf="hasNextDsaSection"
+                >
+                  <span class="nav-dir">Next →</span>
+                  <span class="nav-target">{{ dsaNavItems[currentDsaNavIndex + 1]?.title }}</span>
+                </button>
+                <div class="section-nav-spacer" *ngIf="!hasNextDsaSection"></div>
+              </div>
+            </div>
+          </div>
+        </ng-container>
+
+        <!-- PART 2: LEETCODE INTERVIEW ROADMAP -->
+        <div 
+          id="leetcode-roadmap" 
+          class="section-divider" 
+          style="margin-top: 40px;"
+          *ngIf="viewMode === 'all' || activeDsaSectionId === 'roadmap'"
+        >
+          <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 12px;">
+            <div>
+              <h2>🎯 Part 2 — LeetCode Interview Roadmap (93+ Curated Problems)</h2>
+              <p style="color: #64748b; margin-top: 6px;">
+                Organized by pattern. Start with Easy, progress to Medium, and track independent solves.
+              </p>
+            </div>
+            <!-- Focus Stepper on Roadmap -->
+            <div class="focus-stepper-header" *ngIf="viewMode === 'focus'">
+              <button type="button" class="stepper-arrow-btn" (click)="prevDsaSection()">
+                ◀ Prev (Sec 17)
+              </button>
+              <select class="focus-domain-dropdown" [ngModel]="activeDsaSectionId" (ngModelChange)="navToDsaSection($event)">
+                <option *ngFor="let item of dsaNavItems" [value]="item.id">{{ item.title }}</option>
+              </select>
+              <button type="button" class="stepper-arrow-btn" (click)="nextDsaSection()">
+                Next (Routine) ▶
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <ng-container *ngIf="viewMode === 'all' || activeDsaSectionId === 'roadmap'">
+          <div *ngFor="let cat of leetcodeCategories" class="section-card">
+            <div class="section-heading leetcode-heading">
+              <div class="heading-left">
+                <span class="heading-title">{{ cat.title }}</span>
+              </div>
+              <div class="heading-right">
+                <span class="badge-count">{{ cat.problems.length }} Problems</span>
+              </div>
+            </div>
+
+            <div class="section-body">
+              <div class="table-responsive">
+                <table class="topics-table">
+                  <thead>
+                    <tr>
+                      <th style="width: 48px; text-align: center;">✅</th>
+                      <th style="width: 65px; text-align: center;">#</th>
+                      <th>Problem Title</th>
+                      <th style="width: 110px; text-align: center;">Difficulty</th>
+                      <th style="width: 160px; text-align: center;">Action</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr 
+                      *ngFor="let prob of getFilteredLeetCode(cat.problems)"
+                      [id]="'leetcode-row-' + prob.id"
+                      [class.topic-done]="isFieldCompleted('leetcode', prob.id, 'done')"
+                      [class.highlight-pulse]="highlightedTopicKey === ('leetcode-' + prob.id)"
+                    >
+                      <td style="text-align: center;">
+                        <label class="custom-checkbox-container">
+                          <input 
+                            type="checkbox" 
+                            class="checkbox-primary"
+                            [checked]="isFieldCompleted('leetcode', prob.id, 'done')"
+                            (change)="toggleField('leetcode', prob.id, 'done', $event)"
+                          />
+                          <span class="checkmark"></span>
+                        </label>
+                      </td>
+                      <td style="text-align: center; font-weight: 700; color: #64748b;">{{ prob.id }}</td>
+                      <td class="topic-title-cell" (click)="quickToggleTopic('leetcode', prob.id)">
+                        <span class="topic-text"><strong>{{ prob.title }}</strong></span>
+                      </td>
+                      <td style="text-align: center;">
+                        <span class="difficulty-tag" [ngClass]="prob.diffClass">
+                          {{ prob.difficulty }}
+                        </span>
+                      </td>
+                      <td style="text-align: center;">
+                        <a [href]="prob.link" target="_blank" rel="noopener" class="leetcode-solve-btn">
+                          Solve on LeetCode ↗
+                        </a>
+                      </td>
+                    </tr>
+
+                    <tr *ngIf="getFilteredLeetCode(cat.problems).length === 0">
+                      <td colspan="5" class="empty-search">
+                        <span *ngIf="hideCompleted">🎉 All problems in this category completed!</span>
+                        <span *ngIf="!hideCompleted">🔍 No LeetCode problems match your filter.</span>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+
+          <!-- Roadmap Focus Mode Navigation Footer -->
+          <div class="section-nav-footer" *ngIf="viewMode === 'focus'">
+            <button type="button" class="section-nav-btn prev" (click)="prevDsaSection()">
+              <span class="nav-dir">← Previous</span>
+              <span class="nav-target">Section 17: System & Class Design</span>
+            </button>
+            <div class="section-nav-center">
+              <span class="nav-domain-badge">Part 2: LeetCode Roadmap</span>
+              <span class="nav-domain-stat">{{ completedLeetCodeProblems }} / {{ totalLeetCodeProblems }} Solved</span>
+            </div>
+            <button type="button" class="section-nav-btn next" (click)="nextDsaSection()">
+              <span class="nav-dir">Next →</span>
+              <span class="nav-target">Solving Routine & Links</span>
+            </button>
+          </div>
+        </ng-container>
+
+        <!-- FOOTER / PART 3 FOR DSA -->
+        <section 
+          id="solving-routine-section" 
+          class="footer-section"
+          *ngIf="viewMode === 'all' || activeDsaSectionId === 'routine'"
+        >
+          <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 16px;">
+            <h3 style="margin: 0;">🔄 For Every Problem Checklist</h3>
+            <button 
+              type="button" 
+              class="section-nav-btn prev" 
+              *ngIf="viewMode === 'focus'" 
+              (click)="prevDsaSection()"
+            >
+              ← Back to LeetCode Roadmap
+            </button>
+          </div>
+
+          <div class="tip-box">
+            <b>🔄 Standard Problem Solving Routine:</b><br>
+            1. Define inputs/outputs<br>
+            2. Write edge case examples<br>
+            3. Attempt brute force solution<br>
+            4. Implement clean Java code<br>
+            5. Walk through edge cases<br>
+            6. Analyze Time & Space Complexity<br>
+            7. <b>Explain your solution aloud</b>
+          </div>
+
+          <!-- Official Practice Links Table -->
+          <div class="platform-table-wrapper" style="margin-top: 24px;">
+            <h3>🔗 Official Practice Links</h3>
+            <table class="platform-table">
+              <thead>
+                <tr><th>Platform</th><th>Link</th></tr>
+              </thead>
+              <tbody>
+                <tr *ngFor="let p of dsaPlatforms">
+                  <td><strong>{{ p.platform }}</strong></td>
+                  <td>
+                    <a [href]="p.link" target="_blank" rel="noopener" class="resource-link-btn">
+                      {{ p.label }} ↗
+                    </a>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <p class="footer-tagline">
+            PrepMaster Pro · Master DSA Practice Workbook · Java Foundations + 280+ Prompts + LeetCode Roadmap
+          </p>
+        </section>
+      </div>
+    </div>
+  </main>
+</div>
+
+<!-- Floating Action Buttons: Smart Resume Learning + Back to Top -->
+<div class="floating-fab-group">
+  <button 
+    type="button" 
+    class="fab-btn fab-resume" 
+    (click)="jumpToNextIncomplete()" 
+    title="⚡ Jump directly to your next incomplete topic/problem"
+  >
+    <span class="fab-icon">⚡</span>
+    <span class="fab-label">Next Incomplete</span>
+  </button>
+
+  <button 
+    *ngIf="showBackToTop" 
+    (click)="scrollToTop()" 
+    class="fab-btn fab-top" 
+    title="Scroll back to top"
+  >
+    ▲
+  </button>
+</div>

@@ -1,0 +1,14 @@
+{
+  "name": "interview-prep-interactive-tracker",
+  "version": "1.0.0",
+  "description": "Full-Stack Interview Preparation Topic Checklist & Progress Tracker (Angular + Express)",
+  "scripts": {
+    "start": "cd backend && npm start",
+    "dev:backend": "cd backend && npm run dev",
+    "dev:frontend": "cd frontend && npm start",
+    "build:frontend": "cd frontend && npm run build",
+    "test": "cd backend && node test-all.js"
+  },
+  "author": "",
+  "license": "ISC"
+}
