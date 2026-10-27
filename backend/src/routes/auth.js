@@ -19,10 +19,33 @@ function generateToken(user) {
 }
 
 function getFrontendUrl(req) {
-  if (process.env.FRONTEND_URL) {
+  if (process.env.FRONTEND_URL && !process.env.FRONTEND_URL.includes('your-app-name')) {
     return process.env.FRONTEND_URL.replace(/\/$/, '');
   }
-  return `${req.protocol}://${req.get('host')}`;
+  const proto = req.headers['x-forwarded-proto'] || req.protocol;
+  return `${proto}://${req.get('host')}`;
+}
+
+function getGoogleCallbackUrl(req) {
+  if (process.env.GOOGLE_CALLBACK_URL && !process.env.GOOGLE_CALLBACK_URL.includes('your-backend-app')) {
+    return process.env.GOOGLE_CALLBACK_URL;
+  }
+  if (process.env.RENDER_EXTERNAL_URL) {
+    return `${process.env.RENDER_EXTERNAL_URL.replace(/\/$/, '')}/api/auth/google/callback`;
+  }
+  const proto = req.headers['x-forwarded-proto'] || req.protocol;
+  return `${proto}://${req.get('host')}/api/auth/google/callback`;
+}
+
+function getGithubCallbackUrl(req) {
+  if (process.env.GITHUB_CALLBACK_URL && !process.env.GITHUB_CALLBACK_URL.includes('your-backend-app')) {
+    return process.env.GITHUB_CALLBACK_URL;
+  }
+  if (process.env.RENDER_EXTERNAL_URL) {
+    return `${process.env.RENDER_EXTERNAL_URL.replace(/\/$/, '')}/api/auth/github/callback`;
+  }
+  const proto = req.headers['x-forwarded-proto'] || req.protocol;
+  return `${proto}://${req.get('host')}/api/auth/github/callback`;
 }
 
 function isValidEmail(email) {
@@ -342,7 +365,7 @@ router.get('/oauth/config', (req, res) => {
 router.get('/google', (req, res) => {
   const frontendUrl = getFrontendUrl(req);
   const clientId = process.env.GOOGLE_CLIENT_ID;
-  const redirectUri = process.env.GOOGLE_CALLBACK_URL || `${req.protocol}://${req.get('host')}/api/auth/google/callback`;
+  const redirectUri = getGoogleCallbackUrl(req);
 
   if (!clientId || !process.env.GOOGLE_CLIENT_SECRET) {
     // If not configured, prompt with helpful guidance
@@ -372,7 +395,7 @@ router.get('/google/callback', async (req, res) => {
   }
 
   try {
-    const redirectUri = process.env.GOOGLE_CALLBACK_URL || `${req.protocol}://${req.get('host')}/api/auth/google/callback`;
+    const redirectUri = getGoogleCallbackUrl(req);
     const tokenRes = await fetch('https://oauth2.googleapis.com/token', {
       method: 'POST',
       headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
@@ -429,7 +452,7 @@ router.get('/google/callback', async (req, res) => {
 router.get('/github', (req, res) => {
   const frontendUrl = getFrontendUrl(req);
   const clientId = process.env.GITHUB_CLIENT_ID;
-  const redirectUri = process.env.GITHUB_CALLBACK_URL || `${req.protocol}://${req.get('host')}/api/auth/github/callback`;
+  const redirectUri = getGithubCallbackUrl(req);
 
   if (!clientId || !process.env.GITHUB_CLIENT_SECRET) {
     return res.redirect(`${frontendUrl}/login?oauth_setup=github`);

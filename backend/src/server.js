@@ -12,6 +12,7 @@ const interviewSections = require('./data/interviewTopics.json');
 const dsaData = require('./data/dsaTopics.json');
 
 const app = express();
+app.set('trust proxy', 1);
 const PORT = process.env.PORT || 3000;
 
 // Middleware
