@@ -1,31 +1,45 @@
-# Environment variables & secrets
+# ==============================================================================
+# PrepMaster Pro — Git Ignore Rules
+# ==============================================================================
+
+# 1. Environment Secrets & Credentials (Keep local ONLY)
 .env
 .env.*
-!.env.example
 *.env
 backend/src/.env
+backend/.env
+!.env.example
+!backend/.env.example
 
-# Local User Database & Logs
+# 2. Local User Database & Temporary State (Never push personal progress/passwords)
 backend/data/tracker.json
 backend/data/*.tmp
-*.log
+backend/data/*.db*
+*.tmp
 
-# AI agent caches & scratch
-.agents/
-
-# Dependencies
+# 3. Dependencies
 node_modules/
+backend/node_modules/
+frontend/node_modules/
+.pnp
+.pnp.js
+
+# 4. Build Artifacts & Caches
+dist/
+frontend/dist/
+.angular/
+frontend/.angular/
+/tmp
+/out-tsc
+/bazel-out
+
+# 5. Logs & Debug Reports
+*.log
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
 
-# Angular build artifacts
-frontend/dist/
-frontend/.angular/
-.angular/
-dist/
-
-# OS and Editor files
+# 6. IDEs & Operating System Artifacts
 .DS_Store
 Thumbs.db
 .vscode/
@@ -35,53 +49,7 @@ Thumbs.db
 *.njsproj
 *.sln
 *.sw?
-# See https://docs.github.com/get-started/getting-started-with-git/ignoring-files for more about ignoring files.
+*.bak
 
-# Compiled output
-/dist
-/tmp
-/out-tsc
-/bazel-out
-
-# Node
-/node_modules
-npm-debug.log
-yarn-error.log
-
-# IDEs and editors
-.idea/
-.project
-.classpath
-.c9/
-*.launch
-.settings/
-*.sublime-workspace
-
-# Visual Studio Code
-.vscode/*
-!.vscode/settings.json
-!.vscode/tasks.json
-!.vscode/launch.json
-!.vscode/extensions.json
-.history/*
-
-# Miscellaneous
-/.angular/cache
-.sass-cache/
-/connect.lock
-/coverage
-/libpeerconnection.log
-testem.log
-/typings
-
-# System files
-.DS_Store
-Thumbs.db
-# Environment secrets
-.env
-.env.*
-!.env.example
-src/.env
-
-# Dependencies
-node_modules/
+# 7. AI & Tool Scratch
+.agents/

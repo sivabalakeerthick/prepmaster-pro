@@ -1,8 +1,15 @@
-# Environment secrets
+# Environment secrets (Keep local only)
 .env
 .env.*
-!.env.example
+*.env
 src/.env
+!.env.example
+
+# Local database (Never push personal progress or passwords)
+data/tracker.json
+data/*.tmp
+data/*.db*
 
 # Dependencies
 node_modules/
+*.log
